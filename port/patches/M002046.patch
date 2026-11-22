@@ -1,6 +1,7 @@
+diff --git a/src/Development/AbelianVarietyTheory/BlockTheory/AdelicCMFields/UnitaryHeckeCharacterIdele.lean b/src/Development/AbelianVarietyTheory/BlockTheory/AdelicCMFields/UnitaryHeckeCharacterIdele.lean
 --- a/src/Development/AbelianVarietyTheory/BlockTheory/AdelicCMFields/UnitaryHeckeCharacterIdele.lean
 +++ b/src/Development/AbelianVarietyTheory/BlockTheory/AdelicCMFields/UnitaryHeckeCharacterIdele.lean
-@@ -167,7 +167,7 @@
+@@ -167,7 +167,7 @@ def finiteAdeleMap : FiniteAdeleRing (𝓞 K) K →+* FiniteAdeleRing (𝓞 L) L
  
  def infiniteAdeleMap : InfiniteAdeleRing K →+* InfiniteAdeleRing L :=
    Pi.ringHom fun w : InfinitePlace L =>
@@ -9,45 +10,34 @@
        (Pi.evalRingHom (fun v : InfinitePlace K => v.Completion) (w.comap (algebraMap K L)))
  
  def adeleMap : AdeleRing (𝓞 K) K →+* AdeleRing (𝓞 L) L :=
-@@ -181,7 +181,7 @@
+@@ -181,7 +181,8 @@ theorem _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdel
        algebraMap L (AdeleRing (𝓞 L) L) (algebraMap K L x) := by
    refine Prod.ext ?_ ?_
    · funext w
 -    exact LiesOver.completionMap_coe _
-+    exact LiesOver.completionMap_coe (w.comap (algebraMap K L)) w _
++    exact (AbsoluteValue.Completion.map_coe (w.comap (algebraMap K L)).1 w.1
++      (WithAbs.toAbs _ x)).trans rfl
    · ext w : 1
      exact _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.finiteCompletionMap_coe K L w x
  
-@@ -189,11 +189,24 @@
+@@ -189,9 +190,13 @@ open NumberField IsDedekindDomain IsDedekindDomain.HeightOneSpectrum Filter in
  open scoped RestrictedProduct in
  variable (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L] [Algebra K L] in
  theorem _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.continuous_adeleMap : Continuous (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.adeleMap K L) :=
 -  (continuous_pi fun w => LiesOver.continuous_completionMap.comp (continuous_apply _)).prodMap
 -    (RestrictedProduct.mapAlong_continuous _ _ _
 -      (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.tendsto_under K L) _
-+  by
-+    have hi : Continuous (infiniteAdeleMap K L) := by
-+      apply continuous_pi
-+      intro w
-+      exact (AbsoluteValue.Completion.continuous_map (w.comap (algebraMap K L)).1 w.1).comp
-+        (show Continuous (fun x : InfiniteAdeleRing K => x (w.comap (algebraMap K L)))
-+          from continuous_apply _)
-+    have hf : Continuous (finiteAdeleMap K L) :=
-+      (RestrictedProduct.mapAlong_continuous
-+        (A₁ := fun v => (v.adicCompletionIntegers K : Set (v.adicCompletion K)))
-+        (A₂ := fun w => (w.adicCompletionIntegers L : Set (w.adicCompletion L)))
-+        (fun v : HeightOneSpectrum (𝓞 K) => v.adicCompletion K)
-+        (fun w : HeightOneSpectrum (𝓞 L) => w.adicCompletion L)
-+        (fun w => w.under (𝓞 K)) (tendsto_under K L)
-+        (fun w => (finiteCompletionMap K L w : _ → _))
++  (continuous_pi fun (w : InfinitePlace L) => (AbsoluteValue.Completion.continuous_map (w.comap (algebraMap K L)).1 w.1).comp (continuous_apply (w.comap (algebraMap K L)))).prodMap
++    (RestrictedProduct.mapAlong_continuous
++      (fun v : HeightOneSpectrum (𝓞 K) => v.adicCompletion K)
++      (fun w : HeightOneSpectrum (𝓞 L) => w.adicCompletion L)
++      (fun w => w.under (𝓞 K))
++      (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.tendsto_under K L)
++      (fun w => (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.finiteCompletionMap K L w : _))
        (Eventually.of_forall (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.finiteCompletionMap_mapsTo K L))
--      fun w => _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.continuous_finiteCompletionMap K L w)
-+        fun w => _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.continuous_finiteCompletionMap K L w)
-+    exact hi.prodMap hf
+       fun w => _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.continuous_finiteCompletionMap K L w)
  
- def ideleMap : Idele K →* Idele L := Units.map (adeleMap K L).toMonoidHom
- 
-@@ -550,7 +563,7 @@
+@@ -550,7 +555,7 @@ variable {E : Type} [Field E] [NumberField E] in
  theorem _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.continuous_ideleNorm : Continuous (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.ideleNorm (E := E)) := by
    have hinf : Continuous (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.infiniteIdeleNorm (E := E)) := by
      show Continuous fun x : _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.Idele E => ∏ v : InfinitePlace E, ‖x.val.1 v‖ ^ v.mult
@@ -56,12 +46,16 @@
        (((continuous_apply v).comp (continuous_fst.comp (Units.continuous_val (M := AdeleRing (𝓞 E) E)))).norm).pow _
    have hfin : Continuous (_root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.finiteIdeleNorm (E := E)) := by
      refine continuous_of_continuousAt_one _ ?_
-@@ -629,8 +642,6 @@
+@@ -628,10 +633,8 @@ variable {E : Type} [Field E] [NumberField E] in
+ private theorem norm_uniformiser_eq_absNorm_inv {P : HeightOneSpectrum (𝓞 E)}
      {ϖ : (P.adicCompletion E)ˣ} (hϖ : _root_.GlobalTheory.IndefiniteRowSideFullHecke.UnitaryHeckeCharacterIdele.IsUniformiser P ϖ) :
      ‖(ϖ : P.adicCompletion E)‖ = (Ideal.absNorm P.asIdeal : ℝ)⁻¹ := by
-   rw [FinitePlace.norm_def, hϖ, WithZeroMulInt.toNNReal_neg_apply _ WithZero.exp_ne_zero]
+-  rw [FinitePlace.norm_def, hϖ, WithZeroMulInt.toNNReal_neg_apply _ WithZero.exp_ne_zero]
 -  simp only [show ∀ hx, Multiplicative.toAdd (WithZero.unzero (x := WithZero.exp (-1 : ℤ)) hx) = -1
 -    from fun _ => rfl]
-   simp
+-  simp
++  rw [FinitePlace.norm_def, hϖ, WithZeroMulInt.toNNReal_neg_apply _ WithZero.exp_ne_zero,
++    WithZero.log_exp, NNReal.coe_zpow, NNReal.coe_natCast, zpow_neg_one]
  
  open NumberField IsDedekindDomain IsDedekindDomain.HeightOneSpectrum Filter in
+ open scoped RestrictedProduct in

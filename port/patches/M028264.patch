@@ -1,14 +1,17 @@
+diff --git a/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsPolyAnnihilatesCommutingLinearCombination.lean b/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsPolyAnnihilatesCommutingLinearCombination.lean
 --- a/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsPolyAnnihilatesCommutingLinearCombination.lean
 +++ b/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsPolyAnnihilatesCommutingLinearCombination.lean
-@@ -12,8 +12,9 @@ theorem exists_poly_annihilates_linear_combination : ∀ {M : Type} [AddCommGrou
+@@ -12,8 +12,11 @@ theorem exists_poly_annihilates_linear_combination : ∀ {M : Type} [AddCommGrou
          Polynomial.aeval (∑ i, c i • A i) p v = 0 := by
    intro M _ _ ι _ A hc c P hP
    classical
 -  letI : CommRing (Algebra.adjoin ℂ (Set.range A)) := Algebra.adjoinCommRingOfComm ℂ
 -    (by rintro _ ⟨i, rfl⟩ _ ⟨j, rfl⟩; exact hc i j)
-+  letI : CommRing (Algebra.adjoin ℂ (Set.range A)) :=
-+    haveI := Algebra.isMulCommutative_adjoin ℂ (s := Set.range A) (by rintro _ ⟨i, rfl⟩ _ ⟨j, rfl⟩ -; exact hc i j)
-+    IsMulCommutative.instCommRing
++  letI : IsMulCommutative (Algebra.adjoin ℂ (Set.range A)) :=
++    Algebra.isMulCommutative_adjoin ℂ
++      (by rintro _ ⟨i, rfl⟩ _ ⟨j, rfl⟩ _; exact hc i j)
++  letI : CommRing (Algebra.adjoin ℂ (Set.range A)) := by
++    open scoped IsMulCommutative in exact inferInstance
    let S := Algebra.adjoin ℂ (Set.range A)
    let I : Ideal S :=
      { carrier := {a | ∀ v : M, (∀ i, Polynomial.aeval (A i) (P i) v = 0) → (a : Module.End ℂ M) v = 0}

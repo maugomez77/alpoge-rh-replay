@@ -1,7 +1,8 @@
 {
-  "module": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolyAnnihilatesCommutingLinearCombination",
-  "source_sha256": "79c672969a73182cdd5b50364e91543ed06dd89f4d375a547e79e2a8a1462e48",
-  "lean": "leanprover/lean4:v4.36.0",
-  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
-  "notes": "`Algebra.adjoinCommRingOfComm` is gone; the proof-local `CommRing` instance on the adjoin is built with `IsMulCommutative.instCommRing` from `Algebra.isMulCommutative_adjoin`, whose pairwise hypothesis adds an unused `a ≠ b` argument. The statement does not mention this instance."
+ "module": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolyAnnihilatesCommutingLinearCombination",
+ "source_sha256": "79c672969a73182cdd5b50364e91543ed06dd89f4d375a547e79e2a8a1462e48",
+ "lean": "leanprover/lean4:v4.36.0",
+ "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+ "notes": "fixed for Lean 4.36",
+ "evidence": "local port build on leanprover/lean4:v4.36.0 (worker mbp): lake build succeeded after patch"
 }
