@@ -1,0 +1,8 @@
+{
+ "module": "Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsPrimeInvolutionOfRingInvolution",
+ "source_sha256": "2c81b35d5aac19908069e1347183d22a42bef8ab0fbf69e7b75c81ffb0fa71c1",
+ "lean": "leanprover/lean4:v4.36.0",
+ "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+ "notes": "fixed for Lean 4.36",
+ "evidence": "local port build on leanprover/lean4:v4.36.0 (worker mbp): lake build succeeded after patch"
+}

@@ -1,0 +1,8 @@
+{
+ "module": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsAlgebraicRatFuncFractionRingDedekind",
+ "source_sha256": "4b1b994c233ec56a26bf4e708fb924eef6bd889a6e5cc411a36eed47f9e0e2ff",
+ "lean": "leanprover/lean4:v4.36.0",
+ "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+ "notes": "fixed for Lean 4.36",
+ "evidence": "local port build on leanprover/lean4:v4.36.0 (worker mbp): lake build succeeded after patch"
+}

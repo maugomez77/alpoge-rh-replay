@@ -1,6 +1,7 @@
+diff --git a/src/Development/AbelianVarietyTheory/Definitions/Foundations/ExistsFinsetOfEventually.lean b/src/Development/AbelianVarietyTheory/Definitions/Foundations/ExistsFinsetOfEventually.lean
 --- a/src/Development/AbelianVarietyTheory/Definitions/Foundations/ExistsFinsetOfEventually.lean
 +++ b/src/Development/AbelianVarietyTheory/Definitions/Foundations/ExistsFinsetOfEventually.lean
-@@ -175,8 +175,8 @@
+@@ -175,8 +175,8 @@ theorem IsRestrGroup.subgroup [∀ w, T1Space (Ya w)] [∀ v, T1Space (Yf v)] (h
        have : (H : Set X) = (⋂ w ∉ range i, pa w ⁻¹' {1}) ∩ ⋂ v ∉ range j, pf v ⁻¹' {1} :=
          Set.ext fun x => by simpa using hH x
        rw [this]
@@ -11,7 +12,7 @@
      have : ∀ w, ∃ D : Set (Ya w), IsCompact D ∧ (∀ u (e : i u = w), D = e ▸ C u) ∧ (w ∉ range i → D = {1}) :=
        fun w => by
          by_cases hw : w ∈ range i
-@@ -247,9 +247,8 @@
+@@ -247,9 +247,8 @@ theorem IsRestrGroup.measurableSet_cyl (h : IsRestrGroup pa pf K) {S : Finset V}
      ((S.measurableSet_biInter fun v hv => (h.continuous_pf v).measurable (hB v hv)).inter
        (h.isOpen_levelAway S).measurableSet)
  

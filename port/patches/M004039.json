@@ -1,7 +1,8 @@
 {
-  "module": "Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually",
-  "source_sha256": "40a4c5e4c9dcfc7faf27048e3c8d15b3be28b8634795f479e9d434729eb0fc5e",
-  "lean": "leanprover/lean4:v4.36.0",
-  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
-  "notes": "Replace isClosed_biInter over negated membership with nested isClosed_iInter, and retain BorelSpace/IsTopologicalGroup typeclass assumptions on IsHaarProd.smul required by Mathlib v4.36.0's IsHaarMeasure.nnreal_smul (MeasurableConstSMul)."
+ "module": "Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually",
+ "source_sha256": "40a4c5e4c9dcfc7faf27048e3c8d15b3be28b8634795f479e9d434729eb0fc5e",
+ "lean": "leanprover/lean4:v4.36.0",
+ "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+ "notes": "fixed for Lean 4.36",
+ "evidence": "local port build on leanprover/lean4:v4.36.0 (worker mbp): lake build succeeded after patch"
 }

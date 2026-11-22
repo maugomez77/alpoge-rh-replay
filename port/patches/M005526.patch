@@ -1,0 +1,22 @@
+diff --git a/src/Development/AbelianVarietyTheory/Proofs/AdelicLatticeProofs/ExistsPrimeInvolutionOfRingInvolution.lean b/src/Development/AbelianVarietyTheory/Proofs/AdelicLatticeProofs/ExistsPrimeInvolutionOfRingInvolution.lean
+--- a/src/Development/AbelianVarietyTheory/Proofs/AdelicLatticeProofs/ExistsPrimeInvolutionOfRingInvolution.lean
++++ b/src/Development/AbelianVarietyTheory/Proofs/AdelicLatticeProofs/ExistsPrimeInvolutionOfRingInvolution.lean
+@@ -41,7 +41,8 @@ theorem exists_primeInvolution_of_ringInvolution {R : Type} [CommRing R] [IsDede
+   refine ⟨hf.toPerm f, hf, ?_, ?_, ?_⟩
+   · intro P
+     show Ideal.absNorm (P.asIdeal.map s) = _
+-    simp only [Ideal.absNorm_apply, Submodule.cardQuot_apply]
++    letI : Infinite R := Module.Free.infinite ℤ R
++    rw [Ideal.absNorm_apply, Ideal.absNorm_apply, Submodule.cardQuot_apply, Submodule.cardQuot_apply]
+     exact (Nat.card_congr (Ideal.quotientEquiv P.asIdeal (P.asIdeal.map s) s rfl).toEquiv).symm
+   · intro P x
+     exact hm _ x
+@@ -113,7 +114,7 @@ theorem cmConjugation_on_primes : ∀ (F E : Type) [Field F] [NumberField F] [Fi
+       have hai : IsIntegral ℤ a := by
+         have h1 : IsIntegral ℤ (algebraMap F E a) := by
+           rw [ha]; exact RingOfIntegers.isIntegral_coe _
+-        exact (isIntegral_algebraMap_iff (algebraMap F E).injective).1 h1
++        exact isIntegral_algebraMap_iff.1 h1
+       obtain ⟨b, hb⟩ : ∃ b : 𝓞 F, algebraMap (𝓞 F) (𝓞 E) b = x * s x :=
+         ⟨⟨a, hai⟩, RingOfIntegers.ext ha⟩
+       have h1 : b ∈ (Q.under (𝓞 F)).asIdeal := by

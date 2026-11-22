@@ -1,0 +1,21 @@
+diff --git a/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsIsAlgebraicRatFuncFractionRingDedekind.lean b/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsIsAlgebraicRatFuncFractionRingDedekind.lean
+--- a/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsIsAlgebraicRatFuncFractionRingDedekind.lean
++++ b/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsIsAlgebraicRatFuncFractionRingDedekind.lean
+@@ -16,7 +16,7 @@ theorem ringKrullDim_le_of_isIntegral {A R : Type*} [CommRing A] [CommRing R] [A
+   rw [WithBot.coe_iSup (OrderTop.bddAbove _)]
+   refine iSup_le fun l => ?_
+   obtain ⟨P, -, hP, hPl⟩ := Ideal.exists_ideal_over_prime_of_isIntegral l.head.asIdeal (⊥ : Ideal R)
+-    (by rw [← RingHom.ker_eq_comap_bot, (RingHom.injective_iff_ker_eq_bot _).1 h]; exact bot_le)
++    (by unfold Ideal.under; rw [← RingHom.ker_eq_comap_bot, (RingHom.injective_iff_ker_eq_bot _).1 h]; exact bot_le)
+   have : P.LiesOver l.head.asIdeal := ⟨hPl.symm⟩
+   obtain ⟨L, hL, -, -⟩ := Ideal.exists_ltSeries_of_hasGoingUp l P
+   rw [← hL]
+@@ -47,7 +47,7 @@ theorem exists_finite_inj_polynomial (k B : Type) [Field k] [CommRing B] [IsDede
+       (Field.toIsField k))
+   obtain rfl : s = 1 := by omega
+   let e : MvPolynomial (Fin 1) k ≃ₐ[k] Polynomial k :=
+-    (MvPolynomial.renameEquiv k (Equiv.equivPUnit.{1, 1} (Fin 1))).trans (MvPolynomial.pUnitAlgEquiv k)
++    (MvPolynomial.renameEquiv k (Equiv.equivPUnit.{1, 1} (Fin 1))).trans (MvPolynomial.uniqueAlgEquiv k PUnit.{1})
+   refine ⟨g.toRingHom.comp e.symm.toRingEquiv.toRingHom, hg.comp e.symm.injective, ?_⟩
+   exact RingHom.Finite.comp hfin (RingHom.Finite.of_surjective _ e.symm.surjective)
+ 
