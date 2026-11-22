@@ -1,8 +1,0 @@
-{
- "module": "Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.StabiliserCardinality",
- "source_sha256": "739fcb9a33acf8f51edae1d0b24ee1d827c0a9c58cfd5d0b3637435aaabb73f4",
- "lean": "leanprover/lean4:v4.36.0",
- "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
- "notes": "fixed for Lean 4.36",
- "evidence": "local port build on leanprover/lean4:v4.36.0 (worker mbp): lake build succeeded after patch"
-}
