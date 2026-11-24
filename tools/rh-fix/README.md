@@ -11,6 +11,7 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `regression-watch.sh [repo]` | Rebuild every module in `watch-modules.txt` at the current tip; catches reversions (the `Bundle0295` class of bug). |
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
 | `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, **@mentions on unwatched threads** (notifications API, `--mention-skip` filters bot batch titles), state changes, reviews, merge conflicts. Exits with the full text of new events. |
+| `work-finder.py` | Ranks small unclaimed fixes from the live `PR120-BUGS.md` board **and** build-log error lines; splits an **M4 lane** (build + fix) from a **mini lane** (static triage). `--validated` excludes modules already built clean and unchanged; `--build-log`/`--log-sha` marks rows whose file changed since as `VERIFY`. Watch mode exits when the queue changes. |
 | `watch-repos.txt` / `watch-threads.txt` / `watch-files.txt` | Watcher config: `owner/repo [own\|threads]`, extra threads `owner/repo N [note]`, files `owner/repo:path`. |
 
 ## Workflow (the part that actually matters)
