@@ -12,6 +12,12 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
 | `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, **@mentions on unwatched threads** (notifications API, `--mention-skip` filters bot batch titles), state changes, reviews, merge conflicts. Exits with the full text of new events. |
 | `work-finder.py` | Ranks small unclaimed fixes from the live `PR120-BUGS.md` board **and** build-log error lines; splits an **M4 lane** (build + fix) from a **mini lane** (static triage). `--validated` excludes modules already built clean and unchanged; `--build-log`/`--log-sha` marks rows whose file changed since as `VERIFY`. Watch mode exits when the queue changes. |
+| `ledger.py` | Content-hash validation ledger: `build` from an `OK` list at a SHA, `check` at the tip. A module is clean only if its source **and direct import blobs** match the validated ones. |
+| `claims.py` | Claim registry (module → PR/owner); `add`, `remove`, `list`. |
+| `journal.py` | Append/read the event journal (`JOURNAL.md`). |
+| `supervise.sh` | `start`/`stop`/`status`/`daemon` for the watchers; reads `watchers.conf`, writes PID files and logs. |
+| `post-receipt.sh` | Run `preflight.sh` and post its receipt to a PR once (marker-deduped). |
+| `sync.sh` | `pull`/`push` watcher state (claims, ledger, times, journal) to the fork. |
 | `stop-watchers.sh` | Stop the local GitHub watcher + work-finder (does not touch the M4 build). |
 | `stop-m4-build.sh [--container]` | Kill `lake`/`lean` on the M4; `--container` also stops `rhreplay`. |
 | `stop-all.sh [--container]` | Both of the above. |

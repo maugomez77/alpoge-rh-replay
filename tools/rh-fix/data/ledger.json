@@ -1,0 +1,680 @@
+{
+ "sha": "49b2bdb6a8ca653a83fbd2ab25ca16ad9e261f7f",
+ "modules": {
+  "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0045": {
+   "source": "d20070de5a764d444c0b1c6c32e51f1611c8446e",
+   "deps": "95966e8842537210a58df79d5569fe8af8436f314d7c1c4c4c21802ef0c31835",
+   "imports": {
+    "Formalism.LocalToGlobal.ProjectiveLattices.ThShort": "385788c17672606e14a9e1bd8a007efa1228bd8e",
+    "Formalism.LocalToGlobal.ProjectiveLattices.Bundle0033": "db1fbd21f409e4c65703de6694bef0929961380b",
+    "Formalism.LocalToGlobal.ProjectiveLattices.Bundle0021": "4b290a746d710e56e25d303b402e3571eb264215",
+    "Development.AbelianVarietyTheory.Definitions.ThetaValues.Bundle0002": "05c98531ec781720e08d05908b7d8a40ab3e90d1",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0044": "cd80905e8dfa894a37973a9673d6ab2b64d2b937",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.IsAdelicOne": "4f8a696d4023e0c3b2fe6b3d7f5f297ea7cc26fd",
+    "Development.AbelianVarietyTheory.Definitions.CMLattices.IntegralOf": "7937c5e5fd7374b63cc6b8499390d0d6b73914f6",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.IsHomogeneousCompIdeal": "1fa475b7af66ec8654bb6c155b25658ecb7063a5",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.IsIntegralOpW": "6b5fe446f308f73d6b610cd79a77762f2be16a3d",
+    "Development.AbelianVarietyTheory.Definitions.Foundations.Bundle0018": "39f9beaee4e27ce9c6bba0b39959fda9727005eb",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasSatakeGLOfIsSatVecGL": "0bb8ed82b20c3cd9b1c1e21d4af84a1c0c75adbd",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0179": "6f56ded61d4c12c1e95df2ab8bcdfee9f99030af",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SatakeParameterSphericalProductSpehQuotients": "be163450d1dd584ff05e809f949437c0345a1417",
+    "Development.AbelianVarietyTheory.Definitions.GaloisGeometry.LatticeDataThicknessBound": "a10569ae30b202f7426ff93e304b858d51636566",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDefiniteDatumGoodObj": "597c93a928014ebe644a99ecd26427b302b46f7e",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0087": "669b31d7b492479fff7a8d7e42295a0fac727499",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0099": "1e7d054a5fdbba2e2dbcdd3f62141443b8e637fa",
+    "Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.RelAmpleOfLocallyOnBase": "5cfe9f5e88278930f37bede5d8f196277e73d7fe",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.LawsProved": "213e1550d1fb32e8a26c0de99a12bee97f6bf528",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Bundle0007": "4cbb79dbfb9ead05da3acd5a759871f728d4059b",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1275": "103cecbc1a1a2106a1b987099457260f71b01255",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Bundle0006": "88f3d304d1360b6df75ff94ed6245de5785e9325",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools": "2cc2a7de106be9c274c0b3cded44c272e694c4e9",
+    "Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.SlopeBoundSingleLiftOfDefinitions": "2aad9b63f05f9da5b042adfe8fd718877f058832",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.CompEqOneIffPush": "ea4b781dc1f8e7fcd9d04a2fc037ce912def2ea2",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne": "d5aaf876017d4339f63aec0ef1b7137af897fc1f"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0231": {
+   "source": "48303a534355c75339e29f65e91d0e4bcd00c4c1",
+   "deps": "0508b335eded68f2d13f9f03730ec69979638a9918603cf8b2e03cc763b36927",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0019": "bf9f929b7fdf351252028e9cb8444b861976129b",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0145": "ed5bd8a1ca60ed9084e9dac520b214e196c3fc1b",
+    "Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.Bundle0065": "d404f6e09f4a6355528e57d8da0908719281dac2",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralNormSqEqToL2": "3b531d1c5c8674eb2a09c25ea931429953c8fa55",
+    "Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0017": "b73877411a8ed255d7abc42508ab0afa8faa4d80",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0214": "a7a399a63b7e2cb2642953d7a24df2e87128eca3",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0196": "7fc88a1cebb06f62960cb9f65813056aec37355c",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0200": "126a4c710c67cf0d0c1f7ae75142f1865ecf1d1e",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0217": "8cd46cbbfa3cfeab2116dbcdd3ed78a8553ca173",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0224": "f3fc4e4cd2ca8d1d774883f1eea49f24b5da13ca",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0223": "669969f5de19705e559763b4b1e370fdaf0962b8",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0202": "c2ae4b9a98040fde4ab029f4088aa4280c85fb5c",
+    "Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil\u2082.SiegelWeilUnitaryConvergent": "57bb4c7eb9bcf1324682a5fe7cceb4c5bb8bdac5",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.Bundle0007": "1d179cf24b61d4d5297ee5c510d1c41280a55c36",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam": "0e3bc62e9d6f0fe8e74a62fe61159002cd819b9d",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn": "5f6a02ee732849ce138c85070cc27c160fa67873",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.BilinearVacuumCentralCharacter": "ccc0287861f57a2f512a14a504dcc7e728fb3912",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0226": "0f5833c8b3c96068c4d826d60bfa00f6007d6216",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemHomLatticeCompletionIffSupportedMaps": "ece0b3a8c278480cfafa7bcca91099804e2f94ea",
+    "Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0008": "6cb128b56c45b41aea13a179fcec85be55a65447",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.AdelicPointComponentsAtPlacesLatticesVacua": "01b4f0c198833173f2b5ff9e91d6a620d4dd764b"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0246": {
+   "source": "8f325d8eb97d5eda429136638c142840f2f11b0d",
+   "deps": "f9b7635767f4d74ff0fcf888afb4075aa5ecfb769498d9fdb4b0707a66717e58",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.LatticeFrames.ValLastX": "75c69273034282c84aab3983eff64cdc7b443435",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0236": "98115946a6a65dec86ff2302658c390643265204",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0090": "b17bbf2657a9e3b86ad4339557a41b06377c6082",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0203": "d8ba2e5e0612687f8d5ce20016226fab32b90f25",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.Bundle0007": "1d179cf24b61d4d5297ee5c510d1c41280a55c36",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam": "0e3bc62e9d6f0fe8e74a62fe61159002cd819b9d",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn": "5f6a02ee732849ce138c85070cc27c160fa67873",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0160": "46fd451e2c306648cff38470e211c870b2ad361f",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0239": "76317a5ef0231327a79795e5f3f14d331b338d81",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0224": "f3fc4e4cd2ca8d1d774883f1eea49f24b5da13ca",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0225": "e9227bb3cc3aadd144d8035dd3a2ba93fa97c6c8",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0230": "2da54cb7a6c47de41fe663183ebb5881b00e675f",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0214": "a7a399a63b7e2cb2642953d7a24df2e87128eca3",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0205": "3d1834f2c9a6e514d331ef3428febb1662711957",
+    "Development.AbelianVarietyTheory.Definitions.LatticeFrames.OnFramesRdApply": "76f4bc1d22a9178e2463ca83f59941784849262b",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0233": "b95c733730b35c36fd4113c0593dc2db8e6d95fd",
+    "Development.AbelianVarietyTheory.Definitions.Foundations.ForallEventuallyFinLocIff": "ec6f6a8280733efb65c72bd4207814c2d272f113",
+    "Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0017": "b73877411a8ed255d7abc42508ab0afa8faa4d80",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0207": "ad2ed87f0fbc5fb546f2fe37e7b083a2f7a1baf3",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0192": "11a8ba90cb40c3ba34459972d8b23fe1af69b15f",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0227": "ffd2149c31b041b68e907b7e02c54cbf01658600",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0238": "179e018b8691c93deff3bef2beb4e59b99e346bc",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0234": "b184bd9b13db449baf5b2694e3d29add1150f1ec",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0073": "e555d37ccf8a88e6288c382e202900a1b5e81bd7",
+    "Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace": "8a390983549297f6f9c3ad0fe7783c09395fdaeb",
+    "Formalism.LocalToGlobal.IndefiniteReal.Bundle0016": "c30d49756ff3b5f53fef1583457f40ce2ade0fae",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.Bundle0004": "32e0e0ea8cdd9c2fc4a28ad38c6ef43a4a036637",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.HasDRepIffHasDerivAt": "3fa166ac29f2830ed70bf69c1e40794d9eee7eef",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry\u2082.HoweUnram": "9c9dc8d121d6ab86bf03f8c2baba1638cd191058",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PairwiseDisjointCell": "41ac60a3653777878587e3ef9b7d0d1f4beba277"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1245": {
+   "source": "ffee542029f02cf2b5d90caf5e37388798b60007",
+   "deps": "a2d28fc7375c9f09e643ba4809f465c792d6698fefaa61bada0dc899f46b2739",
+   "imports": {
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1222": "18bbbdcb014eebcd90e8877d91694016c3822c72",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle0922": "9d41e789e551e1058b6a5948d02e5a09f4f85a0e",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0041": "fcfbd47244548e50ab879cc8bd3ce7af1efe289a",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0042": "024e502e8317b82540c360795b22da02f07c3663",
+    "Formalism.HarderNarasimhan.StatementPl": "581af3d483b1cecd5180fe8f9c193f02cdd51788",
+    "Formalism.HarderNarasimhan.ShiftInvariance": "29d7eca1af486b46186ef0b2c36595bb0977c4b4",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0034": "8883ed17caca9c9163f2e1c1d91c1751b41b6088",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1218": "a8481a4feec32c2563d7be9f49d9d4dd7b482cad",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle0689": "c3272ddcbba721dd57920dd5f8f5788f025cdf74",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle0519": "e47a6156cfda6f330f0f59f83b11d469374aa64d",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle0690": "0651e291808ab516469e82302f8a6138b0c1e0f3",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinFirst": "c47cac461ba84059175bb5465ad6b02547d13e27",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.AbsSubOfDisjoint": "53104ffb1bef4aefd08ee8eafb2645892eacda12",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle0065": "b7354ac5f06c12de39775ab44387ad2be0592378",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1228": "cf050b37998f3a8af7a9efe9923d43891ea9218c",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0037": "a9316e45994568d0ae0e8ac4eb6ce299b1558363",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0033": "7c6cfcdc3532dd852e4906cfd7f6107ac0c359c4",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock": "d90ed319f71e200444a7c9f202ab017c462e8906",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1231": "2259c517c10162a0fc6a347af78424faccdcd2fe"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1254": {
+   "source": "6850c83bbacccaf83d62a9e9f0f730d44cc3f1fd",
+   "deps": "9c51a42f50ce7b040706c4d611053ac014af879c586a83cc6f079ac503abc408",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.KeyFormula.GeomIntSelf": "66008342ea073cb70aff555fbf2f80da6128d6ce",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0148": "3b1ff0a7fd1d3aeb06e073ac4cc5489f96ca9442",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0120": "8bb269ddcf7b4afb349123caf7dd5a647c6fa6d9",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.WeilIsGrpPullbackOfCommute": "9982faea04ab3b3740be075a0bedaff300bc06dc",
+    "Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.Bundle0029": "d57fa3774adad8628f3a11e5122379002640fb1e",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MorphismsSpreadOutToFgSubalgebra": "f7a1c7ecd34b5995e77fe29e9d7e8025db11ecb0",
+    "Development.AbelianVarietyTheory.Proofs.DegenerationProofs.Bundle0166": "c836dd47ebacb57f2814e928c54ab023d7861295",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsAbelianSchemeAndExtendOfGenericHoms": "979db2271a27e34f7bc60fb07d8f3abef2c0e391",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0173": "d7b9948a967499a4827383c20b21b89f551650e6",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0039": "37e408f9447ce826d328bca582517cd36e516804",
+    "Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsIsoIffBijectiveOverAlgClosed": "607475d9bd0a585864aff493e94c31a152f63420",
+    "Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective": "7f9c9e88acc8c2bfc8050b92126a543039dd33a6",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0044": "f6ad120b067cdd6bafd61e8e78a6b7ce6a94c10f",
+    "Development.AbelianVarietyTheory.Proofs.DegenerationProofs.Bundle0126": "c168ec2cda104d4040870f0bd0b32653c433ef0f",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1233": "093bbb350e32dd1a66c3d6ad23b6e9e1e6fb444e",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0027": "d9b76864914ee066df0ce44162cc6b588137269e",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumNormRowSubProdMinors": "67a211a81980d0ca2b1c80b4b3f57eeb7a68f9dd",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0042": "024e502e8317b82540c360795b22da02f07c3663",
+    "Formalism.HarderNarasimhan.StatementPl": "581af3d483b1cecd5180fe8f9c193f02cdd51788",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle0922": "9d41e789e551e1058b6a5948d02e5a09f4f85a0e",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0041": "fcfbd47244548e50ab879cc8bd3ce7af1efe289a",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1228": "cf050b37998f3a8af7a9efe9923d43891ea9218c",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1217": "3dc69d2a48fe7b142ca12ef6d3061b35e52f4645",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0033": "7c6cfcdc3532dd852e4906cfd7f6107ac0c359c4"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0381": {
+   "source": "0a7db290dc84358bd88af68e85e132dabdf4b369",
+   "deps": "8f18c62d4584b6cfe6a6a854407cd55ff6c367bfe2718a9ce13f3623a65e36b6",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Bundle0016": "bc618b11ff1e96d314cf49a11a1ebd7d822bb66e",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.CorankRelation": "5545d3b823c666e7fc64f50cc90b760e9382e7b3",
+    "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ScalarEquivalenceGeneral.ScalarFactorEqOneOfLe": "39684bcad01475a128d85eaf96ca6aa4928f16e9",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.MainEqClass": "ede9a39b82564ab44a1c15c702499d46b83de1a5",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGram": "6a453e063693b56f5c59edd3dfc7e4cc33ef462f",
+    "Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SerFixOne": "bb70910384e178081ea239f35a23b97ce8cab241",
+    "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.Bundle0015": "2e1c43fdf89cc829b8dfec5ed4ce1d91bb22552a",
+    "Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0018": "4631568c2fd1322b7daa4e1f5460b895536e261e",
+    "Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsAdelicUnitaryTrivialOutsideSplitPlaceLocEq": "24d62d1c5113cb61af6ff7c56425393b7362a26c",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0333": "38e38188c6a60232b9e65339b6a9a774fa4806e8"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0295": {
+   "source": "a69506c19ad37d524c7abf2521298bf197bdae5e",
+   "deps": "7085adf85c75b32060d20483319a74d4eb45a77116265115c132f290cf33c5d1",
+   "imports": {
+    "Formalism.LocalToGlobal.IndefiniteReal.LinksDefs": "e98ed470be503e7a18370f6fc2bd1c2fcde2c8f9",
+    "Formalism.LocalToGlobal.ProjectiveLattices.Bundle0027": "81da323f92a9ade5318332645ee8537a21d49fef",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0292": "70e446730a49cfdabb194b6a3af0c49165915d65",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0071": "146954ec0118b95075a7060d0ac2ebfb19b33988",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0068": "1d62162b9e8ba9d9e67de68fbb063c309525b224",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0005": "6f94891fcaf07d35269367e45e23e49657392b8e",
+    "Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm": "fb8d2b7a97fde5bad0a7c215a6827ba83f43473f",
+    "Formalism.PairingDivisors.StatementH": "6fcbf8ca8e4ce22d6c5424e8fd7f1986a906f711",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0224": "f500577e7975ec03bec310d96d7db88746819c9f",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0264": "33d67f188407aa3a9f0ef92abe7f6e0d5069fc3a",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.CmThetaTaylorCoeffAlgebraicAndConjugate": "9c9e9c96a67514468d388a3b64c7893f012d3c33",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0255": "17bee98b0f218cc571f424e46c5c9dc956254fb6",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0235": "148c7a9c7655374f431c22770e6e0e5a061115fc",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0274": "33b920a2e35ce91b57416e19aedb2e68a8dddb2a",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.TorsionPointPadicAbscissaNormLeOne": "8cd20749660d10ae4dbf5ac33b9f71c767d2204b",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0294": "6f58594b79c3596e08d7c5c2c59b8b343571557b",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0282": "bdb06516ef644f89d3ead02e8cd769cc76d61614",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaTranslateLogNormParallelogramLaw": "e3c2503a01d433f91acc6e0e2a8d11665b9e012c",
+    "Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.TheoremOfCubeOfAdditionFormulas": "209902c014636ae0231f43e478d312289d434a13",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0230": "0c1a2d252d929eff37abbe0ca1e7cd24ad396d74",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0272": "8aa6523d492798355f8ab5ad79da06435d85e91b",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0291": "3b37db7fbd076bd7c9523df7fa32b5b63b7b43aa",
+    "Development.AbelianVarietyTheory.Definitions.Foundations.AestronglyMeasurableQuotMeasureIffLift": "4c2be8d52e7ff4beb350022a8a0be6759067521e",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.OddnessConditionHolds": "23a29a37a18ff9f60096df865be078c1ebd0d49b",
+    "Formalism.LocalToGlobal.IndefiniteReal.ExistsChosenExtremalVector": "7687bca4fdcaa5aeceee8df95d2d729ce765a8f2",
+    "Formalism.LocalToGlobal.IndefiniteReal.LinksChar": "a5eea945d46d450c770de1d5893515daf1b17fcf"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemBddFormsOfWithSmoothings": {
+   "source": "503448f76006948b786139c727cc85b488820159",
+   "deps": "f78adca0fbf0676bb9af4ca8926d05bc5e0b82c9c4212c7cd2f0dfc2bd3d1269",
+   "imports": {
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1155": "0f962c028ba09dfb35d8eab31a02fd83f7855196",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0282": "247efaa33f6eeb54ac6136a5a4905c459c1e1353",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.IsAddHaarMeasureVolumeLie": "e9d34da8afb77ea7b84603908daf3d8b1a55cdef",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1247": "c45cddfa5fc856524791593697ea9f00467a0503",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1252": "26e94571dd3b3643244a54fb62713a58d3fe5359"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL": {
+   "source": "bc818b884eda0d4e1b7213ca7570e605a22f4eee",
+   "deps": "d32ea05f38acc20e56b9e3c83d6b26ed457018c5f3e1b6875ea71571a18f4d37",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Bundle0025": "f5e181854779343e55edf2692cf921006fe0457e",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0011": "e85bf39531a8ba28e85a961c7a8fa2b9df10af87",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0009": "baaeb8f3f4246d72ac24ac9810bf5085b85234cc",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0008": "a593ee611be08e98d98f1c5c6154cd0f296e6833",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0001": "e846128b852682a67ee43ab57f6fc4f44b30657a",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0010": "e2ed38e34d3d929d40cc709e5b18085de6490fa3",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient": "95d3759e5ac32825d8d7ffbe253965e4c84d8c31",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.Bundle0001": "70356578c9f2fe445a879dcec41504933ab9e381",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.ExistsUniqueHcharOfFiniteOrder": "c909bd73f5c73e704e45bb5d395ffa28abaad375",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSupportOfIsSubquotientProdIrr": "5e439f4501067bfbcb1287cf7a58dfe844cfa64f",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSupercuspidalOfIsCuspidal": "0fac2ddabf7e3adad5c7346c2151075cb2775450",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0630": "b14ab404bc5799840969b437b26ff7880c054030",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0632": "951e00aad9a7991cd503d4ea286d216485f5373d",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsNonzeroIntertwiningMapFromUnitarySupercusp": "b2c1c20fa6bcdf108f770badf839e72ba49dea36",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0147": "1d3a9640ba522a93cf4926b6d18f7a55240d42a2",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0050": "349d7ab11666add3356e4f485f698eca3a8ab08d"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0200": {
+   "source": "3b43387fef8825501ab78eef955799f51523b0b1",
+   "deps": "c1e2eb17f96973a28f2e61109acfd46490c4f9be40d957a6ef1d66cda682c55a",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod": "489f7277ddc46c7f29d1bcebe40e72f00c2cb74b",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.ValLeOneOfMemKO": "f81d756c338b688441b150ef30206f3721f39abc",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0187": "52d4c3acdef31cc9fcfdcec7ada0d665c513d5a9",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.DeRhamPotSemistable": "b50807615dbe413515070e23f34b1496e94c09c6",
+    "Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations": "0635e4a1541cc1441242c76a240ae7770de9c7c9",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalFilDR": "f8e2c69c00843d84763fd35627023d3c563cff1e",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0050": "77c2e774fdc4956d1ed38dc55d991f274f5fc320",
+    "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.Bundle0002": "b779f6602db5693e2235ae84cfb7a903f6b1e750",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0191": "fded03d1f0359756dfd4c2b0740ab8a86dd28215",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0093": "d9f5b4e3e3631af9a9daf1a50f717f3f925c7c31",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankLetterHomComp": "569bcf1bd8f9511505106fbc6009bc346c870fd7",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.CharpolyWeilDelignePotSemistableEnlargeCoefficie": "58b62f44cbdfe927a4ad73c46ee2985dcb315b6d",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0579": "5b52905d93d1ab78d1bf00afe76d843a831d2554",
+    "Development.AbelianVarietyTheory.Definitions.GlobalTwisting.Imports": "f7e1434ef82d87d70d5bf28d6840f6cccfc6226c",
+    "Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.Bundle0115": "96bfc9408cc4e6bfd0e29606f4efcdaedaef977f",
+    "Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.Bundle0116": "3dcc90b5c6067533333f23e32e894c3c577940f4",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0189": "9fc7fe149fe012359741f4ae94660d3cf94978d1",
+    "Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsGoodRationalEigenformHittingCarriedPart": "4fb5a57d5b4ca853aca14e4c85cf72bb2b7d7ab0",
+    "Development.AbelianVarietyTheory.Definitions.GaloisGeometry.Bundle0017": "b1c10d6d1b43e4a270ba7f93a20e3c15cf58dbfe",
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry\u2082.HoweUnram": "9c9dc8d121d6ab86bf03f8c2baba1638cd191058",
+    "Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil": "fbb6b2e2c046b7055a5681c4e13ede2dc09d14ad",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.Bundle0004": "32e0e0ea8cdd9c2fc4a28ad38c6ef43a4a036637",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.Bundle0007": "1d179cf24b61d4d5297ee5c510d1c41280a55c36"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0059": {
+   "source": "ef51a9757bc2a862cf6140875cbddb77d8d189ac",
+   "deps": "e4d2a103bf140a856d02ac44b7fa2fe98c542ca0545ae17d5b726bdca911210e",
+   "imports": {
+    "Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.ModelsAt": "49901b7ecfd83d3c533dde9d3b82747e0057b2a4",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0014": "df9a57f86a429424d494320f8b99b21a1ecd890a",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.Bundle0027": "1a2250bbe6dd35183bfdca05fba5aa7aaf9b701c",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.Bundle0033": "f18c59e384ae295098a61b1a674d9045bed56980",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0048": "b0f38b1bfeb84ccd8e656c14bdc7cb6a8e4a7a73",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0058": "bbd52b9ba58da064872dbcafca0ce31f8b8f0ec1",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0046": "4f1e7d02561d314c2de9a399fd1f0291cd674474",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsNumberFieldNormalisedDegenerationData": "aba0e3a7778736f005cd47a63670333df4eb48cf",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsNumberFieldQkPointsComplexDegeneration": "076fa01aeeb9c5dcc6756b91c8dfab11e0fecf46",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.Bundle0057": "c883926c6e062e78904424f8ba1b83170dc6ac6a",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.Bundle0015": "b6bb945211b2bf4a1d710e8eaed2dc31efcc13a1",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.Bundle0003": "2da420dc5298a4df5866c548aaa024f3103f0ed1",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsMonHomOfMul": "03bf95bd9ceb097449d3327d38b5ebf38e122615",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0175": "8422a8f6a7015b287b357e58b1410b262cb7e342",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0176": "909c052c1942b9b1b878ce64a6c83e09cc3227bb",
+    "Development.AbelianVarietyTheory.Proofs.ModuliProofs.Bundle0208": "e91367f5488d78b1eb0eb5bff27a3495daf87237",
+    "Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.IsThetaL2NormSquared": "126cadae87fe7df154914ac5342a534bc4a03e5e",
+    "Development.AbelianVarietyTheory.Definitions.RegularCharts.ModelAt": "fdffc046f04d60a2aa733831ea694469b72df1d0",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt": "f64065f2fd2973ea49d23d898ff9f887816c106c",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0034": "81eb1d7c49cf6a9be506ad226e7ca36c79094b0c",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0039": "b9fc2c2346b1744cd3b289367a05cc4db435e104",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0032": "8ac3d3c0729b443701e40c0daf3bae11835634b2",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0096": "2fce2d965e6864c0bfc3df23d9c77dcfbbf58aeb",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0029": "938c1e0c83d701e32f45e5ef7847e7dd44dca9b1",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0028": "01b78be0203cf45c041a4007c0a1e2815075434e",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0027": "847c705b1273c085c3834b196e45b902cbd24e07",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0054": "e340c85c326bca9a7d484dd21ff094515c94902b",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0010": "5439ac13c0d3ef5fe354eb4b0e8d086056ec1cac",
+    "Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.Bundle0019": "b4d218d7d8d6533a030eb4101a7ae77b26290478",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0017": "e698ca63ed525665ae851bfd9723ba801ca097ca",
+    "Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.IsFramedPointChangedByLetters": "5375b3fdcb5274f98504857451c2864bf890e736",
+    "Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ThetaL2FamilyUniformCompare": "2400440d3b01c5fddef7ebb91741c30e589f8ab1",
+    "Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.Bundle0001": "3ba2e322f0ac19f0af036c65176941e1db996c22",
+    "Development.AbelianVarietyTheory.Definitions.ThetaValues.GamAt": "4da20e4cab63c2a0c9953ff57c58715496134bef",
+    "Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.QatOfBridgeAlt": "8cde0d313e7ac57adb8d9a3893a75d97191192d0",
+    "Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.Bundle0061": "9349c910b82877511a6af745275a0aa5755ab879"
+   }
+  },
+  "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0367": {
+   "source": "cfd615d92328eb7898826ae3926519eecbe29b2d",
+   "deps": "b365201c808b9585681bf74c7e0979837fb9791fa7d2ca23811559a8d59369bd",
+   "imports": {
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient": "95d3759e5ac32825d8d7ffbe253965e4c84d8c31",
+    "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.Bundle0001": "70356578c9f2fe445a879dcec41504933ab9e381",
+    "Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne": "e68281c6e851b655662428337abd65830e1273a0",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.SmRep": "059cd3d171b5248f574d6945939b9ebb5c0eb934",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0346": "637d986e3bac8b3deea888395c8aeeadd2290469",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0127": "8b7fee1d4988a7f6022c5803f9112dc0c186ee63",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsEquivPiExteriorTensorBlockLevi": "f7fd3bacecefebc46e31a78a9520311a30453f0c",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormalisedInductionProductParabolicPiTensor": "ebc93a33b36aae5307b304699f7563a38760a890",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0126": "2992a0c0fcf2b5028f89bec13841bea63c8647ef",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0124": "899493b8ce9046fb282d22d2932389ebff164b53",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0295": "c5f0de6ef1a1bb4475997eeff294e5e72f7fe4a9",
+    "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0041": "fcfbd47244548e50ab879cc8bd3ce7af1efe289a",
+    "Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.Bundle0064": "5886859d6236978dbc309499e13349e9ee758418",
+    "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0202": "c2ae4b9a98040fde4ab029f4088aa4280c85fb5c",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.WittFrameTorusEqLeviElement": "7f0e71dd38146607ce5dad1a851aa893d553889f",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0337": "1018bc9c17c8ceb5574909f828c7f1a25279cfd0",
+    "Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0252": "13bb344d30e45ef6c1d20299810c9e54d78ee73f",
+    "Development.AbelianVarietyTheory.Definitions.ThetaValues.MemAnalyticAtZeroOfEventuallyDifferentiableAt": "113993ac3bffd3aa9cacd437a11658413b7d4461",
+    "Development.AbelianVarietyTheory.Proofs.CovolumeBounds.Bundle0008": "80257c9503e2ad1cad5d6bd41e16abfde2637c0a",
+    "Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.Bundle0007": "64e8af39970488efe9dec7b982d0a1bf27259b2a",
+    "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0345": "3e208336daee17e3754fbf2501d112bc024d0e11"
+   }
+  },
+  "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.HeckeShiftSums.Bundle0001": {
+   "source": "80d93bb9ebb94182bcd32c37bc1f21fd5ab9ee86",
+   "deps": "df251cd2cf6c777885816b16096b85f46562f00565616568ece22f939e5c2bd5",
+   "imports": {
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.Full": "f1c7ce7474237564a4ed9973c299c8f0b2ea6bc2",
+    "GroundTheory.AutomorphicForms.CuspidalDiscreteness.Bundle0001": "93fbec49a3c89540ff4b4467533bcfbd4ac61893",
+    "GroundTheory.AutomorphicForms.CuspidalDiscreteness.Bundle0002": "96c37bff78a2e8b1bbad32c928a7d193aa813350",
+    "GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsMeasure": "766ed92c88333c146ed780aa0a42687ff100953a",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.HpSpec": "0c5635faa66bc42cbcd1431b171969e88a07d95e",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.Bundle0004": "78ab3968c70b1da151d24172b3b4862addb5d0c0",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.Bundle0008": "d2b7336df34744056d17039f9a672d62101b0aa3",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.Bundle0004": "9f1163542498ea3e3e71a3fcbac11abab7d06f23",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.Bundle0005": "7d267c38073dadc12c7d6e77479ee03a8cf2517e",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.Bundle0020": "b4b30bd635e970c9ada2ff2c1e26942bee88151e",
+    "GroundTheory.AutomorphicForms.CuspidalDiscreteness.TorusDifference": "4c55215b5dd1b771a09233dc98825493f1439d6f"
+   }
+  },
+  "Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ExistsCore": {
+   "source": "f130f357b2d05c975a59115163b065aaba6f772e",
+   "deps": "ac1e984c8e6840384e9a0ead7d8b0e11ce8d575d8a952094138ef399dbc41a88",
+   "imports": {
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ObstructionBoundFromDuality": "ce232aabe613669afcc64bc9cac5a6eed047ef53",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.Bundle0004": "6b514dcdb068cdd6a19e5eb1d33dd4bdbd54b04f",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.Bundle0001": "29d45f1bfeedc5daf3250bc5f97f3374635a4537",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DegreeCountCohomology.Bundle0003": "828448ed7b2c28d9f079898552be069d12466ab1",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.Bundle0017": "a66697fdd1c6bbca0079aa5b92a7cf0782eb43ee"
+   }
+  },
+  "Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0003": {
+   "source": "7accd28d36d7bb93e2fdcb903d03418ab2a471dd",
+   "deps": "88a61bf53de3791ecee182bd4a77cdf269d2fac880a50b6c952cec1f8fcf93f4",
+   "imports": {
+    "Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0001": "2e23fc30421361467e23ebce0c215f3ede20fb00",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.Bundle0003": "bbdd39d3b073064ead73563518c9ac344ad0a1ee",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.LocalRepresentationL2": "1734e0ddcd2d0466c357942bdd47e94d7d954fd6",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SmoothRepresentationsGL.Bundle0004": "915b7f09a25840878587995f9acb133cf4c93d5e",
+    "Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.StrongMultiplicityOne.Bundle0001": "6df9cd7aae3aa358d1a0b5ed9a094d88e524f58b",
+    "GroundTheory.AutomorphicForms.SupercuspidalCoefficients": "344e7046ef2c6066f0f3049d8d1d3615070aeb2b",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.Bundle0002": "24e8d4842087678480c413054db7f8f62b65ddd7",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.TwistUnitary": "e3613bc07f06e4dce570f0e2f9b12972fb273ba7"
+   }
+  },
+  "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0009": {
+   "source": "a8fe560772b3e8b3e1dd518f0c81e63397a2e334",
+   "deps": "85c67000de85d112470d547bbff63f89a3f7d202f38e2eec28c98c82abd745c9",
+   "imports": {
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.NApply": "f2e83de8ad05773449a4b3b42df18ed751e43ce3",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0003": "228bb0c867fac1367682648b14228ae393546c4e",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0008": "006eaab86c8a7dea8b492a470b2ff7de72a71810",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0007": "247df20834fe5f6a2cca780fd85277b0832dc82f",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0001": "37c9363fc9f8c30974d1f2a51aef0c2de13c5c6c"
+   }
+  },
+  "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.PlaceAe": {
+   "source": "e73e3b7e04597d5d4e35f6222c0b300e209deb11",
+   "deps": "ce5501784f735d67179bf118a605b05f891eff091b31f0cf00ca8b9f45ff8335",
+   "imports": {
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.SplitAt": "b5202775ecf70b1684d92edb8dbdeea2b9f1e30b",
+    "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.Bundle0001": "489b212220de0262ed894dcbd74922f888f9e72b",
+    "GroundTheory.GlobalFields.SemilocalAlgebras.LocalDegree": "d908a1ae7b7180b8e7d021b93a2a2f4b66fa700f",
+    "Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.Bundle0024": "4e58b62d4d668ccdf3a86889a21f22a23b7aa782",
+    "Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.Bundle0116": "3dcc90b5c6067533333f23e32e894c3c577940f4"
+   }
+  },
+  "Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.InfinitePlaceGluing.PairCases": {
+   "source": "86e91185727c3c3ae096e82449e6ef5bc0e4d681",
+   "deps": "eef4d9d181d1283cc9149b18f38c5326f985b5783d3b093ff0de9da76edffc35",
+   "imports": {
+    "Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.Bundle0001": "b1addd717e490b875cff45336c4ada6d8d7be7dc",
+    "Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvOneSubBound": "08c4302b132f36960904bd1f709b15416b3a0f6b",
+    "GroundTheory.GlobalFields.AnalyticClassNumber.DirichletHecke": "1510efaa733fb1c253e19782e543501773e77c5c",
+    "Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.Bundle0048": "302cd721c6c2c11f5688a56b7d68300dafd4fdcd"
+   }
+  },
+  "Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.Bundle0001": {
+   "source": "960d9ff25f003454ece02d32245879fd1f117e2c",
+   "deps": "072e418803a47f51cac1a675a04407616e439318e9e8b68eb52a346ae7ca0247",
+   "imports": {
+    "Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.IntBasisAlt": "7dc54eaace5c0abd7f73cfa51411fe311f7ddfe9",
+    "Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TrivIsCr": "b8ba7b531177debd6c49c27f42ae82263060c05d",
+    "Formalism.SharpRestriction.LevelLetterCocycles.LocCoh": "c6a912179e3bc2127fc366363e862231f90e01ec",
+    "Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Bundle0011": "f8360dfd48ef8bbf9821efac1d44b315f7d6eb75",
+    "Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete": "9c0447b8bebe6ee2a9eafd2af79f33441be4d9d4",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.DeRhamPotSemistable": "b50807615dbe413515070e23f34b1496e94c09c6",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0368": "9458460357bb3d196c54555bb11028270a87f1ce",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0369": "e26e8f090acee558a4aac8b3c64e2d7575be2a1d",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0286": "41d76365ff1bf739d9b9648b4b2cf5fd47ef22c8",
+    "Development.AbelianVarietyTheory.Definitions.GaloisGeometry.Bundle0002": "7e1ec2d3fb4b00924ced09e6d9da62d2ef7d3da4",
+    "Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Bundle0001": "9da1472f2bd16dce89b4fba4321f56ddeaa8d82c",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0189": "73e8909940739a19803d361fb5c3ea86fe44c0da",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0230": "ec9389be41ff8ee40b0b8c98600d59b2cbb14c93",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0385": "f94f8a2e2375b4311264f60191f4a8a9d445e88d",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0479": "a269a87af0301b250195c26bf4e95e7393dca6e2",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0415": "c967926f809b7c0e37cac452d69b09e22f829dc2",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0353": "ea7edfcb7316b6548c5f4d66f54dea3a9dd261dc",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0360": "0de0c3abaeb63715a8d9973e80c52ce8b0a1e768"
+   }
+  },
+  "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanOrbitalIntegralHuaBound": {
+   "source": "b445ca0d16a17fde3373e0cffdbb6d489875e02f",
+   "deps": "229eb28e2346eeb18770deac0dcfed4c57cc09afdcc075bcc3f24334754439a3",
+   "imports": {
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC": "07c9341fa47362fe720f212d6a921d971c42d171",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0050": "c20dbabfcdb41bee7cda9ac63d14bc4eb93e063e",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSeminormDiffSLe": "6a96faf857ffcae1eb4a52028b8df25907755edd",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0328": "5cce9440b0e6e2600f1348f720885888bf082e8d",
+    "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.Bundle0002": "0566512c5cb12a94071bac8bff1aeb71335bf75f"
+   }
+  },
+  "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0380": {
+   "source": "d799c8f82d64924666afb2f41b581b36cfa67976",
+   "deps": "91510a2b9c4bf1427e093dc3589efefa8e04c6df1e06f8cc4ed1804fa6f3fcb6",
+   "imports": {
+    "Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.LeibnizDerivatives.GenericProdIff": "3211e9419423dcb1b668480591df54d3e6619e75",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0331": "1321499fe60da3124170906244454e10ece6c8d0",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0040": "1e05156bb0d6f27bae142d5e17cfc1d7a44f904d",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0361": "d6962ac738090afd4b1b4d8153353acb9b824547",
+    "Development.WeilBound.RepresentationTheoryGL.TwistedFactors.IntegralUnitBaseChange.InvTransposeGLInvTransposeGL": "014f5cb5c4e2a22dcf4b68bc889539ff4f8e5858",
+    "Development.WeilBound.RepresentationTheoryGL.TwistedFactors.LocalBaseChange.ElementaryCosets.CosetMap": "34ac67136e817e803c2f25b3b5177ad5b3cdf491",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0360": "0c15cb6d4f9f12e54bb83bf23edfbed91d6bdb3d",
+    "Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.InfinitesimalCharacterLimits.AllLeaves": "02f5628ea690e86154d20db3e953f709f98e969a",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0282": "37b539f618e290a040fa8ce1eea6d1a65df97f7d",
+    "Development.AbelianVarietyTheory.Proofs.UnitaryExistence.Bundle0061": "a621e137b9f1597ed86a7e190fefedf6c660229f",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0365": "f62e6d8215921f133add2a48b51d713237963c93",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0351": "72bdc21d81ac5c13752be36edc00a02fc19a2b7e",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0366": "ef06da280c3e0e41b5b8232696d2949c2db4fe36"
+   }
+  },
+  "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0420": {
+   "source": "27cf8985d15671a2c58187d66e1fe3d5e6f19ccc",
+   "deps": "047be7cfb272a0001b6ce212b3b6cfde8e96f444b516d376f2606ae3a0759dcb",
+   "imports": {
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0390": "ea40a6a140c8ab9d3375727529a03b92ad7eca49",
+    "Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ThetaNormCommutation.LocalComparisonSplitting.GlobalCharacterOfInputs": "e570a09e13c398e957ebe1180a0edbcec7f5027f",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0385": "a2aee8020a16bc245d799dfcae4fb7bc1408c36a",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0365": "f62e6d8215921f133add2a48b51d713237963c93"
+   }
+  },
+  "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KernelSumBoundUniform": {
+   "source": "a4f79efbf4f08b851da946c96b7937ee1572f23e",
+   "deps": "3d50708fc371b2e8e968c27647fc4ee4d3fb25bf1784875eda7ccab0aace6893",
+   "imports": {
+    "Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.InfinitesimalCharacterLimits.InfinitesimalCharacterGlue": "83a8ebd6d5b077f4483c5205aad5fac3c75170a4",
+    "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.T2SpaceAdelicGeneralLinearGroupNumberField": "066e72bdc0a7e52958ea76a63a2a860dbd7c680d",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0111": "71f48c1e0b3bd1b0f0fd1d2c2fe605d2ae5941f4",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0391": "0e17a57fc89af5354d279df48b32e6006eea9178"
+   }
+  },
+  "Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProperGroupGermFiniteSubscheme": {
+   "source": "17bc6e6fa61d56cb90b4a9d7f69341c8c28d11e9",
+   "deps": "64e7bb520e7a968f2957a090d69ee625eb73c364ef8fe0fbd79462cea9d20521",
+   "imports": {
+    "Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.KernelRankMultiplicationCharP": "ae1b603d3bf3d516b9c155a6a33c4ff8aa60d423",
+    "Development.AutomorphicSpectrum.Definitions.GlobalGeometry.Bundle0013": "6cbba59bfc831e07d94bc1edfe08f22eda1ed08e",
+    "Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul": "2e8195d5764567c1f6238dc918f9f64bde94370d",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion": "f3442b67abc563d0b55da9ecae9e9ae6e9af6490"
+   }
+  },
+  "Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable": {
+   "source": "c28bb7a98ccc92316d30a59b0203275e1c6032d3",
+   "deps": "1fe33382830252441a4f6b169d3a3a00f1ed51a8adf6f80d6dbfb20cac7a0046",
+   "imports": {
+    "Development.AutomorphicSpectrum.PublishedTheorems.Metrics\u2082.Bundle0001": "4f5c7c768d38405063417868fbf7c6bffac810a6",
+    "Development.AutomorphicSpectrum.PublishedTheorems.Metrics\u2082.SheetDensityEqSetSheetDensity": "321b72c2b25c6975b381e0dfb8279bad0b8cfc8d",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed": "fd4537f63903a0d11215441901c4fb1337f1f583",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0016": "7424910ef1362bb365b8866d7ea85bebdc1b2e93",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0010": "74e1756e0c8a83658924871a10675219e549aecb",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0017": "1540b342b96b934ef5baa3e96ef2ff97b9f50c48",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0012": "3440638aff1701fd5c0945f9b407a2ca5be632ec",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0009": "5feac69d183f0d90d5e6cba88f07f390f83ebf27",
+    "Development.AutomorphicSpectrum.Proofs.MetricProofs.Bundle0032": "ab71d001f6b4fe551c11023f58fd28418e8e69df",
+    "Development.AutomorphicSpectrum.Proofs.MetricProofs.Bundle0038": "8f325dd62d88fed66dde1319679b23974ba44896",
+    "GroundTheory.HeightsAndTheta.Heights.OrbitLimits.Bundle0016": "c22f24d4e06f1838b8011ed0ca9e52000ac9c716",
+    "Development.AutomorphicSpectrum.Proofs.MetricProofs.Bundle0053": "8cd28e6ccf7e31627ef0bca5db9b20fb49caa44c",
+    "GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PPtsSegreChartFibreSum": "1323ab45786ab580022e2c316106a66af40a9ca8"
+   }
+  },
+  "Development.DiscreteGroups.GlobalIrreducibility.Bundle0003": {
+   "source": "cb2616f9cf85280f6f6b7ba0831b568ab38a77c5",
+   "deps": "2bbd2a9463815f0309fa421c025f4ae89cf92e2c66c2a6ba45867cb20a26ae89",
+   "imports": {
+    "Development.DiscreteGroups.GlobalIrreducibility.LConvCut": "89a8c7bb0a1f250f1256455272056f8f52f3cae0",
+    "GroundTheory.LocalFields.Uniqueness": "ed639d903d53152126e4fe7b51e15064bcd07767",
+    "CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.FinOfPI": "955273adb35ef90b9f8a7f512a0e68de99a4d03e",
+    "Development.DiscreteGroups.GlobalIrreducibility.LConvKMCore": "9c0d8cec5ebb60657b90c247a17eed7b6cd4b12c",
+    "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0206": "64225a78705e7538cf75f17cea3a04158ba93fb5",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0638": "fe2ac344b2a9b78b0e6ad2d918e658747f39271a",
+    "Development.DiscreteGroups.GlobalIrreducibility.Bundle0002": "301863fdf5e478d31e668efeb5d69f2de86cdc82",
+    "Development.DiscreteGroups.GlobalIrreducibility.LocTypeOfSerParamLe": "c7d726ef76d6c48e0b11aa5fb16e2ebaecc8f741"
+   }
+  },
+  "Development.DiscreteGroups.GlobalIrreducibility.Bundle0004": {
+   "source": "ca1e7e2b1f3b233d6f918699ee61772116973e9c",
+   "deps": "ed38e357c6a791973ab41bc28eac04448d765b47bb450682f04882f40addee2b",
+   "imports": {
+    "Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0011": "e85bf39531a8ba28e85a961c7a8fa2b9df10af87",
+    "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.Bundle0007": "1d179cf24b61d4d5297ee5c510d1c41280a55c36",
+    "Development.DiscreteGroups.GlobalIrreducibility.Bundle0003": "cb2616f9cf85280f6f6b7ba0831b568ab38a77c5",
+    "Development.DiscreteGroups.GlobalIrreducibility.LConvSepM": "e396ab2ce9813e533134c19e59b2d9e6d312b6f9"
+   }
+  },
+  "Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0058": {
+   "source": "0aa64fa06959d50a421c25519da533c0afe4b2ce",
+   "deps": "74a0347a098b51e0442d0d1f7a7659304a20f38fa4f378c3df9743547f2aa256",
+   "imports": {
+    "Development.AutomorphicSpectrum.Proofs.GeometryProofs.Bundle0173": "a75119eba49f0029263d82dc720968fe2160df54",
+    "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion": "f3442b67abc563d0b55da9ecae9e9ae6e9af6490",
+    "Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0050": "9bdfd0aaa11c0df168e389ad96a8bbc5a864a2d1"
+   }
+  },
+  "Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2Gluing.IntegralLeToReal": {
+   "source": "cff6c50452bfbf6ea67e6b26057d36638c6e9685",
+   "deps": "1518ea4da731844e8471f90cf6f2a388e254613a466cff66a72bae175eb2cf14",
+   "imports": {
+    "Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2DecayOfCountEscape": "39bff9f6b70e99bee58df767fcadfeb90b3cd466",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0280": "f53c9ef016c8b90fe5f6f1ea5a7982c911e0e954",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0281": "a4a97a81eddcc5c68bb418aeb7e631da1f3d0883",
+    "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0275": "c8323786208257a75058b522f7de09ed42abdaab"
+   }
+  },
+  "Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.TraceEqZeroOfQZ": {
+   "source": "56f48884d518059f93b7ad49058fc8a534cd65ac",
+   "deps": "5ead1c97db3fd4c02d9a306a8e24363cee0fe7c740a3d81f6e63ff4545fcc2d6",
+   "imports": {
+    "Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.IsSemisimpleRing": "e22536bf17c049adb9154a5c22b2370f425df2ee",
+    "Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.Bundle0001": "aa98ca30dc9ea28b7cb1074e08afb493db18be5d"
+   }
+  },
+  "Development.WeilBound.ThetaLifts.SmallCones.Bundle0004": {
+   "source": "b613e86b4b9ae4f75d0a25d66e1a1e6921f42d55",
+   "deps": "b85d82d00daa0597ea99e9790545862c4325addfa06c3406dc8eebe3d5f35a81",
+   "imports": {
+    "Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq": "8197b75610f99ac9ebd66c5c9f8085f037c3b9ac",
+    "Development.WeilBound.ThetaLifts.SmallCones.Bundle0003": "9c18b9bc73b77d649621ba9041799afc4dd17909",
+    "Development.WeilBound.ThetaLifts.SmallCones.Bundle0001": "8d5c4e631eb8960783417d61ed00867726c3de91",
+    "Development.WeilBound.ThetaLifts.SmallCones.Bundle0002": "d352014d63e1b484e0161fee06884528d575e60d",
+    "Development.WeilBound.ThetaLifts.SmallCones.UnfPar": "f1bee103d94ebc118fd6f449b0e9f6fcd2dd975d",
+    "Development.WeilBound.ThetaLifts.SmallCones.UnfAbs": "36ac773b8c7a777d3f5735003f7fca3dc38c6718",
+    "CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.Bundle0021": "8a45f69067b61f257200e4ad8820bba888a5cd3e",
+    "CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd": "daaa63cb489b374ea557abe706d52e8cc76aee48",
+    "CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.Bundle0043": "307bf25703e1461abd0c342f97775d31656313b0",
+    "CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.HypJ": "6072e0ddfa8389cccf82829240c54ce4c303e172",
+    "CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.Bundle0025": "c6266fea77e81ee8eea5cb0cd422fe976f777cbf"
+   }
+  },
+  "Formalism.LocalToGlobal.KernelLattices.ColumnData.SelfDual": {
+   "source": "a170791bd02112053fdec57c6830bd14a038d9cd",
+   "deps": "bfb52b4bbcfb4836c91670fdc32654f27e2c298ac8234dad3b7d783d65f2470a",
+   "imports": {
+    "Formalism.LocalToGlobal.KernelLattices.ColumnData": "52eedc6b833f733e3267582106afa44d26981ab6",
+    "Formalism.LocalToGlobal.KernelLattices.ColumnData.HfTrace": "d1c7b88908658573325d68d60b41b75ab896bd54",
+    "Formalism.FrobeniusOrbits.HostCorollaries": "79d59c3d4f8835329433ca674fd2c8fcab2d13c1",
+    "Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.DiscrB": "df7e85c092c089009cc1465af183189bdc0ce02b",
+    "Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.Bundle0081": "e45f55427675437e4fae1f09ec5d086755238860"
+   }
+  },
+  "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActL": {
+   "source": "758dad7d26da521080abeba70930b9d52950bafb",
+   "deps": "5c4fd6f9988201f5bfe48682b210cb3e1294245bfee1fb0984d6bac96d21a061",
+   "imports": {
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Bundle0032": "f280330768a563f00d272b64c22db3ea0c9bb219",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Vanish": "2c914b7f466d403d96a2bdc17ca4e9ae6e5f34d4",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHAlg": "bfba74bd0b57e6b4e1672bd936ebea9b078cc0cc",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.HermitianETransportInvariant": "32b76b15f4a4b1c7165eaf113aee79bc3e3ec051",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.LevelSubgroupCharacterUnitary": "878648eba4bc74c204c251156509cf8069d18b51",
+    "Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bundle0002": "a4d7793978165f3c352c4839ae32141015469c50"
+   }
+  },
+  "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SlabCoverPf": {
+   "source": "337c6411d30ce97ced10786d7fc65bcc0073adb4",
+   "deps": "d8dcce33676a58003bf1b172b1933f87327df422603b374afd6baff8a96c1b65",
+   "imports": {
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Bundle0034": "13f52472cd05a11c517ab9cd6d18ae086c561ec1",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.NilradicalLatticeZMemSpan": "4779f7586cdf192be29c2458dcca1f84a20157b8",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Bundle0036": "0f9a5fdea1b6359830a5f32ece9e7b2fd4ed5d89"
+   }
+  },
+  "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FixedDecomposition": {
+   "source": "7ff1bc1b9b2dab8930645feb03765da2c53ae34a",
+   "deps": "b88f8590538b35e2da990303101151ebcb67b17b807f1eb3dc1d4590bb7b9549",
+   "imports": {
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.Bundle0027": "4936ed6b8a65330fce9994a90ee2f3b5c2a5a90c",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.Bundle0026": "e767bd79bfd28ccb3447e252eece7d91a1fdace8",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.Bundle0019": "b37fffbd7f20ad40ef2198d0b1cb76fdb4036562",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.Bundle0024": "c8d37c98d29f4b08b99a76564070deafc44fb4ef",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.Bundle0002": "a47c77fbf036c13a0e7a67c997c67023259fc3d1"
+   }
+  },
+  "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.AllRowsOf": {
+   "source": "3b99a85c3e4836385aee807b0754ed14d6909524",
+   "deps": "246767e47ec67e3f695621f80ce623dbd8d1501ef49e80c75c2c061c7b065e29",
+   "imports": {
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowDict": "2ff75940ff25f1a60db9567ce43da7af6ff6b880",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RowDictPf": "d4b27765193901401ffbc52631acafd5d85cedae",
+    "Formalism.SharpRestriction.LevelLetterCocycles.Bundle0004": "3b0830843b00cd4ddeda5a26232c8c5c873be992",
+    "Formalism.SharpRestriction.CuspSpanNormBounds.Bundle0006": "99edc849335d8978019ca99ca14a5777b1fe5a2f",
+    "Formalism.SharpRestriction.ParConsts": "b872dd9f98d6d06be73fcf76aa1117f5613fb5e3",
+    "Formalism.SharpRestriction.LevelLetterCocycles.Bundle0025": "aeaed8278b1970490ca2b5a300c74c74ed98dc76",
+    "Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.JCountP": "85fa99a08dcb0b100a43dacad390c881afe85735",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.BunExists": "41c232b68c227496b5e7d4f206dc3cbea3493f86",
+    "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0712": "29762d6f5232724d9e844ce8c25e7f2b51cea0c2"
+   }
+  },
+  "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists": {
+   "source": "8e4c248757308655a2a42c161fd18c0ff4ac7113",
+   "deps": "a141da94dda81767a73d09582b24b67e605e882797ebd42997a55f5ccd011d2c",
+   "imports": {
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.PoincareConstantEq": "d8b156d1e25d77a595ced7464ff52bac33b34bc3",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHAlg": "bfba74bd0b57e6b4e1672bd936ebea9b078cc0cc",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.ConcreteLevelAdelicSubset": "3049d9677e2e66a61784193bfad7db08fff07a33",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.LevelSubgroupProperties": "bcf61cc326f2b2024e856a7ff7223d994d7b1291",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.GenericRatioOfBoundHolds": "7c9222777bedbde580f4d58164e376979b0d9d06"
+   }
+  },
+  "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ThmSOwn": {
+   "source": "eb87518e7835012d033af8ca7357c2ef946ef073",
+   "deps": "aeeea5e6ff9ac63dc2b42314e8896f49f04fd722841a25d46e117652ab62ab07",
+   "imports": {
+    "Formalism.SharpRestriction.CuspSpanNormBounds.StandingHypothesesHoldFamily": "21559b0b7c35ea8e365e455f67ba82321c509ad6",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.NormalizingConstantEq": "56bf89e868708ee22e0c4955a2b58e4dbec0f9ca",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RowsConc": "a54abb5f01be9e485714fcb0d8e1d09453aca08d",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGram": "6a453e063693b56f5c59edd3dfc7e4cc33ef462f",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ConcreteSettingExists": "e7a1835f25057b32380d9650e1671916a8ef15c6",
+    "Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCountE": "fc8636d1fdb3b882fbc43c6da9a23fcf7876bee0",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.SpectralTiesReal": "eddd52c700fbeedfa4ab33972e47db98f7768c02",
+    "Formalism.SharpRestriction.CuspSpanNormBounds.BesselShellMomentBounds": "91d3ae6577a0cc7d94046ca1ee4c38ed4b54db19",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.TheoremSRecursion": "b54ae87ad480cd1b22f9bf3e4e385b2a816b86d4",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.LevelSubgroupProperties": "bcf61cc326f2b2024e856a7ff7223d994d7b1291",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Bundle0054": "6f1d2067d0b1ff162731bcf7149d838bd6451d28",
+    "Formalism.SharpRestriction.CuspSpanNormBounds.Bundle0009": "1f2beaa049009bc22d3fbac5deb1c761b28bd3e5",
+    "Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.UnitaryPointsRankZeroSubsingleton": "ce0cc3d3738067b948af90fbd1750b5f0a786a68",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHAlg": "bfba74bd0b57e6b4e1672bd936ebea9b078cc0cc",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.BunExists": "41c232b68c227496b5e7d4f206dc3cbea3493f86",
+    "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.NatSmulMulEq": "a3011982f6a5d79c641b85fed9f94cffc59ce189",
+    "Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ExplicitFormulaBoundHolds": "b6f172a91490d324383ef3b32f1a4e6803fc36f8",
+    "Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.DegreeRatioFormulaStatement": "736d1d599bc6171fce1b3ad752df8523d4405ed5"
+   }
+  },
+  "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0013": {
+   "source": "c899f619c856f00f136e3d3fac25c8da761e540e",
+   "deps": "14d223bee86ef29085410f1140374172664eaf7c11230ebf099b0f7b1d63df52",
+   "imports": {
+    "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0011": "2cf3946f6871f7dcc4156ab4789fd5d266981b2b",
+    "Formalism.FrobeniusOrbits.RealSubfieldLeCompositum": "3438a8fe789232c3903023c89d83315dfd149394"
+   }
+  }
+ }
+}
