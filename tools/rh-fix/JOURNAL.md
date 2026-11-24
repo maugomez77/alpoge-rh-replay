@@ -7,3 +7,4 @@
 - 2026-11-24T18:03Z Board refreshed (29 rows) but stale vs tip.
 - 2026-11-24T18:20Z Work-finder paused during merge wave.
 - 2026-11-24T18:23Z test journal entry
+- 2026-11-24T18:23Z Architecture deployed: content-hash ledger, stability gate, supervisor, claims, journal, receipts, sync.

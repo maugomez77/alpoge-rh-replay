@@ -79,3 +79,16 @@ python3 tools/rh-fix/work-finder.py --interval 300 \
 ```
 
 Recommended trigger: the branch tip has been unchanged for >= 10 minutes (stability gate).
+
+## Architecture (18:25Z)
+
+- **Content-hash ledger** (`ledger.py`): a module is clean only if its source and direct
+  import blobs match the validated SHA. At `49b2`'s 39-module list, 32 are still clean at
+  the current tip; only 7 genuinely changed.
+- **Work-finder** now supports `--ledger`, `--times` (cost ranking), `--claims`, and
+  `--stable-for` (only report when the tip has been quiet for N seconds).
+- **Supervisor** (`supervise.sh start|stop|status|daemon`) manages the GitHub watcher and
+  the work-finder from `watchers.conf`; PID files in `~/.rh-fix/pids`, logs in `~/.rh-fix/*.log`.
+- **Claims registry** (`claims.py`), **event journal** (`journal.py` + `JOURNAL.md`),
+  **receipts** (`post-receipt.sh`), and **state sync** (`sync.sh pull|push`).
+- Data in the repo: `data/ledger.json`, `data/times.txt`, `data/claims.json`.
