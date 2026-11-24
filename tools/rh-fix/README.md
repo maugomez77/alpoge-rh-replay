@@ -10,7 +10,7 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `scan-opens.py <files…>` | The systemic consolidation bug: `_root_.N.foo` inside a selective `open N (…)` list becomes `N._root_.N.foo` and kills the whole open. Exit 1 on hit. |
 | `regression-watch.sh [repo]` | Rebuild every module in `watch-modules.txt` at the current tip; catches reversions (the `Bundle0295` class of bug). |
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
-| `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also state changes, reviews, merge conflicts. Exits with the full text of new events. |
+| `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, state changes, reviews, merge conflicts. Exits with the full text of new events. |
 | `watch-repos.txt` / `watch-threads.txt` / `watch-files.txt` | Watcher config: `owner/repo [own\|threads]`, extra threads `owner/repo N [note]`, files `owner/repo:path`. |
 
 ## Workflow (the part that actually matters)

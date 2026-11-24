@@ -155,6 +155,29 @@ def print_comment(repo, num, kind, user, when, body, extra=""):
     return f"--- {repo}#{num} [{kind}{extra}] {user} {when}\n{body}\n"
 
 
+def is_bot(user):
+    return user.get("type") == "Bot" or str(user.get("login", "")).endswith("[bot]")
+
+
+def comment_event(c, since, seen):
+    """Classify a comment as new / edited / none.
+
+    New:    created_at > since
+    Edited: created_at <= since < updated_at (the repo-wide since= query
+            already returns edited comments; no extra API call).
+    Returns (kind, token) or None.
+    """
+    created = c.get("created_at", "")
+    updated = c.get("updated_at") or created
+    if created > since:
+        token = c["id"]
+        return ("comment", token) if token not in seen else None
+    if updated > since:
+        token = f"{c['id']}@{updated}"
+        return ("edited comment", token) if token not in seen else None
+    return None
+
+
 def round_once(ctx, since_dt, seen):
     me, repos, watch = ctx["me"], ctx["repos"], ctx["watch"]
     since = since_dt.strftime(ISO)
@@ -165,27 +188,38 @@ def round_once(ctx, since_dt, seen):
         nums = {k.rsplit("#", 1)[1] for k in watch if k.rsplit("#", 1)[0] == repo}
         if not nums:
             continue
-        # conversation comments
+        # conversation comments (new + edits to older comments)
         for c in api_pages(f"repos/{repo}/issues/comments?since={since}"):
-            if c["user"]["login"] == me or c["created_at"] <= since:
+            u = c["user"]
+            if u["login"] == me or is_bot(u):
                 continue
             num = c["issue_url"].rsplit("/", 1)[-1]
-            if num not in nums or c["id"] in seen:
+            if num not in nums:
                 continue
-            new_ids.add(c["id"])
-            events.append(print_comment(repo, num, "comment", c["user"]["login"], c["created_at"], c["body"]))
-        # inline review comments
+            ev = comment_event(c, since, seen)
+            if not ev:
+                continue
+            kind, token = ev
+            new_ids.add(token)
+            when = c["updated_at"] if kind.startswith("edited") else c["created_at"]
+            events.append(print_comment(repo, num, kind, u["login"], when, c["body"]))
+        # inline review comments (new + edits)
         for c in api_pages(f"repos/{repo}/pulls/comments?since={since}"):
-            if c["user"]["login"] == me or c["created_at"] <= since:
+            u = c["user"]
+            if u["login"] == me or is_bot(u):
                 continue
             num = c["pull_request_url"].rsplit("/", 1)[-1]
-            if num not in nums or c["id"] in seen:
+            if num not in nums:
                 continue
-            new_ids.add(c["id"])
+            ev = comment_event(c, since, seen)
+            if not ev:
+                continue
+            kind, token = ev
+            new_ids.add(token)
+            when = c["updated_at"] if kind.startswith("edited") else c["created_at"]
+            ikind = "inline" if kind == "comment" else "edited inline"
             loc = f"{c.get('path', '?')}:{c.get('line') or c.get('original_line') or '?'}"
-            events.append(
-                print_comment(repo, num, "inline", c["user"]["login"], c["created_at"], c["body"], f" {loc}")
-            )
+            events.append(print_comment(repo, num, ikind, u["login"], when, c["body"], f" {loc}"))
 
     repos_q = "".join(f" repo:{r}" for r in repos)
 
