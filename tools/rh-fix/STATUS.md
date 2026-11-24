@@ -62,3 +62,20 @@ tools/rh-fix/stop-m4-build.sh          # kill lake/lean on the M4
 tools/rh-fix/stop-m4-build.sh --container   # also stop rhreplay
 tools/rh-fix/stop-all.sh               # everything
 ```
+
+### Work-finder paused (18:20Z)
+
+Paused during the rapid merge wave: the tip is moving every few minutes, which invalidates
+previously validated files and makes the M4 lane shift without new confirmed failures.
+Restart with:
+
+```sh
+python3 tools/rh-fix/work-finder.py --interval 300 \
+  --repo /path/to/riemann-hypothesis \
+  --validated tools/rh-fix/data/validated-49b2.txt \
+  --validated-sha 49b2bdb6a8... \
+  --build-log tools/rh-fix/data/mb11-errors.txt \
+  --log-sha 49b2bdb6a8...
+```
+
+Recommended trigger: the branch tip has been unchanged for >= 10 minutes (stability gate).
