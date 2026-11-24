@@ -224,6 +224,25 @@ def round_once(ctx, since_dt, seen):
             loc = f"{c.get('path', '?')}:{c.get('line') or c.get('original_line') or '?'}"
             events.append(print_comment(repo, num, ikind, u["login"], when, c["body"], f" {loc}"))
 
+    # @mentions anywhere, on threads not already watched (notifications API)
+    try:
+        notifs = gh_json(
+            "api", f"notifications?participating=true&all=true&since={since}&per_page=50"
+        )
+        if isinstance(notifs, list):
+            for n in notifs:
+                if n.get("reason") not in ("mention", "team_mention"):
+                    continue
+                key = f"{n['repository']['full_name']}#{n['subject']['url'].rsplit('/', 1)[-1]}"
+                title = n.get("subject", {}).get("title", "")
+                if key in watch:
+                    continue
+                if ctx.get("mention_skip") and title.startswith(ctx["mention_skip"]):
+                    continue
+                events.append(f"--- mentioned @{me} in {key} (not a watched thread): {title}\n")
+    except Exception:
+        pass
+
     repos_q = "".join(f" repo:{r}" for r in repos)
 
     # our PRs touched since the cursor: state changes + reviews by others
@@ -273,6 +292,11 @@ def main():
     ap.add_argument("--interval", type=int, default=180)
     ap.add_argument("--rounds", type=int, default=60)
     ap.add_argument("--state", default=os.path.join(CFG, "watch-state.json"))
+    ap.add_argument(
+        "--mention-skip",
+        default=os.environ.get("MENTION_SKIP", "chore: batch"),
+        help="ignore mention threads whose title starts with this prefix ('' = report all)",
+    )
     args = ap.parse_args()
 
     try:
@@ -302,7 +326,7 @@ def main():
         print(f"startup error: {e}", file=sys.stderr)
         return 2
     ctx = {"me": me, "repos": repos, "watch": watch, "states": states, "merges": merges,
-           "files": files, "files_sha": {}}
+           "files": files, "files_sha": {}, "mention_skip": args.mention_skip}
 
     print(f"repos: {' '.join(repos)}", file=sys.stderr)
     print(f"watching {len(watch)} threads since {since_dt.strftime(ISO)}", file=sys.stderr)
