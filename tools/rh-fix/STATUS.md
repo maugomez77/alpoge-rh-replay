@@ -53,3 +53,12 @@ Watch mode: add `--interval 300` (exits when the queue changes).
 
 - M4 build logs/artifacts (`/work`), local watcher PIDs/state, OpenCode session state.
 - Reproduction needs only the SHA, `lake build Main Challenge`, and the gists/comments.
+
+## Stopping
+
+```sh
+tools/rh-fix/stop-watchers.sh          # local GitHub watcher + work-finder
+tools/rh-fix/stop-m4-build.sh          # kill lake/lean on the M4
+tools/rh-fix/stop-m4-build.sh --container   # also stop rhreplay
+tools/rh-fix/stop-all.sh               # everything
+```
