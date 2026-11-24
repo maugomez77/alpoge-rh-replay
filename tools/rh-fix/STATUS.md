@@ -5,7 +5,7 @@ Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, b
 ## RH 4.36
 
 - **#120 is closed** (16:35Z, temporary, to save CI); work continues on `opt/collapse-and-consolidate-4.36`.
-- **Tip:** `7b3e06bd1e` (moving; was `20193c2836` at 18:03Z).
+- **Tip:** `ecce788d81` (moving rapidly; was `20193c2836` at 18:03Z).
 - **Live board is stale:** updated 18:03Z with 29 rows, but all 29 modules were built clean at `49b2bdb6a8` and are unchanged since. The work-finder excludes them.
 - **Last full build:** `49b2bdb6a8` → `error: build failed`, **133 errors / 20 modules**. 18 of those 20 files changed since; the two unchanged ones are being built at `7127dd68`:
   - `Development.AutomorphicArithmetic…GeometricFlagBases.Bundle0004`

@@ -95,7 +95,7 @@ def parse_log(path):
     return out
 
 
-def queue(rows, stale):
+def queue(rows):
     by_mod = {}
     for r in rows:
         by_mod.setdefault(r["path"], []).append(r)
@@ -110,8 +110,6 @@ def queue(rows, stale):
         first = rs[0]
         lane = "m4" if (not claimed and not verify and n <= 2
                         and (cls in MECHANICAL | {"instance"} or cls == "build")) else "mini"
-        if stale:
-            lane = "mini"
         items.append({
             "key": f"{path}:{first['line']}",
             "path": path, "line": first["line"], "errors": n,
@@ -223,11 +221,14 @@ def main():
         ]
         excluded = before - len(rows)
 
-        _, body = render(queue(rows, stale), head, tip, updated, compiled)
+        items = queue(rows)
+        _, body = render(items, head, tip, updated, compiled)
         if excluded:
             body += f"\n_excluded {excluded} rows already validated clean at `{args.validated_sha[:10]}` and unchanged since._\n"
         # ignore the timestamp line so the signature only changes on real queue changes
-        sig = hashlib.sha256(body.split("\n", 1)[1].encode()).hexdigest()
+        sig = hashlib.sha256("\n".join(
+            f"{i['key']}|{i['lane']}|{i['claimed']}|{i['verify']}|{i['errors']}|{i['class']}"
+            for i in items).encode()).hexdigest()
 
         if args.once:
             print(body)
