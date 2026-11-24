@@ -1,0 +1,8 @@
+# Repos watched by watch-github.py.
+# format: owner/repo [own|threads]
+#   own     = every issue/PR we created, any state (plus listed threads)
+#   threads = only entries in watch-threads.txt
+leanprover-community/riemann-hypothesis own
+rohanarun/riemann-hypothesis own
+google-deepmind/formal-conjectures own
+rohanarun/alpoge-rh-replay threads

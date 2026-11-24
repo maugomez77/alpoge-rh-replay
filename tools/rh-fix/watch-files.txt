@@ -1,0 +1,2 @@
+# Files whose new commits count as events: owner/repo:path
+# (leave empty unless you want commit-level watch)
