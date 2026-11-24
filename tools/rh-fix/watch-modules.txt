@@ -1,0 +1,8 @@
+# Modules fixed by this side — re-verify at every new tip (regression guard).
+# One Lake module name per line.
+Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsFundamentalDomainFlagUnipotentCoords
+Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0282
+Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0283
+Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1196
+Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable
+Development.AbelianVarietyTheory.Definitions.GaloisGeometry.Bundle0019
