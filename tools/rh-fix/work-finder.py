@@ -224,11 +224,19 @@ def main():
         _, body = render(queue(rows, stale), head, tip, updated, compiled)
         if excluded:
             body += f"\n_excluded {excluded} rows already validated clean at `{args.validated_sha[:10]}` and unchanged since._\n"
-        sig = hashlib.sha256(body.encode()).hexdigest()
+        # ignore the timestamp line so the signature only changes on real queue changes
+        sig = hashlib.sha256(body.split("\n", 1)[1].encode()).hexdigest()
 
         if args.once:
             print(body)
             return 0
+        if not last_sig and not args.once:
+            # baseline on first run: record the current queue, don't fire
+            json.dump({"sig": sig}, open(args.state, "w"))
+            last_sig = sig
+            if rnd < args.rounds - 1:
+                time.sleep(args.interval)
+            continue
         if sig != last_sig:
             print(f"EVENT at {datetime.now(timezone.utc).strftime('%H:%M:%S')}")
             print(body)
