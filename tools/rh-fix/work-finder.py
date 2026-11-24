@@ -42,13 +42,13 @@ def board_text(path):
     return base64.b64decode(raw).decode("utf-8", "ignore") if raw.strip() else ""
 
 
-def current_tip():
+def current_tip(repo):
     subprocess.run(
-        ["git", "-C", TIP_REPO, "fetch", "-q", "origin", "opt/collapse-and-consolidate-4.36"],
+        ["git", "-C", repo, "fetch", "-q", "origin", "opt/collapse-and-consolidate-4.36"],
         capture_output=True, text=True,
     )
     out = subprocess.run(
-        ["git", "-C", TIP_REPO, "rev-parse", "origin/opt/collapse-and-consolidate-4.36"],
+        ["git", "-C", repo, "rev-parse", "origin/opt/collapse-and-consolidate-4.36"],
         capture_output=True, text=True,
     ).stdout.strip()
     return out
@@ -151,6 +151,8 @@ def main():
     ap.add_argument("--board", default=None, help="local board markdown (default: GitHub)")
     ap.add_argument("--interval", type=int, default=300)
     ap.add_argument("--rounds", type=int, default=288)
+    ap.add_argument("--repo", default=os.environ.get("RH_REPO", TIP_REPO),
+                    help="path to the riemann-hypothesis checkout")
     ap.add_argument("--state", default=os.path.expanduser("~/.rh-fix/work-state.json"))
     ap.add_argument("--validated", default=None,
                     help="file with 'OK Module' lines from a previous build (known-clean)")
@@ -183,7 +185,7 @@ def main():
             print("work-finder: empty board", file=sys.stderr)
             return 2
         head, updated, compiled, rows = parse(text)
-        tip = current_tip()
+        tip = current_tip(args.repo)
         stale = bool(head and tip and not tip.startswith(head[:8]))
 
         if args.build_log:
@@ -191,7 +193,7 @@ def main():
             changed_log = set()
             if args.log_sha and tip:
                 diff = subprocess.run(
-                    ["git", "-C", TIP_REPO, "diff", "--name-only",
+                    ["git", "-C", args.repo, "diff", "--name-only",
                      f"{args.log_sha}..{tip}", "--", "src"],
                     capture_output=True, text=True,
                 ).stdout
@@ -208,7 +210,7 @@ def main():
         changed = set()
         if validated and args.validated_sha and tip:
             diff = subprocess.run(
-                ["git", "-C", TIP_REPO, "diff", "--name-only",
+                ["git", "-C", args.repo, "diff", "--name-only",
                  f"{args.validated_sha}..{tip}", "--", "src"],
                 capture_output=True, text=True,
             ).stdout

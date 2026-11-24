@@ -1,0 +1,368 @@
++ export PATH=/root/.elan/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/root/.elan/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ cd /work/rh120
++ pkill -9 -x lean
++ pkill -9 -x lake
++ sleep 2
++ git fetch -q origin opt/collapse-and-consolidate-4.36
++ git checkout -q -f -B probe/board39 49b2bdb6a8ca653a83fbd2ab25ca16ad9e261f7f
+++ git rev-parse HEAD
++ echo SHA=49b2bdb6a8ca653a83fbd2ab25ca16ad9e261f7f
+SHA=49b2bdb6a8ca653a83fbd2ab25ca16ad9e261f7f
++ git log --oneline -1
+49b2bdb6a8 Merge PR #1028: Fix Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActLevMemCuspA (@TheLarkInn)
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0045 ']'
+++ echo Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0045
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Definitions_Divisors_Bundle0045.log
++ lake build Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0045
++ echo 'OK Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0045'
+OK Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0045
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0231 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0231
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_DecoratedLatticeProofs_Bundle0231.log
++ lake build Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0231
++ echo 'OK Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0231'
+OK Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0231
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0246 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0246
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_DecoratedLatticeProofs_Bundle0246.log
++ lake build Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0246
++ echo 'OK Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0246'
+OK Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0246
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1245 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1245
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_DivisorProofs_Bundle1245.log
++ lake build Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1245
++ echo 'OK Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1245'
+OK Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1245
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1254 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1254
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_DivisorProofs_Bundle1254.log
++ lake build Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1254
++ echo 'OK Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1254'
+OK Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1254
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0381 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0381
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_FlagMeasures_Bundle0381.log
++ lake build Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0381
++ echo 'OK Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0381'
+OK Development.AbelianVarietyTheory.Proofs.FlagMeasures.Bundle0381
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0295 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0295
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_FoundationProofs_Bundle0295.log
++ lake build Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0295
++ echo 'OK Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0295'
+OK Development.AbelianVarietyTheory.Proofs.FoundationProofs.Bundle0295
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemBddFormsOfWithSmoothings ']'
+++ echo Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemBddFormsOfWithSmoothings
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_InertiaEigenvalues_MemBddFormsOfWithSmoothings.log
++ lake build Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemBddFormsOfWithSmoothings
++ echo 'OK Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemBddFormsOfWithSmoothings'
+OK Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemBddFormsOfWithSmoothings
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL ']'
+++ echo Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_InertiaEigenvalues_SupercuspidalSupportUniqueGL.log
++ lake build Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL
++ echo 'OK Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL'
+OK Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0200 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0200
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_SatakeParameters_Bundle0200.log
++ lake build Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0200
++ echo 'OK Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0200'
+OK Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0200
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0059 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0059
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_ThetaShiftProofs_Bundle0059.log
++ lake build Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0059
++ echo 'OK Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0059'
+OK Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.Bundle0059
++ IFS=
++ read -r m
++ '[' -z Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0367 ']'
+++ echo Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0367
+++ tr . _
++ log=/work/b39-Development_AbelianVarietyTheory_Proofs_TwistedOperators_Bundle0367.log
++ lake build Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0367
++ echo 'OK Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0367'
+OK Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0367
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.HeckeShiftSums.Bundle0001 ']'
+++ echo Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.HeckeShiftSums.Bundle0001
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_AutomorphicVarieties_ModularityArgument_InductionEstimates_BorelHeckeBounds_HeckeShiftSums_Bundle0001.log
++ lake build Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.HeckeShiftSums.Bundle0001
++ echo 'OK Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.HeckeShiftSums.Bundle0001'
+OK Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.BorelHeckeBounds.HeckeShiftSums.Bundle0001
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ExistsCore ']'
+++ echo Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ExistsCore
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_AutomorphicVarieties_PatchingModules_ArchimedeanH0Cards_ExistsCore.log
++ lake build Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ExistsCore
++ echo 'OK Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ExistsCore'
+OK Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ExistsCore
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0003 ']'
+++ echo Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0003
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_Foundations_Convolution_CentreSplitting_Bundle0003.log
++ lake build Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0003
++ echo 'OK Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0003'
+OK Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.Bundle0003
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0009 ']'
+++ echo Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0009
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_Foundations_Convolution_RealGroupAnalysis_GaussianForms_Bundle0009.log
++ lake build Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0009
++ echo 'OK Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0009'
+OK Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.Bundle0009
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.PlaceAe ']'
+++ echo Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.PlaceAe
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_Foundations_Convolution_RealGroupAnalysis_UnramifiedSplitting_PlaceAe.log
++ lake build Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.PlaceAe
++ echo 'OK Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.PlaceAe'
+OK Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.PlaceAe
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.InfinitePlaceGluing.PairCases ']'
+++ echo Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.InfinitePlaceGluing.PairCases
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_Foundations_Convolution_SplitEigenfunctions_InfinitePlaceGluing_PairCases.log
++ lake build Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.InfinitePlaceGluing.PairCases
++ echo 'OK Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.InfinitePlaceGluing.PairCases'
+OK Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.InfinitePlaceGluing.PairCases
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.Bundle0001 ']'
+++ echo Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.Bundle0001
+++ tr . _
++ log=/work/b39-Development_AutomorphicArithmetic_Foundations_GaloisRepresentations_ClosedPhiFunctoriality_Bundle0001.log
++ lake build Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.Bundle0001
++ echo 'OK Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.Bundle0001'
+OK Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.Bundle0001
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanOrbitalIntegralHuaBound ']'
+++ echo Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanOrbitalIntegralHuaBound
+++ tr . _
++ log=/work/b39-Development_AutomorphicSpectrum_Proofs_BlockDecomposition_ArchimedeanOrbitalIntegralHuaBound.log
++ lake build Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanOrbitalIntegralHuaBound
++ echo 'OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanOrbitalIntegralHuaBound'
+OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanOrbitalIntegralHuaBound
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0380 ']'
+++ echo Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0380
+++ tr . _
++ log=/work/b39-Development_AutomorphicSpectrum_Proofs_BlockDecomposition_Bundle0380.log
++ lake build Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0380
++ echo 'OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0380'
+OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0380
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0420 ']'
+++ echo Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0420
+++ tr . _
++ log=/work/b39-Development_AutomorphicSpectrum_Proofs_BlockDecomposition_Bundle0420.log
++ lake build Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0420
++ echo 'OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0420'
+OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Bundle0420
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KernelSumBoundUniform ']'
+++ echo Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KernelSumBoundUniform
+++ tr . _
++ log=/work/b39-Development_AutomorphicSpectrum_Proofs_BlockDecomposition_KernelSumBoundUniform.log
++ lake build Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KernelSumBoundUniform
++ echo 'OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KernelSumBoundUniform'
+OK Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KernelSumBoundUniform
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProperGroupGermFiniteSubscheme ']'
+++ echo Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProperGroupGermFiniteSubscheme
+++ tr . _
++ log=/work/b39-Development_AutomorphicSpectrum_Proofs_GeometryProofs_ProperGroupGermFiniteSubscheme.log
++ lake build Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProperGroupGermFiniteSubscheme
++ echo 'OK Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProperGroupGermFiniteSubscheme'
+OK Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProperGroupGermFiniteSubscheme
++ IFS=
++ read -r m
++ '[' -z Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable ']'
+++ echo Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable
+++ tr . _
++ log=/work/b39-Development_AutomorphicSpectrum_Proofs_MetricProofs_ChartDensityIntegrable.log
++ lake build Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable
++ echo 'OK Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable'
+OK Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartDensityIntegrable
++ IFS=
++ read -r m
++ '[' -z Development.DiscreteGroups.GlobalIrreducibility.Bundle0003 ']'
+++ echo Development.DiscreteGroups.GlobalIrreducibility.Bundle0003
+++ tr . _
++ log=/work/b39-Development_DiscreteGroups_GlobalIrreducibility_Bundle0003.log
++ lake build Development.DiscreteGroups.GlobalIrreducibility.Bundle0003
++ echo 'OK Development.DiscreteGroups.GlobalIrreducibility.Bundle0003'
+OK Development.DiscreteGroups.GlobalIrreducibility.Bundle0003
++ IFS=
++ read -r m
++ '[' -z Development.DiscreteGroups.GlobalIrreducibility.Bundle0004 ']'
+++ echo Development.DiscreteGroups.GlobalIrreducibility.Bundle0004
+++ tr . _
++ log=/work/b39-Development_DiscreteGroups_GlobalIrreducibility_Bundle0004.log
++ lake build Development.DiscreteGroups.GlobalIrreducibility.Bundle0004
++ echo 'OK Development.DiscreteGroups.GlobalIrreducibility.Bundle0004'
+OK Development.DiscreteGroups.GlobalIrreducibility.Bundle0004
++ IFS=
++ read -r m
++ '[' -z Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0058 ']'
+++ echo Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0058
+++ tr . _
++ log=/work/b39-Development_WeilBound_CoreStatements_HodgeTatePoints_Bundle0058.log
++ lake build Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0058
++ echo 'OK Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0058'
+OK Development.WeilBound.CoreStatements.HodgeTatePoints.Bundle0058
++ IFS=
++ read -r m
++ '[' -z Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2Gluing.IntegralLeToReal ']'
+++ echo Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2Gluing.IntegralLeToReal
+++ tr . _
++ log=/work/b39-Development_WeilBound_RepresentationTheoryGL_ResidualSpectrum_ExponentialNegativity_L2Gluing_IntegralLeToReal.log
++ lake build Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2Gluing.IntegralLeToReal
++ echo 'OK Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2Gluing.IntegralLeToReal'
+OK Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2Gluing.IntegralLeToReal
++ IFS=
++ read -r m
++ '[' -z Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.TraceEqZeroOfQZ ']'
+++ echo Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.TraceEqZeroOfQZ
+++ tr . _
++ log=/work/b39-Development_WeilBound_RepresentationTheoryGL_UnitaryDualProof_CompactOrbits_NilpotentOrbits_FourierTransforms_TraceEqZeroOfQZ.log
++ lake build Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.TraceEqZeroOfQZ
++ echo 'OK Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.TraceEqZeroOfQZ'
+OK Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.FourierTransforms.TraceEqZeroOfQZ
++ IFS=
++ read -r m
++ '[' -z Development.WeilBound.ThetaLifts.SmallCones.Bundle0004 ']'
+++ echo Development.WeilBound.ThetaLifts.SmallCones.Bundle0004
+++ tr . _
++ log=/work/b39-Development_WeilBound_ThetaLifts_SmallCones_Bundle0004.log
++ lake build Development.WeilBound.ThetaLifts.SmallCones.Bundle0004
++ echo 'OK Development.WeilBound.ThetaLifts.SmallCones.Bundle0004'
+OK Development.WeilBound.ThetaLifts.SmallCones.Bundle0004
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.KernelLattices.ColumnData.SelfDual ']'
+++ echo Formalism.LocalToGlobal.KernelLattices.ColumnData.SelfDual
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_KernelLattices_ColumnData_SelfDual.log
++ lake build Formalism.LocalToGlobal.KernelLattices.ColumnData.SelfDual
++ echo 'OK Formalism.LocalToGlobal.KernelLattices.ColumnData.SelfDual'
+OK Formalism.LocalToGlobal.KernelLattices.ColumnData.SelfDual
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActL ']'
+++ echo Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActL
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_SiegelLatticeTheory_ClosedLocalOrbits_GaugeLatticeShifts_SatGramActL.log
++ lake build Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActL
++ echo 'OK Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActL'
+OK Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActL
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SlabCoverPf ']'
+++ echo Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SlabCoverPf
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_SiegelLatticeTheory_ClosedLocalOrbits_GaugeLatticeShifts_SlabCoverPf.log
++ lake build Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SlabCoverPf
++ echo 'OK Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SlabCoverPf'
+OK Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SlabCoverPf
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FixedDecomposition ']'
+++ echo Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FixedDecomposition
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_SiegelLatticeTheory_CokernelGLCounts_RankPointCounts_FixedDecomposition.log
++ lake build Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FixedDecomposition
++ echo 'OK Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FixedDecomposition'
+OK Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FixedDecomposition
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.AllRowsOf ']'
+++ echo Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.AllRowsOf
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_SiegelLatticeTheory_FlagStabilizerTensors_AllRowsOf.log
++ lake build Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.AllRowsOf
++ echo 'OK Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.AllRowsOf'
+OK Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.AllRowsOf
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists ']'
+++ echo Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_SiegelLatticeTheory_FlagStabilizerTensors_RootLatticeThresholds_FullExists.log
++ lake build Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists
++ echo 'OK Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists'
+OK Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists
++ IFS=
++ read -r m
++ '[' -z Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ThmSOwn ']'
+++ echo Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ThmSOwn
+++ tr . _
++ log=/work/b39-Formalism_LocalToGlobal_SiegelLatticeTheory_FlagStabilizerTensors_ThmSOwn.log
++ lake build Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ThmSOwn
++ echo 'OK Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ThmSOwn'
+OK Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ThmSOwn
++ IFS=
++ read -r m
++ '[' -z Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0013 ']'
+++ echo Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0013
+++ tr . _
++ log=/work/b39-Formalism_PeriodIntegrals_UnitaryGroupMassFormula_ValuationLocalVolumes_Bundle0013.log
++ lake build Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0013
++ echo 'OK Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0013'
+OK Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.Bundle0013
++ IFS=
++ read -r m
++ echo ALLDONE
+ALLDONE
