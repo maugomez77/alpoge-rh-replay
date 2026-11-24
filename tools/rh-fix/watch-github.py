@@ -181,6 +181,9 @@ def comment_event(c, since, seen):
 def round_once(ctx, since_dt, seen):
     me, repos, watch = ctx["me"], ctx["repos"], ctx["watch"]
     since = since_dt.strftime(ISO)
+    # Query with a 60s overlap for indexing lag, but never rewind the saved
+    # cursor: comments older than the cursor are deduped by `seen`.
+    q_since = (since_dt - timedelta(seconds=60)).strftime(ISO)
     events = []
     new_ids = set()
 
@@ -189,14 +192,14 @@ def round_once(ctx, since_dt, seen):
         if not nums:
             continue
         # conversation comments (new + edits to older comments)
-        for c in api_pages(f"repos/{repo}/issues/comments?since={since}"):
+        for c in api_pages(f"repos/{repo}/issues/comments?since={q_since}"):
             u = c["user"]
             if u["login"] == me or is_bot(u):
                 continue
             num = c["issue_url"].rsplit("/", 1)[-1]
             if num not in nums:
                 continue
-            ev = comment_event(c, since, seen)
+            ev = comment_event(c, q_since, seen)
             if not ev:
                 continue
             kind, token = ev
@@ -204,14 +207,14 @@ def round_once(ctx, since_dt, seen):
             when = c["updated_at"] if kind.startswith("edited") else c["created_at"]
             events.append(print_comment(repo, num, kind, u["login"], when, c["body"]))
         # inline review comments (new + edits)
-        for c in api_pages(f"repos/{repo}/pulls/comments?since={since}"):
+        for c in api_pages(f"repos/{repo}/pulls/comments?since={q_since}"):
             u = c["user"]
             if u["login"] == me or is_bot(u):
                 continue
             num = c["pull_request_url"].rsplit("/", 1)[-1]
             if num not in nums:
                 continue
-            ev = comment_event(c, since, seen)
+            ev = comment_event(c, q_since, seen)
             if not ev:
                 continue
             kind, token = ev
@@ -321,9 +324,10 @@ def main():
             json.dump(state, open(args.state, "w"))
             return 0
 
-        # overlap 60s against indexing lag; seen set dedupes
-        since_dt = round_start - timedelta(seconds=60)
-        state = {"since": since_dt.strftime(ISO), "seen": list(seen)[-2000:]}
+        # advance the persisted cursor to the round start; the 60s overlap
+        # is applied only to the API query, never to the saved cursor
+        since_dt = round_start
+        state = {"since": round_start.strftime(ISO), "seen": list(seen)[-2000:]}
         json.dump(state, open(args.state, "w"))
         if args.once:
             print("no events", file=sys.stderr)
