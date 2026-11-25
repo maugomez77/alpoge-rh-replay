@@ -12,6 +12,7 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
 | `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, **@mentions on unwatched threads** (notifications API, `--mention-skip` filters bot batch titles), state changes, reviews, merge conflicts. Exits with the full text of new events. |
 | `plan.py` | Beforehand estimate: exact closure modules, jobs (4/module), trace-based must-build set (missing/stale source/stale deps), median compile time, critical path, and a wall estimate separating compile work from replay-job overhead. |
+| `plan.py --elab-only` | Intermediate-check estimate: 2 jobs/module (`olean`+`ilean`), no IR/C. |
 | `work-finder.py` | Ranks small unclaimed fixes from the live `PR120-BUGS.md` board **and** build-log error lines; splits an **M4 lane** (build + fix) from a **mini lane** (static triage). `--validated` excludes modules already built clean and unchanged; `--build-log`/`--log-sha` marks rows whose file changed since as `VERIFY`. Watch mode exits when the queue changes. |
 | `ledger.py` | Content-hash validation ledger: `build` from an `OK` list at a SHA, `check` at the tip. A module is clean only if its source **and direct import blobs** match the validated ones. |
 | `claims.py` | Claim registry (module → PR/owner); `add`, `remove`, `list`. |
@@ -48,3 +49,11 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 - `set_option maxHeartbeats` / `synthInstance.maxHeartbeats` bumps are acceptable *when the search terminates* — say so in the PR body, and stay near the file's existing local budget.
 - Prefer root causes: a wrong `open` entry explains dozens of cascading errors; do not patch the cascades.
 - Duplicates and wrong-name resolutions (`mulB`, `Dec`) are usually one qualification, not N bugs.
+
+## Build modes (important)
+
+- **Intermediate green check:** `lake build Main:elabArts Challenge:elabArts` — fully elaborates and
+  typechecks every proof, but skips IR/C generation (~half the Lake jobs).
+- **Final Comparator/cache:** must use the default facets (`lake build Main Challenge`), because the
+  Comparator and cache publication need the full `.olean`/`.ilean`/`.ir`/C artifacts.
+- `:elabArts` does **not** weaken the proof: elaboration and typechecking are unchanged.

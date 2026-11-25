@@ -27,11 +27,15 @@ def main():
     ap.add_argument("--times", default=None)
     ap.add_argument("--time-stat", choices=["median", "max"], default="median")
     ap.add_argument("--jobs-per-module", type=float, default=4.0)
+    ap.add_argument("--elab-only", action="store_true",
+                    help="intermediate check mode: 2 jobs/module (olean+ilean), no IR/C")
     ap.add_argument("--parallel", type=int, default=12)
     ap.add_argument("--jobs-per-min", type=float, default=1000.0,
                     help="Lake job processing rate (replays + compiles)")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
+    if args.elab_only:
+        args.jobs_per_module = 2.0
 
     src = os.path.join(args.repo, "src")
     lib = os.path.join(args.repo, ".lake/build/lib/lean")
@@ -149,6 +153,7 @@ def main():
     out = {
         "closure_modules": len(closure),
         "jobs_estimate": round(jobs),
+        "facet_mode": "elabArts (no IR/C)" if args.elab_only else "default (irArts)",
         "must_build": len(must),
         "known_clean": len(clean),
         "missing_olean": len(missing),
