@@ -67,11 +67,25 @@ TARGETS="$MOD"
 if [ "$BUILD_IMPORTERS" = 1 ]; then TARGETS="$TARGETS $(cat "$OUT/importers.txt")"; fi
 echo "building: $TARGETS"
 if lake build $TARGETS > "$OUT/build.log" 2>&1; then
+  BUILD_STATUS=PASS
   echo "ok build"
 else
+  BUILD_STATUS=FAIL
   echo "FAIL build (see $OUT/build.log)"; RC=1
 fi
 grep -E "Built .*$MOD|error: src" "$OUT/build.log" | tail -3
+
+# job coverage: the last [done/total] in the log
+LAST_JOB=$(grep -oE '\[[0-9]+/[0-9]+\]' "$OUT/build.log" | tail -1 | tr -d '[]')
+JOBS_DONE=${LAST_JOB%%/*}; JOBS_TOTAL=${LAST_JOB##*/}
+[ -n "${JOBS_DONE:-}" ] || JOBS_DONE=0
+[ -n "${JOBS_TOTAL:-}" ] || JOBS_TOTAL=0
+if [ "$JOBS_TOTAL" -gt 0 ] 2>/dev/null; then
+  COVERAGE=$(awk -v d="$JOBS_DONE" -v t="$JOBS_TOTAL" 'BEGIN{printf "%.1f", 100*d/t}')
+else
+  COVERAGE="unknown"
+fi
+printf 'jobs=%s/%s\ncoverage=%s%%\n' "$JOBS_DONE" "$JOBS_TOTAL" "$COVERAGE" | tee -a "$OUT/inputs.txt"
 
 # 6. axioms (opt-in, names supplied by the caller)
 if [ -n "$AXIOMS" ]; then
@@ -95,12 +109,21 @@ fi
   echo "- base: \`$MB\`"
   echo "- changed inputs: **$COUNT**"
   echo "- importers: $(wc -l < "$OUT/importers.txt" | tr -d ' ')"
+  echo "- build jobs: **$JOBS_DONE / $JOBS_TOTAL** (coverage ${COVERAGE}%)"
   [ -n "${LOG_SHA:-}" ] && echo "- build log sha256: \`$LOG_SHA\`"
   echo "- result: $([ "$RC" = 0 ] && echo PASS || echo FAIL)"
   echo
   echo "## Checks"
   echo "- open-list scan: $([ -s "$OUT/open-scan.txt" ] && echo FAIL || echo ok)"
   echo "- statement diff: $([ -s "$OUT/statement-diff.txt" ] && echo REVIEW || echo none)"
+  echo
+  echo "## Verification ladder"
+  echo "| stage | status |"
+  echo "|---|---|"
+  echo "| build | $BUILD_STATUS (jobs $JOBS_DONE/$JOBS_TOTAL, ${COVERAGE}%) |"
+  echo "| clean-machine build | pending |"
+  echo "| \`lake comparator\` | pending |"
+  echo "| \`con-leche --compare\` | pending |"
   [ -s "$OUT/axioms.txt" ] && { echo; echo "## Axioms"; echo '```'; cat "$OUT/axioms.txt"; echo '```'; }
 } > "$OUT/RECEIPT.md"
 echo "receipt: $OUT/RECEIPT.md"
