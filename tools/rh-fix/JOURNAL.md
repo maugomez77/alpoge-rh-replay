@@ -1,5 +1,7 @@
 # Event journal
 
+**Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
+
 - 2026-11-24T10:44Z #120 closed by maintainer Deicyde as "superseded by #324" (which consolidated modules on main); reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z); 4.36 lane active.
 - 2026-11-24T14:04Z Board validation: 39/39 rows build clean at 49b2bdb6a8.
 - 2026-11-24T15:04Z Full Main Challenge started at 49b2bdb6a8.

@@ -1,6 +1,8 @@
 > **Authoritative snapshot:** [`CURRENT.md`](CURRENT.md) — start there.
 
-# Status — 2026-11-25T09:17Z
+**Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
+
+# Status — 2026-11-25T09:20Z (01:20 PST)
 
 ## Current RH 4.36 (this section supersedes the 18:10Z snapshot below)
 

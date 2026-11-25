@@ -1,6 +1,7 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T09:17Z
+**Last updated:** 2026-11-25T09:20Z (01:20 PST)
+**Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
 **Maintenance:** update it at every milestone (terminal build, merge, new claim). Supporting detail:
