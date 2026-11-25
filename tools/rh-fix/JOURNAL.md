@@ -12,3 +12,4 @@
 - 2026-11-25T01:39Z Bundle0004 and Bundle0224 both compile clean at tip ab2ded12 (direct lean exit 0); @[expose] refactor fixed the private-declaration issue; no PR.
 - 2026-11-25T02:51Z Calibrated full Main Challenge started at b9b24502 (predicted must_build=20012, jobs=191540, est ~6.5h).
 - 2026-11-25T05:54Z b9b24502 full build: 1 error/1 module (ShortThetaValueComplexPointEqClassicalTheta:276), 3h; fixed at next tip (exact key). New full build started at 884075ed.
+- 2026-11-25T07:09Z 884075ed full build: 1 module/6 errors in 22m; fixed at 94ff1f0f (attribute [-instance]); next build at 94ff1f0f.
