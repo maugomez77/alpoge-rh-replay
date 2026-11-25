@@ -2,7 +2,8 @@
 
 **Last updated:** 2026-11-25T06:15Z
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
-**This file is the only one you need to read to resume.** Supporting detail:
+**This file is the only one you need to read to resume.**
+**Maintenance:** update it at every milestone (terminal build, merge, new claim). Supporting detail:
 `STATUS.md`, `HANDOFF.md`, `JOURNAL.md`, `README.md`, `NEXT-SESSION.md` (older).
 
 ## What this project is
