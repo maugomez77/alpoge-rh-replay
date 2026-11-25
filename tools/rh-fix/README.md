@@ -11,6 +11,7 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `regression-watch.sh [repo]` | Rebuild every module in `watch-modules.txt` at the current tip; catches reversions (the `Bundle0295` class of bug). |
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
 | `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, **@mentions on unwatched threads** (notifications API, `--mention-skip` filters bot batch titles), state changes, reviews, merge conflicts. Exits with the full text of new events. |
+| `build-fast.sh [--check] [targets]` | One command for the best-known flow: cache preflight, then full build — or `--check` for `:elabArts` (no IR/C). |
 | `warm-cache.sh` | Try the repo's validated CI cache for the exact build inputs before compiling (`lake exe cache get`). Exit 3 means no cache — just build. |
 | `plan.py` | Beforehand estimate: exact closure modules, jobs (4/module), trace-based must-build set (missing/stale source/stale deps), median compile time, critical path, and a wall estimate separating compile work from replay-job overhead. |
 | `plan.py --elab-only` | Intermediate-check estimate: 2 jobs/module (`olean`+`ilean`), no IR/C. |
