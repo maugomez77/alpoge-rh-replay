@@ -1,6 +1,6 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T09:20Z (01:20 PST)
+**Last updated:** 2026-11-25T14:00Z (06:00 PST)
 **Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
@@ -17,17 +17,18 @@ Two parallel efforts:
    full builds, fault-finding, small fixes, receipts.
 2. **Formal Conjectures** — four PRs adding Erdős problem statuses/answers.
 
-## Live state (2026-11-25T08:40Z)
+## Live state (2026-11-25T14:00Z)
 
 | Item | Value |
 |---|---|
-| **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. **Provenance:** first closed by *Deicyde* at 10:44Z Nov 24 as "superseded by #324", reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z), re-closed by the author at 16:35Z. The PR head is frozen at `67edc6403` (Nov 23 11:27Z) — **823 commits behind** the fork tip. |
-| **Old build** | `884075ed`, `/work/mainbuild13.log`: terminal `error: build failed`, 7 error lines in `ExistsIsHaarProbabilityMaxCompactHermitian` (superseded; the tip restores the line and compiles **clean, exit 0**) |
-| **Tip build in flight** | `mainbuild14` at **`94ff1f0f`**: **94,445 / 114,021**, **0 errors**, running (09:13Z) |
-| Branch tip | `94ff1f0fd0` (quiet since 06:14Z; `origin/opt/collapse-and-consolidate-4.36` == `94ff1f0f`; checked out in the M4 worktree as local branch `probe/next2` — its HEAD is byte-identical to the fork tip) |
-| Watcher | ran at 07:08Z: snapshotted 13, fetched the tip, `probe/next`, started 14 |
-| Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; that module is fixed at the next tip |
-| Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → 6 on the bad commit (0 at tip for that module) |
+| **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. **Provenance:** first closed by *Deicyde* at 10:44Z Nov 24 as "superseded by #324", reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z), re-closed by the author at 16:35Z. The PR head is frozen at `67edc6403` (Nov 23 11:27Z) — **823+ commits behind** the current fork tip `7fb6893d70`. |
+| **mainbuild14** | `884075ed`…`94ff1f0f`, terminal 11:56Z Nov 25: **113,995 / 114,021**, `error: build failed`, **7 errors / 2 modules**: `ReBaseZeta` (4) and `ArchimedeanSchwartz.HodgeTateFromSandwich` (3). Log `/work/mainbuild14.log`, sha256 `7cfbd1c0…`. |
+| **mainbuild15 in flight** | **`7fb6893d70`**, started 13:58Z (05:58 PST); fresh full `Main Challenge`. Log `/work/mainbuild15.log`. |
+| Branch tip | `7fb6893d70` (+8 commits since `94ff1f0f`, 13 files). Checked out in the M4 worktree as `probe/next4`. |
+| Targeted check | `b35a3239c4`: build of the two mainbuild14 failures → **80,107 jobs, exit 0** (13:57Z). Fixes: #1414 (`ReBaseZeta`), #1411/#1412 (`instMeasGL` disables restored in 12 files). |
+| Watcher | monitor-only `/work/watch-build.sh` armed for mainbuild15 → `/work/mainbuild15-summary.txt` (PIDS on M4 + Mini); **does not** auto-start another build. |
+| Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; fixed at the next tip |
+| Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → **2/7** at `94ff1f0f` → **0** for those two at `b35a3239c4` |
 | lean-lsp MCP | **down** (tunnel refused; server shut down 06:10). `lake env lean` over SSH works. |
 
 ### New finding: instance-shadow census (2026-11-25)
@@ -119,8 +120,9 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Immediate next steps
 
-1. **Tip build.** `mainbuild14` at `94ff1f0f` (94,445/114,021, 0 errors at 09:13Z; ~2–2.5h remaining at the observed rate).
-   On exit: if green → `certify.sh 94ff1f0f`; if errors → triage and delta-build.
+1. **Tip build.** `mainbuild15` at `7fb6893d70` (started 13:58Z). The two mainbuild14
+   failures are already confirmed clean at `b35a3239c4` (80,107 jobs, exit 0).
+   On exit: if green → `certify.sh 7fb6893d70`; if errors → triage and delta-build.
 2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
    `:olean`-only build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /

@@ -2,13 +2,15 @@
 
 **Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
 
-# Status — 2026-11-25T09:20Z (01:20 PST)
+# Status — 2026-11-25T14:00Z (06:00 PST)
 
 ## Current RH 4.36 (this section supersedes the 18:10Z snapshot below)
 
 - **#120:** closed since 16:35Z Nov 24 (author, temporary, to save CI). First closed by maintainer Deicyde 10:44Z ("superseded by #324"), reopened 13:18Z by Deicyde (Rohan confirmed at 13:25Z), re-closed 16:35Z. **PR head frozen at `67edc6403` — 823 commits behind the fork tip.**
-- **Tip:** `94ff1f0fd0` == `origin/opt/collapse-and-consolidate-4.36` (fork `rohanarun/riemann-hypothesis`). M4 worktree `/work/rh120` is checked out as local branch `probe/next2`, HEAD identical to the fork tip.
-- **Build:** `mainbuild14` (`lake build Main Challenge`, started 07:09Z): **94,445 / 114,021, 0 errors** at 09:13Z, running.
+- **mainbuild14 @ `94ff1f0f`:** terminal 11:56Z — 113,995/114,021, `error: build failed`, **2 modules / 7 errors** (`ReBaseZeta`, `HodgeTateFromSandwich`).
+- **Tip:** `7fb6893d70` (fork `rohanarun/riemann-hypothesis`); M4 worktree on local branch `probe/next4`.
+- **Fix check:** both failures build clean at `b35a3239c4` (targeted, 80,107 jobs, exit 0). Fixes #1414 + #1411/#1412.
+- **Build:** `mainbuild15` at `7fb6893d70`, started 13:58Z; monitor-only watcher armed for its terminal summary.
 - The rest of this file is the **2026-11-24T18:10Z snapshot**, kept for history (tip then was `ecce788d81`).
 
 Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`.
