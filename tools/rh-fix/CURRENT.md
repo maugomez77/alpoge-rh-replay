@@ -1,6 +1,6 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T06:50Z
+**Last updated:** 2026-11-25T08:40Z
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
 **Maintenance:** update it at every milestone (terminal build, merge, new claim). Supporting detail:
@@ -16,15 +16,15 @@ Two parallel efforts:
    full builds, fault-finding, small fixes, receipts.
 2. **Formal Conjectures** — four PRs adding Erdős problem statuses/answers.
 
-## Live state (2026-11-25T06:50Z)
+## Live state (2026-11-25T08:40Z)
 
 | Item | Value |
 |---|---|
 | **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. |
-| **Full build in flight** | `884075ed`, log `/work/mainbuild13.log` on the M4; 88,987 / 114,021 jobs |
-| Errors | **6 / 1 module** (`ExistsIsHaarProbabilityMaxCompactHermitian`) — but `884075ed` **removed** the `attribute [-instance]` line; the tip restores it and the module compiles **clean (exit 0)** |
+| **Old build** | `884075ed`, `/work/mainbuild13.log`: terminal `error: build failed`, 7 error lines in `ExistsIsHaarProbabilityMaxCompactHermitian` (superseded; the tip restores the line and compiles **clean, exit 0**) |
+| **Tip build in flight** | `mainbuild14` at **`94ff1f0f`**: **89,421 / 114,021**, **0 errors**, running (08:35Z) |
 | Branch tip | `94ff1f0fd0` (quiet since 06:14Z) |
-| **Watcher queued** | `/work/wait-and-build.sh` (PID 854956): on build exit → snapshot → fetch tip → `probe/next` → delta build to `/work/mainbuild14.log` |
+| Watcher | ran at 07:08Z: snapshotted 13, fetched the tip, `probe/next`, started 14 |
 | Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; that module is fixed at the next tip |
 | Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → 6 on the bad commit (0 at tip for that module) |
 | lean-lsp MCP | **down** (tunnel refused; server shut down 06:10). `lake env lean` over SSH works. |
@@ -64,6 +64,18 @@ Apply: when touching an instance-bearing hub, budget a full build. Reducing hub 
 **Important:** the full build stops at the first blocking module; “1 error” means the
 frontier, not the whole tree. Fixing it reveals the next layer.
 
+### Mini disk (2026-11-25)
+
+- Was **96%** (21 G free) → **82%** (81 G free).
+- Hugging Face cache 54 G moved to `/Volumes/Storage/caches/huggingface` + symlink.
+- npm cache 6.4 G freed.
+- **`~/dev` (61 G) held** — an external symlink would break remote SSH ownership/permissions.
+- **uv 194 G pending** — `archive-v0` is locked by 7 live MCP servers. After an
+  OpenCode restart: `uv cache clean` (the tool environments themselves are only 242 MB).
+- Remaining candidates: OrbStack 65 G, Ollama 22 G, Claude/Google app data ~21 G,
+  `~/Library/Caches` 15 G.
+- `/Volumes/Storage`: 1.8 TiB total, **1.5 TiB free**.
+
 ## Links
 
 - RH PR: https://github.com/leanprover-community/riemann-hypothesis/pull/120
@@ -93,6 +105,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `delta-build.sh` | Build only the closure; falls back to `Main Challenge` above `DELTA_MAX` |
 | `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, delta build |
 | `certify.sh` | Clean-source `:olean` build + exports + comparator + independent kernels |
+| `InstanceAudit.lean` | Semantic instance audit: reads `Meta.instanceExtension` (keys, priority, module), not source text |
 | `warm-cache.sh` | Try the repo's validated CI cache (exit 3 = none) |
 | `stop-all.sh [--container]` | Stop watchers + M4 build/container |
 | `lean-lsp-mcp-remote.sh` | stdio-over-SSH bridge to `lean-lsp-mcp` in the container |
@@ -105,9 +118,8 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Immediate next steps
 
-1. **Build tail.** Wait for `mainbuild13` to terminate; read
-   `/work/mainbuild13-summary.txt`. The watcher then fetches the then-current tip,
-   checks out `probe/next`, and runs the delta build to `/work/mainbuild14.log`.
+1. **Tip build.** `mainbuild14` at `94ff1f0f` (89,421/114,021, 0 errors at 08:35Z).
+   On exit: if green → `certify.sh 94ff1f0f`; if errors → triage and delta-build.
 2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
    `:olean`-only build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
