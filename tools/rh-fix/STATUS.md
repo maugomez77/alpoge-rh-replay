@@ -92,3 +92,11 @@ Recommended trigger: the branch tip has been unchanged for >= 10 minutes (stabil
 - **Claims registry** (`claims.py`), **event journal** (`journal.py` + `JOURNAL.md`),
   **receipts** (`post-receipt.sh`), and **state sync** (`sync.sh pull|push`).
 - Data in the repo: `data/ledger.json`, `data/times.txt`, `data/claims.json`.
+
+## Handoff to next session
+
+See **`NEXT-SESSION.md`** — live build state, machines, MCP setup, immediate steps,
+and a ready-to-paste opening prompt.
+
+Current at handoff (06:15Z): full build at `884075ed` in flight (~84k/114k jobs,
+6 errors / 1 module), branch tip `22f1682e9f`, `lean-lsp` MCP configured.
