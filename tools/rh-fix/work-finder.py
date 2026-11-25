@@ -104,6 +104,11 @@ def load_times(path):
                 t[parts[0]] = float(parts[1])
             except ValueError:
                 pass
+        elif len(parts) >= 4:
+            try:
+                t[parts[0]] = float(parts[2])  # median
+            except ValueError:
+                pass
     return t
 
 
