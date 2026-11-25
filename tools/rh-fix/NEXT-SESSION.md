@@ -1,3 +1,5 @@
+> **Authoritative snapshot:** [`CURRENT.md`](CURRENT.md) — start there.
+
 # Next session — start here
 
 **Last updated:** 2026-11-25T06:15Z

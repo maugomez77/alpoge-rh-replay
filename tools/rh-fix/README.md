@@ -1,3 +1,5 @@
+> **Start here:** [`CURRENT.md`](CURRENT.md) — single-file state of the project.
+
 # ~/.rh-fix — repair toolchain for the Riemann-Hypothesis consolidation
 
 Build-first, claim-second. Every fix gets a receipt before it becomes `ready for review`.

@@ -1,3 +1,5 @@
+> **Authoritative snapshot:** [`CURRENT.md`](CURRENT.md) — start there.
+
 # Handoff — RH 4.36 + Formal Conjectures
 
 **Last updated:** 2026-11-24T16:40Z

@@ -1,3 +1,5 @@
+> **Authoritative snapshot:** [`CURRENT.md`](CURRENT.md) — start there.
+
 # Status — 2026-11-24T18:10Z
 
 Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`.
