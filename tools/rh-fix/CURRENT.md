@@ -105,6 +105,12 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `module-graph-{render,density,layers}.py` | Galaxy, density-reveal, and layered-BFS renders |
 | `module-graph-interactive.py` | Self-contained Plotly WebGL HTML (pan/zoom/hover) |
 | `module-graph-buildtime.py` | Layout coloured by measured per-module compile cost |
+| `module-graph-structure.py` | k-core portrait + longest-chain critical path |
+| `module-graph-treemap.py` | Interactive namespace treemap + sunburst |
+| `module-graph-semantic.py` | TF-IDF→SVD→t-SNE semantic map of module source |
+| `module-graph-instances.py` | `attribute [-instance]` debt map on the layout |
+| `graph-export.py` + `module-graph-layout-tsv.py` | Export a tree's names/edges and lay it out (current-tip images) |
+| `build-timeline-extract.py` + `module-graph-timeline.py` | Real build Gantt from a log + olean mtimes |
 | `preflight.sh <Module>` | Receipt: scope, open scan, statements, importers, build log digest, axioms |
 | `critic.py --module … --error …` | Deterministic checks + Grok CLI review before `gh pr ready` |
 | `post-receipt.sh <Module> <PR>` | Post the preflight receipt once (marker-deduped) |
