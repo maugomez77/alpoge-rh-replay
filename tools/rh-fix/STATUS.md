@@ -10,7 +10,7 @@ Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, b
 - **Last full build:** `49b2bdb6a8` → `error: build failed`, **133 errors / 20 modules** (published: https://github.com/rohanarun/alpoge-rh-replay/issues/35028). 18 of those 20 files changed since; the two unchanged ones are being built at `7127dd68`:
   - `Development.AutomorphicArithmetic…GeometricFlagBases.Bundle0004`
   - `Development.AutomorphicSpectrum.Proofs.GeometryProofs.Bundle0224`
-  - **Result:** both **FAIL**. `Bundle0004` is unchanged at the tip (`a_snd` unknown → real); `Bundle0224` changed at the tip (likely fixed).
+  - **Result:** both FAIL at `7127`, but **both compile clean at the current tip `ab2ded12`** (direct `lake env lean`, exit 0). The `@[expose] public section` refactor fixed the private-declaration drop; no fix PR needed.
 - Earlier results: baseline `376bacf238` → 96/27; rerun `2d20aa90` → 67/16, **24 of 27** baseline failures fixed.
 - **Work queue:** see [`WORK-QUEUE.md`](WORK-QUEUE.md) — currently **1 M4** candidate and **20 mini** triage items (18 marked `VERIFY` because the file changed since the log SHA), with 28 stale board rows excluded.
 
