@@ -35,7 +35,7 @@ DF_BEFORE=$(df -h . | awk 'NR==2 {print $4}')
 
 # 2. clean source build, oleans only (no IR/C)
 BUILD=PASS
-lake build Main:olean Challenge:olean > "$OUT/build.log" 2>&1 || BUILD=FAIL
+lake build Main:elabArts Challenge:elabArts > "$OUT/build.log" 2>&1 || BUILD=FAIL
 LAST=$(grep -oE '\[[0-9]+/[0-9]+\]' "$OUT/build.log" | tail -1 | tr -d '[]')
 FIRST_ERR=$(grep -m1 '^error' "$OUT/build.log" || true)
 if command -v sha256sum >/dev/null 2>&1; then DIGEST() { sha256sum "$1" | awk '{print $1}'; }; else DIGEST() { shasum -a 256 "$1" | awk '{print $1}'; }; fi

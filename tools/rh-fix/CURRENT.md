@@ -1,6 +1,6 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T14:00Z (06:00 PST)
+**Last updated:** 2026-11-25T21:05Z (13:05 PST)
 **Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
@@ -17,19 +17,21 @@ Two parallel efforts:
    full builds, fault-finding, small fixes, receipts.
 2. **Formal Conjectures** — four PRs adding Erdős problem statuses/answers.
 
-## Live state (2026-11-25T14:00Z)
+## Live state (2026-11-25T21:05Z)
 
 | Item | Value |
 |---|---|
-| **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. **Provenance:** first closed by *Deicyde* at 10:44Z Nov 24 as "superseded by #324", reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z), re-closed by the author at 16:35Z. The PR head is frozen at `67edc6403` (Nov 23 11:27Z) — **823+ commits behind** the current fork tip `7fb6893d70`. |
+| **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. **Provenance:** first closed by *Deicyde* at 10:44Z Nov 24 as "superseded by #324", reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z), re-closed by the author at 16:35Z. The PR head is frozen at `67edc6403` (Nov 23 11:27Z) — **900+ commits behind** the current fork tip `e497a6603e`. |
 | **mainbuild14** | `884075ed`…`94ff1f0f`, terminal 11:56Z Nov 25: **113,995 / 114,021**, `error: build failed`, **7 errors / 2 modules**: `ReBaseZeta` (4) and `ArchimedeanSchwartz.HodgeTateFromSandwich` (3). Log `/work/mainbuild14.log`, sha256 `7cfbd1c0…`. |
-| **mainbuild15 in flight** | **`7fb6893d70`**, started 13:58Z (05:58 PST); fresh full `Main Challenge`. Log `/work/mainbuild15.log`. |
-| Branch tip | `7fb6893d70` (+8 commits since `94ff1f0f`, 13 files). Checked out in the M4 worktree as `probe/next4`. |
+| **mainbuild15** | `7fb6893d70`, started 13:58Z. **Killed at 20:02Z by host-disk exhaustion** (see Disk). Was 105,280/105,967, **0 errors**. A resume (`mainbuild15b`) also died; superseded by mainbuild16b. |
+| **mainbuild16b in flight** | **`e497a6603e`**, started 21:01Z (13:01 PST); **`lake build Main:elabArts Challenge:elabArts`** (olean/ilean only — no IR/C). Log `/work/mainbuild16b.log`. |
+| Branch tip | `e497a6603e` (+29 commits since `7fb6893d70`). M4 worktree checked out as `probe/next5`. |
 | Targeted check | `b35a3239c4`: build of the two mainbuild14 failures → **80,107 jobs, exit 0** (13:57Z). Fixes: #1414 (`ReBaseZeta`), #1411/#1412 (`instMeasGL` disables restored in 12 files). |
-| Watcher | monitor-only `/work/watch-build.sh` armed for mainbuild15 → `/work/mainbuild15-summary.txt` (PIDS on M4 + Mini); **does not** auto-start another build. |
+| **Disk (recovered)** | Root cause of the 20:02Z VM force-stop: **host disk 100% full** (118 MB free); OrbStack `data.img.raw` had grown to **792 GB**, and `.lake/build/ir` was **450 GB**. Cleanup: caches + stale Docker Desktop (~20 GB host), deleted `ir` (450 GB). OrbStack auto-reclaimed: image **366 GB**, host **445 GB free**, `/work` 43% used. |
+| Watcher | monitor-only `/work/watch-build.sh` armed for mainbuild16b → `/work/mainbuild16b-summary.txt`; matches any `lake build`. |
 | Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; fixed at the next tip |
 | Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → **2/7** at `94ff1f0f` → **0** for those two at `b35a3239c4` |
-| lean-lsp MCP | **down** (tunnel refused; server shut down 06:10). `lake env lean` over SSH works. |
+| lean-lsp MCP | **removed** from the OpenCode catalog (2026-11-25 system update); no MCP tools available. `lake env lean` over SSH works. |
 
 ### New finding: instance-shadow census (2026-11-25)
 
@@ -120,11 +122,13 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Immediate next steps
 
-1. **Tip build.** `mainbuild15` at `7fb6893d70` (started 13:58Z). The two mainbuild14
-   failures are already confirmed clean at `b35a3239c4` (80,107 jobs, exit 0).
-   On exit: if green → `certify.sh 7fb6893d70`; if errors → triage and delta-build.
+1. **Tip build.** `mainbuild16b` at `e497a6603e` (started 21:01Z), `elabArts` only.
+   The two mainbuild14 failures are already confirmed clean at `b35a3239c4`
+   (80,107 jobs, exit 0). On exit: if green → `certify.sh e497a6603e`; if errors →
+   triage and delta-build. Do **not** run plain `lake build Main Challenge` on
+   this machine without space headroom: IR is 450 GB and previously filled the host.
 2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
-   `:olean`-only build, exports, `lake comparator`, `con-leche --verified`,
+   `elabArts`-only build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
    `Statements.lean` unchanged → ask Rohan to reopen #120.
 3. **If new errors:** build-first → claim (draft PR) → fix → `preflight.sh` →
@@ -142,20 +146,24 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Certification gate (next after green)
 
-Disk reality on the M4 (2026-11-25):
+Disk reality on the M4 (2026-11-25, after cleanup):
 
 | Path | Size |
 |---|---:|
-| `.lake/build/ir` (default `irArts`: `.ir`/`.c` per module) | **287 GB** |
-| `.lake/build/lib/lean` (oleans) | **56 GB** |
-| `.lake/packages` (Mathlib artifacts) | 7.3 GB |
-| free on `/work` | 189 GB |
+| `.lake/build/ir` (default `irArts`: `.ir`/`.c` per module) | **450 GB → deleted** |
+| `.lake/build/lib/lean` (oleans) | 73 GB |
+| `.lake/packages` (Mathlib artifacts) | 0.5 GB |
+| `/work` in use / free | 342 GB / 469 GB |
+| OrbStack image / host free | 366 GB / 445 GB |
 
-A default clean build (343 GB) **does not fit**. An `:olean`-only build does (56 GB).
+A default clean build's IR (450 GB) does **not fit safely**. Use **`elabArts`**
+(olean/ilean only). Lake 5.0 library facets are `elabArts` / `irArts`; the
+`:olean` facet exists only on modules — `Main:olean` fails with
+"unknown lean_lib facet `olean`". `certify.sh` was fixed accordingly.
 
 `certify.sh <sha>`:
 1. fresh worktree at the SHA, share only `.lake/packages` (not the project build);
-2. `lake build Main:olean Challenge:olean` — no IR/C;
+2. `lake build Main:elabArts Challenge:elabArts` — no IR/C;
 3. `leanexport Challenge` / `leanexport Main` with `export-targets.txt`;
 4. `lake comparator --config comparator.json --challenge-from-export … --solution-from-export …`;
 5. `con-leche --verified` and `leanchecker-paranoid` on the solution export;
