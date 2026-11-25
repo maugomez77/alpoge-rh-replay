@@ -1,0 +1,539 @@
+{
+ "sampled_edges": 494947,
+ "shards": {
+  "shards": 20,
+  "sample": 494947,
+  "topk": 50
+ },
+ "mean": -0.2656,
+ "median": -0.26,
+ "q05": -0.6167,
+ "q95": 0.0538,
+ "negative_fraction": 0.9088,
+ "negative_fraction_ci95": 0.0008,
+ "cross_namespace_mean": -0.3499,
+ "same_namespace_mean": -0.2512,
+ "cross_namespace_fraction": 0.146,
+ "debt_edges_mean": -0.277,
+ "no_debt_edges_mean": -0.2535,
+ "correlation": {
+  "degree_sum": {
+   "rho": -0.2138,
+   "p": 0.0
+  },
+  "instance_debt_sum": {
+   "rho": -0.0444,
+   "p": 8.74963928325079e-215
+  },
+  "compile_cost_sum": {
+   "rho": -0.1087,
+   "p": 0.0
+  }
+ },
+ "most_negative": [
+  {
+   "edge": "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0006 -- Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.Bundle0001",
+   "kappa": -1.0,
+   "degrees": [
+    350,
+    465
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle2804 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.99,
+   "degrees": [
+    68,
+    479
+   ],
+   "instance_debt": 2,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle3025 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.99,
+   "degrees": [
+    106,
+    479
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.WeilBound.ThetaLifts.Reductions.FiniteClosure.TheoremKOfMod",
+   "kappa": -0.99,
+   "degrees": [
+    4209,
+    75
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- Development.WeilBound.ThetaLifts.Reductions.FiniteClosure.TheoremKOfMod",
+   "kappa": -0.99,
+   "degrees": [
+    4148,
+    75
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle3044 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.98,
+   "degrees": [
+    58,
+    479
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal",
+   "kappa": -0.98,
+   "degrees": [
+    4148,
+    191
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 3.4,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle3085 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.98,
+   "degrees": [
+    72,
+    479
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.TwistedOperators.Bundle0648 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.98,
+   "degrees": [
+    67,
+    479
+   ],
+   "instance_debt": 1,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle3130 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.97,
+   "degrees": [
+    96,
+    479
+   ],
+   "instance_debt": 1,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.WeakOfAtt",
+   "kappa": -0.964286,
+   "degrees": [
+    4148,
+    28
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0009",
+   "kappa": -0.96,
+   "degrees": [
+    4209,
+    379
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 10.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1530 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.96,
+   "degrees": [
+    71,
+    479
+   ],
+   "instance_debt": 5,
+   "compile_cost_s": 24.1,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle1043 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.96,
+   "degrees": [
+    103,
+    479
+   ],
+   "instance_debt": 2,
+   "compile_cost_s": 27.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0008",
+   "kappa": -0.96,
+   "degrees": [
+    4209,
+    496
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 12.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.ExistsUniqueHcharOfFiniteOrder",
+   "kappa": -0.96,
+   "degrees": [
+    4148,
+    644
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 5.2,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.ExistsUniqueHcharOfFiniteOrder",
+   "kappa": -0.96,
+   "degrees": [
+    4209,
+    644
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 5.2,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0008",
+   "kappa": -0.96,
+   "degrees": [
+    4148,
+    496
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 12.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle3040 -- Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0007",
+   "kappa": -0.96,
+   "degrees": [
+    54,
+    479
+   ],
+   "instance_debt": 1,
+   "compile_cost_s": 16.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology\u2082.Bundle0006",
+   "kappa": -0.96,
+   "degrees": [
+    4209,
+    255
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 5.8,
+   "cross_namespace": false
+  }
+ ],
+ "most_positive": [
+  {
+   "edge": "Development.WeilBound.CoreStatements.PadicHodgeComparison.GoodCoverEigenspaces.CubeCechEquivalences.CoordsOfCommonEigenvector -- Development.WeilBound.CoreStatements.PadicHodgeComparison.GoodCoverEigenspaces.MemRangeOfSol",
+   "kappa": 0.75,
+   "degrees": [
+    2,
+    2
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 13.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.CMTraceEmbeddings.Bundle0002 -- Development.AutomorphicArithmetic.CMTraceEmbeddings.Bundle0001",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.LxCore -- Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.Bundle0001",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 10.5,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalOrderProjection.Bundle0001 -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalOrderProjection.LocOProjOf",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 9.3,
+   "cross_namespace": false
+  },
+  {
+   "edge": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ValuationLifting.ValuationApproximation.Bundle0001 -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ValuationLifting.LiftSt",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 8.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "ReciprocityTheory.L2DbarEstimates.SymmetricSections.Bundle0002 -- ReciprocityTheory.L2DbarEstimates.SymmetricSections.Bundle0001",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 9.2,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DeterminantKernelFiniteness.ValuationLeOneOfDenom -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DeterminantKernelFiniteness.ExistsNatMulMemFracFam",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 6.9,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.RegZero -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.GoodHeight",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 13.4,
+   "cross_namespace": false
+  },
+  {
+   "edge": "ReciprocityTheory.L2DbarEstimates.Mollifiers.MollGraph -- ReciprocityTheory.L2DbarEstimates.Mollifiers.MollTendstoOfContinuous",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 8.9,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ConvolutionProjection.Bundle0001 -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ConvolutionProjection.ConvProjOf",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 7.5,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TensorFrameConstruction.LocFrame -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TensorFrameConstruction.LocalFramePreservesOrthogonal",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 9.2,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionDescent.GraphAlgebraSpecSmooth -- Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionDescent.GraphAlgebra",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 9.0,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MirabolicBound.CardNonzero -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MirabolicBound.Bundle0001",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 7.5,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CircleGaugeAction.OfRealCoordsSmulCenterCoord -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CircleGaugeAction.DglApplyOff",
+   "kappa": 0.666667,
+   "degrees": [
+    3,
+    3
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 8.8,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MinkowskiBound.MinkowskiBoundOfSteps -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MinkowskiBound.Bundle0001",
+   "kappa": 0.625,
+   "degrees": [
+    4,
+    4
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 7.5,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LeftPhaseRule.ReflectionColumnDualIsotropic -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LeftPhaseRule.MulApplyS",
+   "kappa": 0.625,
+   "degrees": [
+    4,
+    4
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 8.1,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SelmerOrderCounts.SelInvLe -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SelmerOrderCounts.Bundle0001",
+   "kappa": 0.625,
+   "degrees": [
+    4,
+    4
+   ],
+   "instance_debt": 2,
+   "compile_cost_s": 17.2,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.Bundle0002 -- Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.Bundle0001",
+   "kappa": 0.625,
+   "degrees": [
+    4,
+    4
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 10.4,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TraceDistributionsGL.FiniteImageOfEventually -- Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TraceDistributionsGL.Bundle0001",
+   "kappa": 0.625,
+   "degrees": [
+    4,
+    4
+   ],
+   "instance_debt": 2,
+   "compile_cost_s": 13.8,
+   "cross_namespace": false
+  },
+  {
+   "edge": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ThetaSeriesExistence.GenEqOf -- Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ThetaSeriesExistence.Bundle0002",
+   "kappa": 0.625,
+   "degrees": [
+    4,
+    4
+   ],
+   "instance_debt": 0,
+   "compile_cost_s": 7.5,
+   "cross_namespace": false
+  }
+ ],
+ "top_namespace_pairs": [
+  {
+   "pair": "PositivityTheory -- ReciprocityTheory",
+   "n": 2,
+   "mean": -0.6312
+  },
+  {
+   "pair": "Formalism -- PositivityTheory",
+   "n": 5,
+   "mean": -0.565
+  },
+  {
+   "pair": "Formalism -- GroundTheory",
+   "n": 9,
+   "mean": -0.5339
+  },
+  {
+   "pair": "Formalism -- ReciprocityTheory",
+   "n": 605,
+   "mean": -0.4782
+  },
+  {
+   "pair": "CompanionTheory -- ReciprocityTheory",
+   "n": 138,
+   "mean": -0.4621
+  },
+  {
+   "pair": "CompanionTheory -- GroundTheory",
+   "n": 59,
+   "mean": -0.4621
+  },
+  {
+   "pair": "CompanionTheory -- Formalism",
+   "n": 694,
+   "mean": -0.4513
+  },
+  {
+   "pair": "Development -- GroundTheory",
+   "n": 6397,
+   "mean": -0.3544
+  },
+  {
+   "pair": "Development -- ReciprocityTheory",
+   "n": 25786,
+   "mean": -0.3534
+  },
+  {
+   "pair": "Development -- Formalism",
+   "n": 33485,
+   "mean": -0.3491
+  },
+  {
+   "pair": "GroundTheory -- PositivityTheory",
+   "n": 91,
+   "mean": -0.3455
+  },
+  {
+   "pair": "Development -- PositivityTheory",
+   "n": 489,
+   "mean": -0.3319
+  }
+ ]
+}

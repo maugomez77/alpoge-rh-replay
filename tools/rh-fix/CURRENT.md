@@ -112,6 +112,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `module-graph-duplicates2.py` | Strict near-duplicate census (rare IDs kept + token Jaccard) |
 | `module-graph-ricci.py` | Exact Ollivier–Ricci curvature on namespace-cluster graphs |
 | `module-graph-forman.py` | Full-graph Forman–Ricci curvature map |
+| `ricci_sample_job.py` + `ricci_merge.py` | Sharded Ollivier–Ricci on GitHub Actions (pairwise paths); full 495k-edge pass |
 | `graph-export.py` + `module-graph-layout-tsv.py` | Export a tree's names/edges and lay it out (current-tip images) |
 | `build-timeline-extract.py` + `module-graph-timeline.py` | Real build Gantt from a log + olean mtimes |
 | `preflight.sh <Module>` | Receipt: scope, open scan, statements, importers, build log digest, axioms |
