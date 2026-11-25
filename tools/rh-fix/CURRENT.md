@@ -92,6 +92,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `import-closure.py` | Reverse-dependency closure of changed modules (delta-green unit) |
 | `delta-build.sh` | Build only the closure; falls back to `Main Challenge` above `DELTA_MAX` |
 | `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, delta build |
+| `certify.sh` | Clean-source `:olean` build + exports + comparator + independent kernels |
 | `warm-cache.sh` | Try the repo's validated CI cache (exit 3 = none) |
 | `stop-all.sh [--container]` | Stop watchers + M4 build/container |
 | `lean-lsp-mcp-remote.sh` | stdio-over-SSH bridge to `lean-lsp-mcp` in the container |
@@ -107,8 +108,9 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 1. **Build tail.** Wait for `mainbuild13` to terminate; read
    `/work/mainbuild13-summary.txt`. The watcher then fetches the then-current tip,
    checks out `probe/next`, and runs the delta build to `/work/mainbuild14.log`.
-2. **If the tip build is green:** clean-machine rebuild, `lake comparator`,
-   `con-leche --compare`, then rebase onto `main` with `Challenge.lean` /
+2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
+   `:olean`-only build, exports, `lake comparator`, `con-leche --verified`,
+   `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
    `Statements.lean` unchanged → ask Rohan to reopen #120.
 3. **If new errors:** build-first → claim (draft PR) → fix → `preflight.sh` →
    `critic.py` → post exact SHA/exit/first diagnostic to #35028.
@@ -122,6 +124,29 @@ frontier, not the whole tree. Fixing it reveals the next layer.
    fresh-container advances with `LAKE_ARTIFACT_CACHE=true`; prime with
    `lake build -o maps.json` + `lake cache add`.
 6. FC: #8214/#8187 approved (need 2nd approval); #8215/#8219 re-review.
+
+## Certification gate (next after green)
+
+Disk reality on the M4 (2026-11-25):
+
+| Path | Size |
+|---|---:|
+| `.lake/build/ir` (default `irArts`: `.ir`/`.c` per module) | **287 GB** |
+| `.lake/build/lib/lean` (oleans) | **56 GB** |
+| `.lake/packages` (Mathlib artifacts) | 7.3 GB |
+| free on `/work` | 189 GB |
+
+A default clean build (343 GB) **does not fit**. An `:olean`-only build does (56 GB).
+
+`certify.sh <sha>`:
+1. fresh worktree at the SHA, share only `.lake/packages` (not the project build);
+2. `lake build Main:olean Challenge:olean` — no IR/C;
+3. `leanexport Challenge` / `leanexport Main` with `export-targets.txt`;
+4. `lake comparator --config comparator.json --challenge-from-export … --solution-from-export …`;
+5. `con-leche --verified` and `leanchecker-paranoid` on the solution export;
+6. receipt with SHA, build-log hash, export hashes, stage results.
+
+`bubblewrap 0.9.0` is installed in `rhreplay`. `lake comparator` and `lake check` require it.
 
 ## Process gates now in place (2026-11-25)
 
