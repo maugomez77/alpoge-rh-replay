@@ -4,8 +4,8 @@
 # Usage: delta-build.sh [base] [head]
 # Env:   RH_REPO (default /work/rh120), DELTA_MAX (default 15000 modules)
 #
-# Falls back to `lake build Main Challenge` when the closure is large or a
-# config file changed.  Writes a receipt to ~/.rh-fix/delta-<sha>/.
+# Falls back to a full `Main:elabArts Challenge:elabArts` build when the closure
+# is large or a config file changed.  Writes a receipt to ~/.rh-fix/delta-<sha>/.
 set -u
 export PATH=/root/.elan/bin:$PATH
 
@@ -19,6 +19,12 @@ SHA=$(git rev-parse "$HEAD") || exit 2
 SHORT=$(git rev-parse --short "$HEAD")
 OUT="$HOME/.rh-fix/delta-$SHORT"
 mkdir -p "$OUT"
+
+# shellcheck disable=SC1091
+source "$(dirname "$0")/disk-guard.sh" 2>/dev/null || true
+if command -v disk_guard >/dev/null 2>&1; then
+  disk_guard "${DISK_MIN_GB:-100}" "$REPO" || exit 3
+fi
 
 python3 /work/import-closure.py --src src --changed "$BASE" --head "$HEAD" \
   --json --out "$OUT/modules.txt" --explain > "$OUT/closure.json" 2> "$OUT/closure.err"
@@ -46,6 +52,7 @@ fi
   echo "sha=$SHA"
   echo "base=$(git rev-parse "$BASE")"
   echo "mode=$MODE"
+  echo "facets=$([ "${DELTA_IR:-0}" = "1" ] && echo irArts || echo elabArts)"
   echo "targets=${#TARGETS[@]}"
   python3 -c "import json;d=json.load(open('$OUT/closure.json'));print('changed=%d closure=%d total=%d coverage=%.4f'%(len(d['changed']),d['closure_size'],d['total_modules'],d['coverage']))" 2>/dev/null || true
 } > "$OUT/inputs.txt"
@@ -55,7 +62,14 @@ if [ "${DELTA_DRY:-0}" = "1" ]; then
   echo "dry run: not building"
   exit 0
 fi
-lake build "${TARGETS[@]}" > "$OUT/build.log" 2>&1
+
+BUILD_TARGETS=()
+if [ "${DELTA_IR:-0}" = "1" ]; then
+  BUILD_TARGETS=("${TARGETS[@]}")
+else
+  for t in "${TARGETS[@]}"; do BUILD_TARGETS+=("$t:elabArts"); done
+fi
+lake build "${BUILD_TARGETS[@]}" > "$OUT/build.log" 2>&1
 BUILD_RC=$?
 
 LAST=$(grep -oE '\[[0-9]+/[0-9]+\]' "$OUT/build.log" | tail -1 | tr -d '[]')

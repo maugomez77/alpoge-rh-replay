@@ -1,10 +1,10 @@
 #!/bin/bash
 # Clean-source certification at a pinned SHA.
 #
-# The default Lake facet `irArts` writes .ir/.c for every module: 287 GB here.
-# For checking we only need `olean` (56 GB for the whole tree), so this builds
-# `:olean` in a fresh worktree, exports the challenge/solution modules, and hands
-# the exports to Comparator and the independent kernels.
+# The default Lake facet `irArts` writes .ir/.c for every module: 450 GB here.
+# For checking we only need `elabArts` (olean/ilean, ~73 GB for the whole tree),
+# so this builds that in a fresh worktree, exports the challenge/solution
+# modules, and hands the exports to Comparator and the independent kernels.
 #
 # Usage: certify.sh <sha> [worktree] [outdir]
 # Requires: bubblewrap, a warm $RH_REPO with .lake/packages (Mathlib artifacts).
@@ -18,6 +18,13 @@ SHORT=$(git -C "$REPO" rev-parse --short "$SHA") || exit 2
 WT=${2:-/work/certify-$SHORT}
 OUT=${3:-$HOME/.rh-fix/certify-$SHORT}
 mkdir -p "$OUT"
+
+# Disk guard: certification needs ~73 GB of oleans plus the shared packages.
+# shellcheck disable=SC1091
+source "$(dirname "$0")/disk-guard.sh" 2>/dev/null || true
+if command -v disk_guard >/dev/null 2>&1; then
+  disk_guard "${DISK_MIN_GB:-100}" "$REPO" || exit 3
+fi
 
 echo "certify: $SHA -> $WT (receipt $OUT)"
 

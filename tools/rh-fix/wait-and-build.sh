@@ -15,8 +15,15 @@ BRANCH=${RH_BRANCH:-opt/collapse-and-consolidate-4.36}
 LOCAL_BRANCH=${RH_LOCAL:-probe/next}
 
 # 1. wait for the current build (and any lingering workers) to stop
-while pgrep -f "lake build Main Challenge" >/dev/null 2>&1; do sleep 30; done
+while pgrep -f "lake build" >/dev/null 2>&1; do sleep 30; done
 sleep 15
+
+# 1b. disk headroom before advancing the worktree
+# shellcheck disable=SC1091
+source "$(dirname "$0")/disk-guard.sh" 2>/dev/null || true
+if command -v disk_guard >/dev/null 2>&1; then
+  disk_guard "${DISK_MIN_GB:-100}" "$REPO" || exit 3
+fi
 
 # 2. record the terminal state of the old build
 {
@@ -40,12 +47,12 @@ TIP=$(git rev-parse FETCH_HEAD)
 git checkout -B "$LOCAL_BRANCH" "$TIP" || exit 4
 echo "tip=$TIP" | tee -a "$SUMMARY"
 
-# 4. delta build at the tip
+# 4. elabArts build at the tip (olean/ilean only; no IR/C)
 {
   echo "=== tip build ==="
   date -u
   echo "tip=$TIP"
-  lake build Main Challenge
+  lake build Main:elabArts Challenge:elabArts
   rc=$?
   echo "exit=$rc"
   date -u

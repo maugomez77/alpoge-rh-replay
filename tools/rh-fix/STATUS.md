@@ -12,6 +12,7 @@
 - **Disk incident:** `mainbuild15` was killed at 20:02Z when the **host disk filled** (OrbStack VM force-stop, `StorageFull`). Cleanup freed 450 GB (build IR) + 20 GB host; host now 445 GB free.
 - **Tip:** `e497a6603e` (fork `rohanarun/riemann-hypothesis`); M4 worktree on local branch `probe/next5`.
 - **Build:** `mainbuild16b` at `e497a6603e`, started 21:01Z — `Main:elabArts Challenge:elabArts` (no IR/C); monitor-only watcher armed. Note: `:olean` is not a valid library facet in Lake 5.0; `certify.sh` fixed to `:elabArts`.
+- **Hardening (21:22Z):** disk guard in all build scripts; `elabArts` default with `--ir` opt-in; `pin-build.sh` adds a 600s quiescence gate + pinned SHA + JSON receipt.
 - The rest of this file is the **2026-11-24T18:10Z snapshot**, kept for history (tip then was `ecce788d81`).
 
 Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`.

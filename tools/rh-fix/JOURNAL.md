@@ -23,3 +23,4 @@
 - 2026-11-25T20:5xZ Recovery: freed ~20 GB host (caches + stale Docker Desktop data, unused since June); deleted `.lake/build/ir` (450 GB); OrbStack auto-reclaimed image to 366 GB — host back to 445 GB free, /work 43% used.
 - 2026-11-25T21:00Z Tooling bug found: Lake 5.0 library facet `:olean` does not exist (`unknown lean_lib facet`). Correct: `Main:elabArts Challenge:elabArts`. `certify.sh` fixed.
 - 2026-11-25T21:01Z mainbuild16b started at e497a6603e (probe/next5) with `Main:elabArts Challenge:elabArts` (no IR/C). Watcher armed → /work/mainbuild16b-summary.txt.
+- 2026-11-25T21:22Z Build hardening: new `disk-guard.sh` (abort below 100G VM / 80G host) sourced by build-fast, delta-build, wait-and-build and certify; `elabArts` is now the default everywhere (`--ir` / `DELTA_IR=1` opt-in); new `pin-build.sh` waits for 600s of branch quiescence, pins the SHA, builds elabArts and writes JSON+Markdown receipts. Deployed to ~/.rh-fix and /work.

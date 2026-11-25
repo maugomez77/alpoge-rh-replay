@@ -1,6 +1,6 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T21:05Z (13:05 PST)
+**Last updated:** 2026-11-25T21:22Z (13:22 PST)
 **Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
@@ -102,13 +102,15 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `preflight.sh <Module>` | Receipt: scope, open scan, statements, importers, build log digest, axioms |
 | `critic.py --module … --error …` | Deterministic checks + Grok CLI review before `gh pr ready` |
 | `post-receipt.sh <Module> <PR>` | Post the preflight receipt once (marker-deduped) |
-| `build-fast.sh [--check]` | Cache preflight + full build, or `:elabArts` intermediate check |
+| `build-fast.sh [--check\|--ir]` | Cache preflight + disk guard; `:elabArts` by default, `--ir` for default facets |
+| `disk-guard.sh` | Shared guard: abort builds below 100G (VM) / 80G (host); sourced by build scripts |
+| `pin-build.sh [stable_s] [branch]` | Quiescence gate + pinned-SHA `elabArts` build + JSON/Markdown receipt |
 | `instance-scan.py` | Instance-shadow census: class+head groups, disable lines, removal candidates, `--gate` |
 | `hygiene-check.sh` | Gate: no new global instances vs a baseline (2m47s full tree; `--changed` for a diff) |
 | `import-closure.py` | Reverse-dependency closure of changed modules (delta-green unit) |
-| `delta-build.sh` | Build only the closure; falls back to `Main Challenge` above `DELTA_MAX` |
-| `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, delta build |
-| `certify.sh` | Clean-source `:olean` build + exports + comparator + independent kernels |
+| `delta-build.sh` | Build only the closure as `:elabArts`; falls back to `Main Challenge` above `DELTA_MAX` (`DELTA_IR=1` for IR) |
+| `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, `elabArts` build |
+| `certify.sh` | Clean-source `:elabArts` build + exports + comparator + independent kernels |
 | `InstanceAudit.lean` | Semantic instance audit: reads `Meta.instanceExtension` (keys, priority, module), not source text |
 | `warm-cache.sh` | Try the repo's validated CI cache (exit 3 = none) |
 | `stop-all.sh [--container]` | Stop watchers + M4 build/container |
@@ -127,6 +129,8 @@ frontier, not the whole tree. Fixing it reveals the next layer.
    (80,107 jobs, exit 0). On exit: if green → `certify.sh e497a6603e`; if errors →
    triage and delta-build. Do **not** run plain `lake build Main Challenge` on
    this machine without space headroom: IR is 450 GB and previously filled the host.
+   **Next cycle:** use `pin-build.sh 600` (quiescence gate + pinned SHA + JSON
+   receipt) instead of starting ad-hoc builds at a moving tip.
 2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
    `elabArts`-only build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
