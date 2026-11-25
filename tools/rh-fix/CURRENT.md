@@ -1,6 +1,6 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T08:40Z
+**Last updated:** 2026-11-25T09:17Z
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
 **Maintenance:** update it at every milestone (terminal build, merge, new claim). Supporting detail:
@@ -20,10 +20,10 @@ Two parallel efforts:
 
 | Item | Value |
 |---|---|
-| **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. |
+| **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. **Provenance:** first closed by *Deicyde* at 10:44Z Nov 24 as "superseded by #324", reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z), re-closed by the author at 16:35Z. The PR head is frozen at `67edc6403` (Nov 23 11:27Z) — **823 commits behind** the fork tip. |
 | **Old build** | `884075ed`, `/work/mainbuild13.log`: terminal `error: build failed`, 7 error lines in `ExistsIsHaarProbabilityMaxCompactHermitian` (superseded; the tip restores the line and compiles **clean, exit 0**) |
-| **Tip build in flight** | `mainbuild14` at **`94ff1f0f`**: **89,421 / 114,021**, **0 errors**, running (08:35Z) |
-| Branch tip | `94ff1f0fd0` (quiet since 06:14Z) |
+| **Tip build in flight** | `mainbuild14` at **`94ff1f0f`**: **94,445 / 114,021**, **0 errors**, running (09:13Z) |
+| Branch tip | `94ff1f0fd0` (quiet since 06:14Z; `origin/opt/collapse-and-consolidate-4.36` == `94ff1f0f`; checked out in the M4 worktree as local branch `probe/next2` — its HEAD is byte-identical to the fork tip) |
 | Watcher | ran at 07:08Z: snapshotted 13, fetched the tip, `probe/next`, started 14 |
 | Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; that module is fixed at the next tip |
 | Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → 6 on the bad commit (0 at tip for that module) |
@@ -118,7 +118,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Immediate next steps
 
-1. **Tip build.** `mainbuild14` at `94ff1f0f` (89,421/114,021, 0 errors at 08:35Z).
+1. **Tip build.** `mainbuild14` at `94ff1f0f` (94,445/114,021, 0 errors at 09:13Z; ~2–2.5h remaining at the observed rate).
    On exit: if green → `certify.sh 94ff1f0f`; if errors → triage and delta-build.
 2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
    `:olean`-only build, exports, `lake comparator`, `con-leche --verified`,

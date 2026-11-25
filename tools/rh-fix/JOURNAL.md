@@ -1,6 +1,6 @@
 # Event journal
 
-- 2026-11-24T13:25Z #120 reopened by Rohan; 4.36 lane active.
+- 2026-11-24T10:44Z #120 closed by maintainer Deicyde as "superseded by #324" (which consolidated modules on main); reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z); 4.36 lane active.
 - 2026-11-24T14:04Z Board validation: 39/39 rows build clean at 49b2bdb6a8.
 - 2026-11-24T15:04Z Full Main Challenge started at 49b2bdb6a8.
 - 2026-11-24T16:35Z #120 closed temporarily (CI); work continues on the branch.
@@ -13,3 +13,4 @@
 - 2026-11-25T02:51Z Calibrated full Main Challenge started at b9b24502 (predicted must_build=20012, jobs=191540, est ~6.5h).
 - 2026-11-25T05:54Z b9b24502 full build: 1 error/1 module (ShortThetaValueComplexPointEqClassicalTheta:276), 3h; fixed at next tip (exact key). New full build started at 884075ed.
 - 2026-11-25T07:09Z 884075ed full build: 1 module/6 errors in 22m; fixed at 94ff1f0f (attribute [-instance]); next build at 94ff1f0f.
+- 2026-11-25T09:17Z Provenance recorded: PR #120 head frozen at 67edc6403 (Nov 23 11:27Z), 823 commits behind fork tip 94ff1f0f. M4 worktree is on local branch probe/next2, HEAD == origin/opt/collapse-and-consolidate-4.36 == 94ff1f0fd0. Build at 94,445/114,021, 0 errors.

@@ -1,10 +1,17 @@
 > **Authoritative snapshot:** [`CURRENT.md`](CURRENT.md) — start there.
 
-# Status — 2026-11-24T18:10Z
+# Status — 2026-11-25T09:17Z
+
+## Current RH 4.36 (this section supersedes the 18:10Z snapshot below)
+
+- **#120:** closed since 16:35Z Nov 24 (author, temporary, to save CI). First closed by maintainer Deicyde 10:44Z ("superseded by #324"), reopened 13:18Z by Deicyde (Rohan confirmed at 13:25Z), re-closed 16:35Z. **PR head frozen at `67edc6403` — 823 commits behind the fork tip.**
+- **Tip:** `94ff1f0fd0` == `origin/opt/collapse-and-consolidate-4.36` (fork `rohanarun/riemann-hypothesis`). M4 worktree `/work/rh120` is checked out as local branch `probe/next2`, HEAD identical to the fork tip.
+- **Build:** `mainbuild14` (`lake build Main Challenge`, started 07:09Z): **94,445 / 114,021, 0 errors** at 09:13Z, running.
+- The rest of this file is the **2026-11-24T18:10Z snapshot**, kept for history (tip then was `ecce788d81`).
 
 Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`.
 
-## RH 4.36
+## RH 4.36 (snapshot 2026-11-24T18:10Z)
 
 - **#120 is closed** (16:35Z, temporary, to save CI); work continues on `opt/collapse-and-consolidate-4.36`.
 - **Tip:** `ecce788d81` (moving rapidly; was `20193c2836` at 18:03Z).
