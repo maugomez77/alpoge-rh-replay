@@ -1,0 +1,1350 @@
+{
+ "repo": "/Volumes/Storage/Riemmann/rh120",
+ "modules": 47885,
+ "level": 2,
+ "clusters": [
+  {
+   "name": "Development.AbelianVarietyTheory",
+   "modules": 17367,
+   "root": "Development"
+  },
+  {
+   "name": "Development.AutomorphicArithmetic",
+   "modules": 6842,
+   "root": "Development"
+  },
+  {
+   "name": "Development.WeilBound",
+   "modules": 4538,
+   "root": "Development"
+  },
+  {
+   "name": "Formalism.LocalToGlobal",
+   "modules": 3070,
+   "root": "Formalism"
+  },
+  {
+   "name": "Development.AutomorphicSpectrum",
+   "modules": 2894,
+   "root": "Development"
+  },
+  {
+   "name": "Formalism.PeriodIntegrals",
+   "modules": 1913,
+   "root": "Formalism"
+  },
+  {
+   "name": "Formalism.SharpRestriction",
+   "modules": 1706,
+   "root": "Formalism"
+  },
+  {
+   "name": "ReciprocityTheory.ReductiveGroups",
+   "modules": 1625,
+   "root": "ReciprocityTheory"
+  },
+  {
+   "name": "GroundTheory.HeightsAndTheta",
+   "modules": 1433,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "Formalism.HermitianCurvature",
+   "modules": 835,
+   "root": "Formalism"
+  },
+  {
+   "name": "Development.ResolutionOfSingularities",
+   "modules": 414,
+   "root": "Development"
+  },
+  {
+   "name": "GroundTheory.AutomorphicForms",
+   "modules": 409,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "GroundTheory.ProfiniteCohomology",
+   "modules": 408,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "Development.EtaleCohomology",
+   "modules": 401,
+   "root": "Development"
+  },
+  {
+   "name": "CompanionTheory.SpectralGeometry",
+   "modules": 340,
+   "root": "CompanionTheory"
+  },
+  {
+   "name": "GroundTheory.GlobalFields",
+   "modules": 304,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "CompanionTheory.AutomorphicTheory",
+   "modules": 288,
+   "root": "CompanionTheory"
+  },
+  {
+   "name": "Formalism.GL3MeanSquares",
+   "modules": 193,
+   "root": "Formalism"
+  },
+  {
+   "name": "Formalism.ThetaLogCoordinates",
+   "modules": 168,
+   "root": "Formalism"
+  },
+  {
+   "name": "PositivityTheory.AutomorphicForms",
+   "modules": 149,
+   "root": "PositivityTheory"
+  },
+  {
+   "name": "GroundTheory.ArithmeticGeometry",
+   "modules": 143,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "ReciprocityTheory.L2DbarEstimates",
+   "modules": 130,
+   "root": "ReciprocityTheory"
+  },
+  {
+   "name": "ReciprocityTheory.AnalyticForms",
+   "modules": 119,
+   "root": "ReciprocityTheory"
+  },
+  {
+   "name": "CompanionTheory.RealGroups",
+   "modules": 114,
+   "root": "CompanionTheory"
+  },
+  {
+   "name": "GroundTheory.LocalFields",
+   "modules": 112,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "CompanionTheory.HarishChandraModules",
+   "modules": 97,
+   "root": "CompanionTheory"
+  },
+  {
+   "name": "GroundTheory.PAdicHodge",
+   "modules": 89,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "Formalism.WachLatticeTwists",
+   "modules": 85,
+   "root": "Formalism"
+  }
+ ],
+ "edges": [
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 41187
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 17121
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 14506
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Development.AutomorphicSpectrum",
+   "imports": 6087
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.SharpRestriction",
+   "imports": 5880
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 5542
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 5530
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Development.WeilBound",
+   "imports": 3905
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 2898
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 2337
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.HeightsAndTheta",
+   "imports": 2196
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 1920
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.HeightsAndTheta",
+   "imports": 1553
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Formalism.SharpRestriction",
+   "imports": 1496
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Development.WeilBound",
+   "imports": 1353
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 1127
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Formalism.SharpRestriction",
+   "imports": 824
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 751
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 703
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 646
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 623
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Development.AutomorphicSpectrum",
+   "imports": 606
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 600
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 569
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 542
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 530
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 477
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 469
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Development.EtaleCohomology",
+   "imports": 429
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 416
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 400
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 339
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 323
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 322
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 301
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "ReciprocityTheory.L2DbarEstimates",
+   "imports": 250
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 215
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 215
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 192
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 188
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 184
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 180
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 176
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 176
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "PositivityTheory.AutomorphicForms",
+   "imports": 173
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Formalism.SharpRestriction",
+   "imports": 166
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Formalism.GL3MeanSquares",
+   "imports": 165
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 153
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 153
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 147
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 131
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 128
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 125
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 124
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 124
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 121
+  },
+  {
+   "from": "Development.EtaleCohomology",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 117
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 115
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 115
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Formalism.SharpRestriction",
+   "imports": 114
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 113
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 108
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Formalism.SharpRestriction",
+   "imports": 108
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 103
+  },
+  {
+   "from": "Formalism.HermitianCurvature",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 99
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 97
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "CompanionTheory.RealGroups",
+   "imports": 96
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 92
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 92
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.PAdicHodge",
+   "imports": 84
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 83
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 79
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Development.AutomorphicSpectrum",
+   "imports": 78
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 77
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 77
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 76
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 76
+  },
+  {
+   "from": "GroundTheory.AutomorphicForms",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 74
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.LocalFields",
+   "imports": 74
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 72
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 71
+  },
+  {
+   "from": "GroundTheory.ProfiniteCohomology",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 68
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 64
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 64
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.LocalFields",
+   "imports": 62
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 61
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 61
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.GL3MeanSquares",
+   "imports": 58
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Development.AutomorphicSpectrum",
+   "imports": 58
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 57
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.HeightsAndTheta",
+   "imports": 56
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 55
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 54
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Formalism.SharpRestriction",
+   "imports": 50
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 50
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Development.WeilBound",
+   "imports": 48
+  },
+  {
+   "from": "GroundTheory.ProfiniteCohomology",
+   "to": "GroundTheory.LocalFields",
+   "imports": 47
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "ReciprocityTheory.L2DbarEstimates",
+   "imports": 47
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 46
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 44
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 43
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Formalism.GL3MeanSquares",
+   "imports": 41
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 41
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Formalism.GL3MeanSquares",
+   "imports": 41
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 40
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 39
+  },
+  {
+   "from": "GroundTheory.GlobalFields",
+   "to": "GroundTheory.LocalFields",
+   "imports": 38
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Development.ResolutionOfSingularities",
+   "imports": 38
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.PAdicHodge",
+   "imports": 38
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "ReciprocityTheory.L2DbarEstimates",
+   "imports": 37
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 37
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Formalism.ThetaLogCoordinates",
+   "imports": 34
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "GroundTheory.LocalFields",
+   "imports": 33
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 33
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Formalism.ThetaLogCoordinates",
+   "imports": 33
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 32
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Development.WeilBound",
+   "imports": 32
+  },
+  {
+   "from": "GroundTheory.GlobalFields",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 31
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Development.AutomorphicSpectrum",
+   "imports": 31
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 29
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 29
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "ReciprocityTheory.L2DbarEstimates",
+   "imports": 28
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Formalism.SharpRestriction",
+   "imports": 28
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 28
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "PositivityTheory.AutomorphicForms",
+   "imports": 27
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 27
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 26
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 24
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 24
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 23
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 23
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 23
+  },
+  {
+   "from": "GroundTheory.PAdicHodge",
+   "to": "GroundTheory.LocalFields",
+   "imports": 22
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 22
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Development.AutomorphicSpectrum",
+   "imports": 22
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.WachLatticeTwists",
+   "imports": 20
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Formalism.SharpRestriction",
+   "imports": 20
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 19
+  },
+  {
+   "from": "GroundTheory.AutomorphicForms",
+   "to": "GroundTheory.LocalFields",
+   "imports": 18
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 17
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Development.ResolutionOfSingularities",
+   "imports": 17
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 17
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 16
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 16
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 16
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 16
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Development.WeilBound",
+   "imports": 16
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.PAdicHodge",
+   "imports": 15
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 15
+  },
+  {
+   "from": "Development.EtaleCohomology",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 14
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "PositivityTheory.AutomorphicForms",
+   "imports": 14
+  },
+  {
+   "from": "Formalism.HermitianCurvature",
+   "to": "Formalism.SharpRestriction",
+   "imports": 14
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 13
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "ReciprocityTheory.L2DbarEstimates",
+   "imports": 13
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 13
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.PAdicHodge",
+   "imports": 12
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "GroundTheory.HeightsAndTheta",
+   "imports": 11
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 11
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 11
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Formalism.WachLatticeTwists",
+   "imports": 11
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "GroundTheory.LocalFields",
+   "imports": 10
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "CompanionTheory.RealGroups",
+   "imports": 10
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "GroundTheory.LocalFields",
+   "imports": 10
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 10
+  },
+  {
+   "from": "Formalism.HermitianCurvature",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 10
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 10
+  },
+  {
+   "from": "GroundTheory.AutomorphicForms",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 9
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "GroundTheory.LocalFields",
+   "imports": 9
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 9
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "CompanionTheory.SpectralGeometry",
+   "imports": 9
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 9
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 9
+  },
+  {
+   "from": "GroundTheory.GlobalFields",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 8
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "CompanionTheory.RealGroups",
+   "imports": 8
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 8
+  },
+  {
+   "from": "GroundTheory.LocalFields",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 7
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Formalism.SharpRestriction",
+   "imports": 7
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 7
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 7
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 7
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "Formalism.ThetaLogCoordinates",
+   "imports": 6
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "CompanionTheory.RealGroups",
+   "imports": 6
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Formalism.GL3MeanSquares",
+   "imports": 6
+  },
+  {
+   "from": "GroundTheory.GlobalFields",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 5
+  },
+  {
+   "from": "Development.AutomorphicArithmetic",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 5
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "CompanionTheory.HarishChandraModules",
+   "imports": 5
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Formalism.SharpRestriction",
+   "imports": 5
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 5
+  },
+  {
+   "from": "GroundTheory.LocalFields",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 4
+  },
+  {
+   "from": "Development.AutomorphicSpectrum",
+   "to": "Formalism.HermitianCurvature",
+   "imports": 4
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 4
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 4
+  },
+  {
+   "from": "Formalism.WachLatticeTwists",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 4
+  },
+  {
+   "from": "Development.EtaleCohomology",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 3
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Formalism.WachLatticeTwists",
+   "imports": 3
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 3
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 3
+  },
+  {
+   "from": "Formalism.ThetaLogCoordinates",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 3
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "Formalism.SharpRestriction",
+   "imports": 2
+  },
+  {
+   "from": "GroundTheory.PAdicHodge",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 2
+  },
+  {
+   "from": "GroundTheory.ArithmeticGeometry",
+   "to": "GroundTheory.LocalFields",
+   "imports": 2
+  },
+  {
+   "from": "GroundTheory.ArithmeticGeometry",
+   "to": "GroundTheory.ProfiniteCohomology",
+   "imports": 2
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "PositivityTheory.AutomorphicForms",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "GroundTheory.LocalFields",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "GroundTheory.LocalFields",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 2
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "Development.WeilBound",
+   "imports": 2
+  },
+  {
+   "from": "Formalism.HermitianCurvature",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 2
+  },
+  {
+   "from": "Formalism.SharpRestriction",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 2
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "ReciprocityTheory.AnalyticForms",
+   "imports": 1
+  },
+  {
+   "from": "PositivityTheory.AutomorphicForms",
+   "to": "Formalism.PeriodIntegrals",
+   "imports": 1
+  },
+  {
+   "from": "GroundTheory.ProfiniteCohomology",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 1
+  },
+  {
+   "from": "GroundTheory.AutomorphicForms",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 1
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "GroundTheory.PAdicHodge",
+   "imports": 1
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "Formalism.LocalToGlobal",
+   "imports": 1
+  },
+  {
+   "from": "GroundTheory.HeightsAndTheta",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 1
+  },
+  {
+   "from": "GroundTheory.GlobalFields",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 1
+  },
+  {
+   "from": "Development.EtaleCohomology",
+   "to": "Development.WeilBound",
+   "imports": 1
+  },
+  {
+   "from": "Development.ResolutionOfSingularities",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 1
+  },
+  {
+   "from": "Development.AbelianVarietyTheory",
+   "to": "GroundTheory.HeightsAndTheta",
+   "imports": 1
+  },
+  {
+   "from": "Development.WeilBound",
+   "to": "Formalism.WachLatticeTwists",
+   "imports": 1
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 1
+  },
+  {
+   "from": "ReciprocityTheory.ReductiveGroups",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 1
+  },
+  {
+   "from": "ReciprocityTheory.L2DbarEstimates",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 1
+  },
+  {
+   "from": "CompanionTheory.RealGroups",
+   "to": "GroundTheory.GlobalFields",
+   "imports": 1
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 1
+  },
+  {
+   "from": "CompanionTheory.AutomorphicTheory",
+   "to": "CompanionTheory.RealGroups",
+   "imports": 1
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "GroundTheory.ArithmeticGeometry",
+   "imports": 1
+  },
+  {
+   "from": "CompanionTheory.SpectralGeometry",
+   "to": "Development.WeilBound",
+   "imports": 1
+  },
+  {
+   "from": "CompanionTheory.HarishChandraModules",
+   "to": "GroundTheory.AutomorphicForms",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.HermitianCurvature",
+   "to": "ReciprocityTheory.ReductiveGroups",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.WachLatticeTwists",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.LocalToGlobal",
+   "to": "CompanionTheory.AutomorphicTheory",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.GL3MeanSquares",
+   "to": "Development.AutomorphicArithmetic",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.GL3MeanSquares",
+   "to": "Development.AbelianVarietyTheory",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "GroundTheory.PAdicHodge",
+   "imports": 1
+  },
+  {
+   "from": "Formalism.PeriodIntegrals",
+   "to": "Formalism.ThetaLogCoordinates",
+   "imports": 1
+  }
+ ],
+ "external_imports": 0
+}

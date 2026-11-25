@@ -1,0 +1,230 @@
+{
+ "repo": "/Volumes/Storage/Riemmann/rh120",
+ "modules": 47885,
+ "level": 1,
+ "clusters": [
+  {
+   "name": "Development",
+   "modules": 32520,
+   "root": "Development"
+  },
+  {
+   "name": "Formalism",
+   "modules": 9075,
+   "root": "Formalism"
+  },
+  {
+   "name": "GroundTheory",
+   "modules": 2958,
+   "root": "GroundTheory"
+  },
+  {
+   "name": "ReciprocityTheory",
+   "modules": 2157,
+   "root": "ReciprocityTheory"
+  },
+  {
+   "name": "CompanionTheory",
+   "modules": 860,
+   "root": "CompanionTheory"
+  },
+  {
+   "name": "Lemmata",
+   "modules": 158,
+   "root": "Lemmata"
+  },
+  {
+   "name": "PositivityTheory",
+   "modules": 153,
+   "root": "PositivityTheory"
+  },
+  {
+   "name": "Challenge",
+   "modules": 1,
+   "root": "Challenge"
+  },
+  {
+   "name": "Supplements",
+   "modules": 1,
+   "root": "Supplements"
+  },
+  {
+   "name": "Statements",
+   "modules": 1,
+   "root": "Statements"
+  },
+  {
+   "name": "Main",
+   "modules": 1,
+   "root": "Main"
+  }
+ ],
+ "edges": [
+  {
+   "from": "Development",
+   "to": "Formalism",
+   "imports": 33290
+  },
+  {
+   "from": "Development",
+   "to": "ReciprocityTheory",
+   "imports": 25773
+  },
+  {
+   "from": "Development",
+   "to": "GroundTheory",
+   "imports": 6341
+  },
+  {
+   "from": "Development",
+   "to": "CompanionTheory",
+   "imports": 1435
+  },
+  {
+   "from": "GroundTheory",
+   "to": "ReciprocityTheory",
+   "imports": 1256
+  },
+  {
+   "from": "CompanionTheory",
+   "to": "Development",
+   "imports": 1131
+  },
+  {
+   "from": "CompanionTheory",
+   "to": "Formalism",
+   "imports": 693
+  },
+  {
+   "from": "Lemmata",
+   "to": "Formalism",
+   "imports": 513
+  },
+  {
+   "from": "Formalism",
+   "to": "ReciprocityTheory",
+   "imports": 352
+  },
+  {
+   "from": "PositivityTheory",
+   "to": "Development",
+   "imports": 269
+  },
+  {
+   "from": "ReciprocityTheory",
+   "to": "Formalism",
+   "imports": 253
+  },
+  {
+   "from": "Development",
+   "to": "PositivityTheory",
+   "imports": 220
+  },
+  {
+   "from": "Formalism",
+   "to": "Development",
+   "imports": 195
+  },
+  {
+   "from": "CompanionTheory",
+   "to": "ReciprocityTheory",
+   "imports": 137
+  },
+  {
+   "from": "Formalism",
+   "to": "Lemmata",
+   "imports": 114
+  },
+  {
+   "from": "PositivityTheory",
+   "to": "GroundTheory",
+   "imports": 91
+  },
+  {
+   "from": "CompanionTheory",
+   "to": "GroundTheory",
+   "imports": 57
+  },
+  {
+   "from": "GroundTheory",
+   "to": "Development",
+   "imports": 56
+  },
+  {
+   "from": "ReciprocityTheory",
+   "to": "Lemmata",
+   "imports": 45
+  },
+  {
+   "from": "ReciprocityTheory",
+   "to": "Development",
+   "imports": 13
+  },
+  {
+   "from": "GroundTheory",
+   "to": "Formalism",
+   "imports": 8
+  },
+  {
+   "from": "Lemmata",
+   "to": "ReciprocityTheory",
+   "imports": 6
+  },
+  {
+   "from": "PositivityTheory",
+   "to": "Formalism",
+   "imports": 5
+  },
+  {
+   "from": "Main",
+   "to": "Development",
+   "imports": 2
+  },
+  {
+   "from": "Supplements",
+   "to": "Development",
+   "imports": 2
+  },
+  {
+   "from": "PositivityTheory",
+   "to": "ReciprocityTheory",
+   "imports": 2
+  },
+  {
+   "from": "GroundTheory",
+   "to": "CompanionTheory",
+   "imports": 2
+  },
+  {
+   "from": "Main",
+   "to": "Statements",
+   "imports": 1
+  },
+  {
+   "from": "Main",
+   "to": "Supplements",
+   "imports": 1
+  },
+  {
+   "from": "Development",
+   "to": "Lemmata",
+   "imports": 1
+  },
+  {
+   "from": "ReciprocityTheory",
+   "to": "CompanionTheory",
+   "imports": 1
+  },
+  {
+   "from": "Formalism",
+   "to": "CompanionTheory",
+   "imports": 1
+  },
+  {
+   "from": "Formalism",
+   "to": "GroundTheory",
+   "imports": 1
+  }
+ ],
+ "external_imports": 0
+}

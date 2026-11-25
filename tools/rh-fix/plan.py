@@ -4,18 +4,24 @@
 Uses:
   - import-graph closure (exact module count)
   - Lake .trace files (source/import mtimes -> staleness)
-  - per-module compile stats (max/median/count)
+  - per-module compile stats (max/median/count) from times-extract.py
+  - optional live-log cost model: weighted progress + ETA interval
 
 Usage:
   plan.py --repo PATH [--targets Main Challenge] [--times times-rich.txt]
           [--time-stat median|max] [--jobs-per-module 4]
-          [--parallel 12] [--jobs-per-min 900] [--json]
+          [--parallel 12] [--jobs-per-min 900] [--log BUILD.log] [--json]
+
+Refresh the history first (inside the container):
+  times-extract.py            # /work/*.log -> ~/.rh-fix/build-costs.json
 """
 import argparse
 import json
 import os
+import re
 import sys
 from collections import deque
+from datetime import datetime, timezone
 
 DEFAULT_TARGETS = ["Main", "Challenge"]
 
@@ -32,6 +38,8 @@ def main():
     ap.add_argument("--parallel", type=int, default=12)
     ap.add_argument("--jobs-per-min", type=float, default=1000.0,
                     help="Lake job processing rate (replays + compiles)")
+    ap.add_argument("--log", default=None,
+                    help="live build log: add cost-weighted progress and ETA")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
     if args.elab_only:
@@ -144,6 +152,67 @@ def main():
     cp = dp.get("Main", max(dp.values()) if dp else 0.0)
     total = sum(t[m] for m in must)
 
+    log_info = {}
+    if args.log and os.path.exists(args.log):
+        done = {}
+        job_index = (0, 0)
+        start = None
+        with open(args.log, encoding="utf-8", errors="ignore") as fh:
+            for line in fh:
+                mi = re.search(r"\[(\d+)/(\d+)\]", line)
+                if mi:
+                    job_index = (int(mi.group(1)), int(mi.group(2)))
+                mb = re.search(r"Built (\S+) \(([\d.]+)s\)", line)
+                if mb:
+                    done[mb.group(1)] = float(mb.group(2))
+                ms = re.match(r"start=(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", line)
+                if ms:
+                    start = ms.group(1)
+
+        weight_total = 0.0
+        weight_done = 0.0
+        weight_remaining_max = 0.0
+        for m in closure:
+            if m in done:
+                w = done[m]
+                weight_done += w
+            else:
+                w = tv(m) if m in must else 0.2
+                if m in must:
+                    weight_remaining_max += times.get(m, {}).get("max", fallback)
+                else:
+                    weight_remaining_max += 0.2
+            weight_total += w
+
+        elapsed = None
+        if start:
+            try:
+                t0 = datetime.strptime(start, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+                elapsed = (datetime.now(timezone.utc) - t0).total_seconds()
+            except ValueError:
+                elapsed = None
+        throughput = (weight_done / elapsed) if elapsed and elapsed > 0 else 0.0
+        remaining = max(0.0, weight_total - weight_done)
+        eta_median = remaining / throughput if throughput > 0 else None
+        eta_max = weight_remaining_max / throughput if throughput > 0 else None
+
+        log_info = {
+            "log": args.log,
+            "log_jobs_done": job_index[0],
+            "log_jobs_total": job_index[1],
+            "log_modules_seen": len(done),
+            "cost_weight_done_s": round(weight_done),
+            "cost_weight_total_s": round(weight_total),
+            "cost_weight_remaining_s": round(remaining),
+            "cost_weighted_progress_pct": round(100.0 * weight_done / weight_total, 1) if weight_total else None,
+            "elapsed_s": round(elapsed) if elapsed is not None else None,
+            "throughput_cost_per_s": round(throughput, 2) if throughput else None,
+            "eta_median_s": round(eta_median) if eta_median is not None else None,
+            "eta_median_min": round(eta_median / 60, 1) if eta_median is not None else None,
+            "eta_pessimistic_min": round(eta_max / 60, 1) if eta_max is not None else None,
+            "eta_source": "log cost model (historical medians/max)",
+        }
+
     compile_jobs = args.jobs_per_module * len(must)
     replay_jobs = max(0.0, jobs - compile_jobs)
     compile_wall = total / max(1, args.parallel)
@@ -172,6 +241,7 @@ def main():
         "parallel_assumed": args.parallel,
         "jobs_per_min_assumed": args.jobs_per_min,
     }
+    out.update(log_info)
     if args.json:
         print(json.dumps(out, indent=1))
     else:
