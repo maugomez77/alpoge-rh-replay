@@ -11,6 +11,7 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `regression-watch.sh [repo]` | Rebuild every module in `watch-modules.txt` at the current tip; catches reversions (the `Bundle0295` class of bug). |
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
 | `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, **@mentions on unwatched threads** (notifications API, `--mention-skip` filters bot batch titles), state changes, reviews, merge conflicts. Exits with the full text of new events. |
+| `warm-cache.sh` | Try the repo's validated CI cache for the exact build inputs before compiling (`lake exe cache get`). Exit 3 means no cache — just build. |
 | `plan.py` | Beforehand estimate: exact closure modules, jobs (4/module), trace-based must-build set (missing/stale source/stale deps), median compile time, critical path, and a wall estimate separating compile work from replay-job overhead. |
 | `plan.py --elab-only` | Intermediate-check estimate: 2 jobs/module (`olean`+`ilean`), no IR/C. |
 | `work-finder.py` | Ranks small unclaimed fixes from the live `PR120-BUGS.md` board **and** build-log error lines; splits an **M4 lane** (build + fix) from a **mini lane** (static triage). `--validated` excludes modules already built clean and unchanged; `--build-log`/`--log-sha` marks rows whose file changed since as `VERIFY`. Watch mode exits when the queue changes. |
@@ -57,3 +58,16 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 - **Final Comparator/cache:** must use the default facets (`lake build Main Challenge`), because the
   Comparator and cache publication need the full `.olean`/`.ilean`/`.ir`/C artifacts.
 - `:elabArts` does **not** weaken the proof: elaboration and typechecking are unchanged.
+
+## Cache preflight (biggest single win)
+
+The repo ships a validated CI cache service. Before any full build, run:
+
+```sh
+lake exe cache get      # or tools/rh-fix/warm-cache.sh
+```
+
+- Exit 0: artifacts for these exact inputs were restored — build becomes mostly replay.
+- Exit 3: no validated cache for this tip — build normally.
+- The cache is published by green CI runs, so once the branch is green, future
+  builds of that SHA can skip hours of compilation.
