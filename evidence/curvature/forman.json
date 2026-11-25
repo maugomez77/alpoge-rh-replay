@@ -1,0 +1,379 @@
+{
+ "edges": 494947,
+ "mean": -199.1939,
+ "median": -76.0,
+ "min": -4712.0,
+ "max": 430.0,
+ "negative_fraction": 0.9903,
+ "zero_fraction": 0.0029,
+ "positive_fraction": 0.0068,
+ "normalized_mean": -0.7724,
+ "normalized_median": -0.8287,
+ "normalized_min": -0.9991,
+ "normalized_max": 0.75,
+ "normalized_negative_fraction": 0.9903,
+ "most_negative": [
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion",
+   "curvature": -4712.0,
+   "normalized": -0.841,
+   "degrees": [
+    4209,
+    1392
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion",
+   "curvature": -4657.0,
+   "normalized": -0.841,
+   "degrees": [
+    4148,
+    1392
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0006",
+   "curvature": -4537.0,
+   "normalized": -0.995,
+   "degrees": [
+    4209,
+    353
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0012",
+   "curvature": -4526.0,
+   "normalized": -0.995,
+   "degrees": [
+    4209,
+    342
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0006",
+   "curvature": -4479.0,
+   "normalized": -0.995,
+   "degrees": [
+    4148,
+    353
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement",
+   "curvature": -4477.0,
+   "normalized": -0.994,
+   "degrees": [
+    4209,
+    296
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle0012",
+   "curvature": -4468.0,
+   "normalized": -0.995,
+   "degrees": [
+    4148,
+    342
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.Bundle0001",
+   "curvature": -4467.0,
+   "normalized": -0.996,
+   "degrees": [
+    4209,
+    274
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn",
+   "curvature": -4460.0,
+   "normalized": -0.888,
+   "degrees": [
+    4209,
+    813
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow",
+   "curvature": -4453.0,
+   "normalized": -0.923,
+   "degrees": [
+    4209,
+    617
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr",
+   "curvature": -4451.0,
+   "normalized": -0.944,
+   "degrees": [
+    4209,
+    507
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt",
+   "curvature": -4446.0,
+   "normalized": -0.857,
+   "degrees": [
+    4209,
+    979
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam",
+   "curvature": -4444.0,
+   "normalized": -0.905,
+   "degrees": [
+    4209,
+    701
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec",
+   "curvature": -4436.0,
+   "normalized": -0.991,
+   "degrees": [
+    4209,
+    267
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed",
+   "curvature": -4435.0,
+   "normalized": -0.96,
+   "degrees": [
+    4209,
+    410
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Bundle0003",
+   "curvature": -4430.0,
+   "normalized": -0.876,
+   "degrees": [
+    4209,
+    846
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied",
+   "curvature": -4423.0,
+   "normalized": -0.947,
+   "degrees": [
+    4209,
+    464
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm",
+   "curvature": -4421.0,
+   "normalized": -0.966,
+   "degrees": [
+    4209,
+    369
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TemperedProductOfSquareIntegrable -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement",
+   "curvature": -4419.0,
+   "normalized": -0.994,
+   "degrees": [
+    4148,
+    296
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin -- Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower",
+   "curvature": -4417.0,
+   "normalized": -0.998,
+   "degrees": [
+    4209,
+    218
+   ]
+  }
+ ],
+ "most_positive": [
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.PreAtMem -- Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.OneFieldOfNAt",
+   "curvature": 430.0,
+   "normalized": 0.458,
+   "degrees": [
+    483,
+    456
+   ]
+  },
+  {
+   "edge": "Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionOfSingularities -- Development.ResolutionOfSingularities.Foundations.BlowupUniversalProperty",
+   "curvature": 288.0,
+   "normalized": 0.477,
+   "degrees": [
+    297,
+    307
+   ]
+  },
+  {
+   "edge": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.Bundle0006 -- ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.Bundle0005",
+   "curvature": 229.0,
+   "normalized": 0.352,
+   "degrees": [
+    327,
+    324
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ExistsBaseLatticeOfPrime -- Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Has3NeoOfSteps",
+   "curvature": 214.0,
+   "normalized": 0.443,
+   "degrees": [
+    249,
+    234
+   ]
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsStdFr -- Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0029",
+   "curvature": 163.0,
+   "normalized": 0.351,
+   "degrees": [
+    213,
+    252
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.AdjointLiftingOfCohomology -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.HVCore",
+   "curvature": 157.0,
+   "normalized": 0.415,
+   "degrees": [
+    198,
+    180
+   ]
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0071 -- Development.AbelianVarietyTheory.PublishedTheorems.Divisors\u2082.ToroidalCompactificationBis",
+   "curvature": 157.0,
+   "normalized": 0.369,
+   "degrees": [
+    208,
+    218
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ExistsBaseLatticeOfPrime -- Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.AllStagesAtMemberOfSpecializations",
+   "curvature": 138.0,
+   "normalized": 0.302,
+   "degrees": [
+    249,
+    208
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.Bundle0001 -- Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab",
+   "curvature": 138.0,
+   "normalized": 0.445,
+   "degrees": [
+    153,
+    157
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LinkedUnlE -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.AdjointLiftingOfCohomology",
+   "curvature": 136.0,
+   "normalized": 0.315,
+   "degrees": [
+    234,
+    198
+   ]
+  },
+  {
+   "edge": "Development.ResolutionOfSingularities.EmbeddedResolution.IteratedBlowups.ClopenRestriction -- Development.ResolutionOfSingularities.Foundations.Blowup.BlowupProperties",
+   "curvature": 134.0,
+   "normalized": 0.457,
+   "degrees": [
+    144,
+    149
+   ]
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.Bundle0019 -- Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittDecompSymplInclIsotropicInclAnisotropic",
+   "curvature": 134.0,
+   "normalized": 0.285,
+   "degrees": [
+    221,
+    249
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LinkedUnlE -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.CohInp",
+   "curvature": 134.0,
+   "normalized": 0.32,
+   "degrees": [
+    234,
+    185
+   ]
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0030 -- Development.AbelianVarietyTheory.Definitions.LatticeFrames.Bundle0029",
+   "curvature": 131.0,
+   "normalized": 0.268,
+   "degrees": [
+    236,
+    252
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0058 -- Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.RealPack",
+   "curvature": 128.0,
+   "normalized": 0.287,
+   "degrees": [
+    246,
+    200
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LinkedUnlE -- Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.HVCore",
+   "curvature": 124.0,
+   "normalized": 0.3,
+   "degrees": [
+    234,
+    180
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopCovolSlim2Use -- Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopCovolG",
+   "curvature": 123.0,
+   "normalized": 0.199,
+   "degrees": [
+    350,
+    269
+   ]
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Definitions.LatticeFrames.FrameTopAlt -- Development.AbelianVarietyTheory.Definitions.LatticeFrames.HzUnit",
+   "curvature": 123.0,
+   "normalized": 0.206,
+   "degrees": [
+    316,
+    282
+   ]
+  },
+  {
+   "edge": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ExistsWeilBlockNeAtMember -- Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0225",
+   "curvature": 123.0,
+   "normalized": 0.253,
+   "degrees": [
+    208,
+    279
+   ]
+  },
+  {
+   "edge": "Development.AbelianVarietyTheory.Definitions.LatticeFrames.FrameTopAlt -- Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj",
+   "curvature": 117.0,
+   "normalized": 0.195,
+   "degrees": [
+    316,
+    285
+   ]
+  }
+ ]
+}

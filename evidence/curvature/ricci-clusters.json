@@ -1,0 +1,186 @@
+{
+ "levels": {
+  "1": {
+   "nodes": 10,
+   "edges": 21,
+   "mean": 0.3349,
+   "negative": 1,
+   "most_negative": [
+    {
+     "edge": "Development -- Main",
+     "curvature": -0.25
+    },
+    {
+     "edge": "Development -- Supplements",
+     "curvature": 0.0
+    },
+    {
+     "edge": "Development -- Lemmata",
+     "curvature": 0.2292
+    },
+    {
+     "edge": "Development -- CompanionTheory",
+     "curvature": 0.25
+    },
+    {
+     "edge": "Development -- PositivityTheory",
+     "curvature": 0.25
+    },
+    {
+     "edge": "Development -- GroundTheory",
+     "curvature": 0.2875
+    },
+    {
+     "edge": "Lemmata -- Formalism",
+     "curvature": 0.3333
+    },
+    {
+     "edge": "ReciprocityTheory -- Lemmata",
+     "curvature": 0.3333
+    },
+    {
+     "edge": "Main -- Statements",
+     "curvature": 0.3333
+    },
+    {
+     "edge": "Development -- Formalism",
+     "curvature": 0.3333
+    }
+   ],
+   "most_positive": [
+    {
+     "edge": "ReciprocityTheory -- Formalism",
+     "curvature": 0.5833
+    },
+    {
+     "edge": "GroundTheory -- PositivityTheory",
+     "curvature": 0.5
+    },
+    {
+     "edge": "GroundTheory -- CompanionTheory",
+     "curvature": 0.5
+    },
+    {
+     "edge": "GroundTheory -- ReciprocityTheory",
+     "curvature": 0.4667
+    },
+    {
+     "edge": "GroundTheory -- Formalism",
+     "curvature": 0.4667
+    },
+    {
+     "edge": "PositivityTheory -- Formalism",
+     "curvature": 0.4167
+    },
+    {
+     "edge": "CompanionTheory -- Formalism",
+     "curvature": 0.4167
+    },
+    {
+     "edge": "CompanionTheory -- ReciprocityTheory",
+     "curvature": 0.4167
+    },
+    {
+     "edge": "Main -- Supplements",
+     "curvature": 0.4167
+    },
+    {
+     "edge": "ReciprocityTheory -- PositivityTheory",
+     "curvature": 0.4167
+    }
+   ]
+  },
+  "2": {
+   "nodes": 316,
+   "edges": 1111,
+   "mean": -0.0199,
+   "negative": 538,
+   "most_negative": [
+    {
+     "edge": "Formalism.LocalToGlobal -- ReciprocityTheory.SemistableReduction",
+     "curvature": -0.4952
+    },
+    {
+     "edge": "Development.AutomorphicArithmetic -- Main",
+     "curvature": -0.4778
+    },
+    {
+     "edge": "Development.AbelianVarietyTheory -- ReciprocityTheory.SemistableReduction",
+     "curvature": -0.4598
+    },
+    {
+     "edge": "Development.AutomorphicArithmetic -- ReciprocityTheory.SemistableReduction",
+     "curvature": -0.4424
+    },
+    {
+     "edge": "ReciprocityTheory.ReductiveGroups -- ReciprocityTheory.SemistableReduction",
+     "curvature": -0.4312
+    },
+    {
+     "edge": "Formalism.LocalToGlobal -- Formalism.PadicSubsetSums",
+     "curvature": -0.4151
+    },
+    {
+     "edge": "Formalism.SharpRestriction -- Formalism.GaloisIrreducibility",
+     "curvature": -0.4151
+    },
+    {
+     "edge": "Development.AutomorphicSpectrum -- ReciprocityTheory.SemistableReduction",
+     "curvature": -0.4107
+    },
+    {
+     "edge": "Development.WeilBound -- ReciprocityTheory.SemistableReduction",
+     "curvature": -0.4107
+    },
+    {
+     "edge": "Development.AbelianVarietyTheory -- Formalism.CharacterColumnKernels",
+     "curvature": -0.4082
+    }
+   ],
+   "most_positive": [
+    {
+     "edge": "Formalism.GaussValuationBounds -- Formalism.DistinguishedUnitIdeals",
+     "curvature": 0.4833
+    },
+    {
+     "edge": "CompanionTheory.HarishChandraModules -- CompanionTheory.RealGroups",
+     "curvature": 0.4706
+    },
+    {
+     "edge": "Main -- Supplements.Kernels",
+     "curvature": 0.4167
+    },
+    {
+     "edge": "Formalism.RealPlaceAnalysis -- Formalism.FormalDegreeBessel",
+     "curvature": 0.393
+    },
+    {
+     "edge": "GroundTheory.LocalFields -- GroundTheory.GlobalFields",
+     "curvature": 0.3924
+    },
+    {
+     "edge": "Formalism.TorsionNormIteration -- Formalism.FormalGroupLog",
+     "curvature": 0.381
+    },
+    {
+     "edge": "ReciprocityTheory.NeutralLocalFields -- ReciprocityTheory.Hypotheses",
+     "curvature": 0.375
+    },
+    {
+     "edge": "GroundTheory.AutomorphicForms -- GroundTheory.GlobalFields",
+     "curvature": 0.3611
+    },
+    {
+     "edge": "Formalism.Bundle0001 -- Formalism.ZetaNonvanishing",
+     "curvature": 0.3571
+    },
+    {
+     "edge": "Formalism.GaussValuationBounds -- Formalism.EisensteinCokernelLengths",
+     "curvature": 0.3542
+    }
+   ]
+  }
+ },
+ "modules": 47885,
+ "edges": 494947
+}
