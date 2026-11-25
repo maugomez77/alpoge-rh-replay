@@ -1,0 +1,188 @@
+{
+ "modules": 47885,
+ "vocab": 515048,
+ "pairs": {
+  "cos>=0.95,jaccard>=0.8": {
+   "pairs": 496,
+   "clusters": 400,
+   "duplicate_modules": 444,
+   "largest": 6
+  },
+  "cos>=0.95,jaccard>=0.6": {
+   "pairs": 984,
+   "clusters": 701,
+   "duplicate_modules": 851,
+   "largest": 23
+  },
+  "cos>=0.9,jaccard>=0.7": {
+   "pairs": 791,
+   "clusters": 597,
+   "duplicate_modules": 695,
+   "largest": 8
+  },
+  "cos>=0.9,jaccard>=0.5": {
+   "pairs": 2106,
+   "clusters": 1142,
+   "duplicate_modules": 1564,
+   "largest": 43
+  },
+  "cos>=0.85,jaccard>=0.5": {
+   "pairs": 2446,
+   "clusters": 1271,
+   "duplicate_modules": 1802,
+   "largest": 48
+  }
+ },
+ "top_pairs": [
+  {
+   "a": "Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HloweqTransfer",
+   "b": "Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ComplexNormedInstanceCompat",
+   "cosine": 1.0,
+   "jaccard": 0.9688
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.SymmetricCubeUnits.IsOpenKerKills",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.IsOpenKerKills",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.SymmetricCubeUnits.IsOpenKerKills",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.AbelianUnitPowers.IsOpenKerKills",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.AbelianUnitPowers.IsOpenKerKills",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.IsOpenKerKills",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.Bundle0004",
+   "b": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.Bundle0003",
+   "cosine": 1.0,
+   "jaccard": 0.9716
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.SymmetricCubeUnits.ExistsSymmetricPairingAdjointZero",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.Seed3N",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.SymmetricCubeUnits.ExistsSymmetricPairingAdjointZero",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.Seed3",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.SymmetricCubeUnits.ExistsSymmetricPairingAdjointZero",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.AbelianUnitPowers.Seed3L",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.MapReducibleThreeDim",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KatoEulerSystems.MapReducibleThreeDim",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.AbelianUnitPowers.Seed3L",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.Seed3N",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.AbelianUnitPowers.Seed3L",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.Seed3",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.Seed3",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.Seed3N",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.WeilBound.CoreStatements.HomogeneousNonvanishing.NatCastSmulMemHtLatK",
+   "b": "Development.AutomorphicSpectrum.Proofs.GeometryProofs.NatCastSmulMemHtLat",
+   "cosine": 1.0,
+   "jaccard": 0.9852
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PBergmanDensIntegrable",
+   "b": "GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PBergmanDensChartSum",
+   "cosine": 1.0,
+   "jaccard": 0.981
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.ThetaCorrespondence.GeneralLinearGroups.FAssocL",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.GeneralLinearGroups.FAssocR",
+   "cosine": 1.0,
+   "jaccard": 0.9619
+  },
+  {
+   "a": "Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.SymmetryWindowLevelDimOnAdmissible",
+   "b": "Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.SymmetryWindowOnAdmissible",
+   "cosine": 1.0,
+   "jaccard": 0.7179
+  },
+  {
+   "a": "Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.RestrictedBoundsWeakenFromNineToEight",
+   "b": "Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.RestrictedBoundsWeakenFromEightToSeven",
+   "cosine": 1.0,
+   "jaccard": 0.675
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.Bundle0165",
+   "b": "Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.Bundle0166",
+   "cosine": 1.0,
+   "jaccard": 0.6667
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AssemblyBase",
+   "b": "Development.WeilBound.CoreStatements.AutomorphicKernels.MoriwakiBigness.HilbertSamuelApplications.Bundle0002",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.BaseChangeNorms.ClosedOneU",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.ClosedOneU",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.BaseChangeNorms.ClosedOneU",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.MixedUnitCongruences.ClosedOneU",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.LemmaKOfLitN",
+   "b": "Development.AutomorphicSpectrum.Proofs.GeometryProofs.Bundle0181",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.LemmaKOfLitN",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.MainTheoremPublishedInputsThird",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.LemmaKOfLitN",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0202",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  },
+  {
+   "a": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.MixedUnitCongruences.ClosedOneU",
+   "b": "Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.NormCongruenceUnits.ClosedOneU",
+   "cosine": 1.0,
+   "jaccard": 1.0
+  }
+ ]
+}

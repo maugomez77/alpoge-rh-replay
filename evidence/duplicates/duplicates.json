@@ -1,0 +1,348 @@
+{
+ "modules": 47885,
+ "thresholds": {
+  "0.95": {
+   "pairs": 23479,
+   "duplicate_clusters": 1556,
+   "duplicate_modules_above_one": 5041,
+   "largest_cluster": 218,
+   "cost_savings_upper_s": 30555.5
+  },
+  "0.9": {
+   "pairs": 74969,
+   "duplicate_clusters": 2144,
+   "duplicate_modules_above_one": 13900,
+   "largest_cluster": 7376,
+   "cost_savings_upper_s": 98518.2
+  },
+  "0.8": {
+   "pairs": 230546,
+   "duplicate_clusters": 1181,
+   "duplicate_modules_above_one": 33314,
+   "largest_cluster": 31500,
+   "cost_savings_upper_s": 249174.1
+  }
+ },
+ "top_pairs": [
+  {
+   "a": "Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.LemA",
+   "b": "Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.InertFrames.FrameInertAll",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 6.2,
+   "cost_b_s": 9.8
+  },
+  {
+   "a": "CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.LowKTypeMultiplicityOneFock",
+   "b": "CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.Bridge",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 4.6,
+   "cost_b_s": 4.0
+  },
+  {
+   "a": "Formalism.LocalToGlobal.GlobalTheory.BlockActions.SymmetricLevelClausesHold",
+   "b": "Formalism.LocalToGlobal.GlobalTheory.BlockActions.NormBoundHolds",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.7,
+   "cost_b_s": 3.9
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.FirstLevelFromUniversalLaw",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.SecondCoeffConsistency",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.7,
+   "cost_b_s": 3.2
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.FirstLevelFromUniversalLaw",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormFromDatum",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.7,
+   "cost_b_s": 3.4
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.FirstLevelFromUniversalLaw",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveSecondLogDerivative",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.7,
+   "cost_b_s": 3.0
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.FirstLevelFromUniversalLaw",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveJetsUnitBall",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.7,
+   "cost_b_s": 2.0
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormFromDatum",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.SecondCoeffConsistency",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.4,
+   "cost_b_s": 3.2
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormFromDatum",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveSecondLogDerivative",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.4,
+   "cost_b_s": 3.0
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormFromDatum",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveJetsUnitBall",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.4,
+   "cost_b_s": 2.0
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveJetsUnitBall",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.SecondCoeffConsistency",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 2.0,
+   "cost_b_s": 3.2
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveJetsUnitBall",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveSecondLogDerivative",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 2.0,
+   "cost_b_s": 3.0
+  },
+  {
+   "a": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveSecondLogDerivative",
+   "b": "Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.SecondCoeffConsistency",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.0,
+   "cost_b_s": 3.2
+  },
+  {
+   "a": "Formalism.GaussJetBounds.OneLetterGauss",
+   "b": "Formalism.GaussJetBounds.ThmAGauss",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.8,
+   "cost_b_s": 3.2
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PBergmanDensIntegrable",
+   "b": "GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PBergmanDensChartSum",
+   "svd_cosine": 1.0,
+   "exact_cosine": 0.9999,
+   "cost_a_s": 5.1,
+   "cost_b_s": 4.0
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.KeyFormulaVanishingCechMultInvariants",
+   "b": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0884",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.2,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.KeyFormulaVanishingCechMultInvariants",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0133",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.2,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.KeyFormulaVanishingCechMultInvariants",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0263",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.2,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.KeyFormulaVanishingCechMultInvariants",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0158",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.2,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.KeyFormulaVanishingCechMultInvariants",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0205",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 3.2,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0884",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0205",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0884",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0133",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0884",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0263",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Bundle0884",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0158",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0528",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0109",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0528",
+   "b": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle2887",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0528",
+   "b": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0711",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0528",
+   "b": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0293",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 20.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0293",
+   "b": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0711",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 20.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0293",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0109",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 20.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.Bundle0293",
+   "b": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle2887",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 20.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0711",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0109",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Bundle0711",
+   "b": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle2887",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsPowerSeriesCompletionEmbedding",
+   "b": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompletionEmbedding",
+   "svd_cosine": 1.0,
+   "exact_cosine": 0.9996,
+   "cost_a_s": 4.2,
+   "cost_b_s": 4.2
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.Bundle2887",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0109",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0304",
+   "b": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0337",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0304",
+   "b": "Development.AbelianVarietyTheory.Definitions.Divisors.Bundle0051",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 11.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0304",
+   "b": "Development.AutomorphicArithmetic.ResidueCharacters.ConclusionSplitOfHub",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0304",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0082",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  },
+  {
+   "a": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.Bundle0304",
+   "b": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Bundle0130",
+   "svd_cosine": 1.0,
+   "exact_cosine": 1.0,
+   "cost_a_s": 0.0,
+   "cost_b_s": 0.0
+  }
+ ]
+}

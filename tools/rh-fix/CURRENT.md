@@ -109,6 +109,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `module-graph-treemap.py` | Interactive namespace treemap + sunburst |
 | `module-graph-semantic.py` | TF-IDF→SVD→t-SNE semantic map of module source |
 | `module-graph-instances.py` | `attribute [-instance]` debt map on the layout |
+| `module-graph-duplicates2.py` | Strict near-duplicate census (rare IDs kept + token Jaccard) |
 | `graph-export.py` + `module-graph-layout-tsv.py` | Export a tree's names/edges and lay it out (current-tip images) |
 | `build-timeline-extract.py` + `module-graph-timeline.py` | Real build Gantt from a log + olean mtimes |
 | `preflight.sh <Module>` | Receipt: scope, open scan, statements, importers, build log digest, axioms |
