@@ -14,7 +14,8 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 | `watch-modules.txt` | Modules we fixed — the regression guard list. |
 | `watch-github.py` | roy7-style cheap watcher: repo-wide `comments?since=` per repo, filtered locally to our threads; also **edits to older comments**, **@mentions on unwatched threads** (notifications API, `--mention-skip` filters bot batch titles), state changes, reviews, merge conflicts. Exits with the full text of new events. |
 | `critic.py` | Pre-PR critic: deterministic checks (scope, statements, escape hatches, claims, base freshness, minimality, receipt, error-class match) + optional Grok/ollama review. |
-| `lean-lsp-mcp-remote.sh` | stdio-over-SSH bridge to `lean-lsp-mcp` inside the M4 container (auto-starts `rhreplay`). |
+| `lean-lsp-http/install.sh` | Install the supervised Streamable HTTP lean-lsp bridge (preferred). See [`lean-lsp-http/README.md`](lean-lsp-http/README.md). |
+| `lean-lsp-mcp-remote.sh` | Legacy stdio-over-SSH fallback. Prefer `lean-lsp-http/install.sh`. |
 | `plan.py` | Beforehand estimate: exact closure modules, jobs (4/module), trace-based must-build set (missing/stale source/stale deps), median compile time, critical path, and a wall estimate separating compile work from replay-job overhead. |
 | `work-finder.py` | Ranks small unclaimed fixes from the live `PR120-BUGS.md` board **and** build-log error lines; splits an **M4 lane** (build + fix) from a **mini lane** (static triage). `--validated` excludes modules already built clean and unchanged; `--build-log`/`--log-sha` marks rows whose file changed since as `VERIFY`. Watch mode exits when the queue changes. |
 | `ledger.py` | Content-hash validation ledger: `build` from an `OK` list at a SHA, `check` at the tip. A module is clean only if its source **and direct import blobs** match the validated ones. |
@@ -55,18 +56,18 @@ Build-first, claim-second. Every fix gets a receipt before it becomes `ready for
 
 ## lean-lsp MCP
 
-`~/.config/opencode/opencode.json` has:
+The preferred setup is the supervised Streamable HTTP bridge in
+[`lean-lsp-http/`](lean-lsp-http/README.md). The MCP server and Lean LSP stay
+alive when the SSH tunnel drops; launchd restarts the tunnel locally and a
+watchdog restarts the server on the M4.
 
-```jsonc
-"mcp": {
-  "lean-lsp": {
-    "type": "local",
-    "command": ["/Users/mauriciogomez/.rh-fix/lean-lsp-mcp-remote.sh"],
-    "enabled": true
-  }
-}
+```bash
+RH_HOST=you@m4-host tools/rh-fix/lean-lsp-http/install.sh
 ```
 
-The wrapper streams MCP stdio over SSH into `rhreplay`, with
-`LEAN_PROJECT_PATH=/work/rh120`. It needs `uv` and `ripgrep` inside the
-container (both installed). Restart OpenCode after changing the config.
+The installer writes a project-local `.opencode/opencode.json` (git-ignored)
+and never starts or restarts the `rhreplay` container.
+
+`lean-lsp-mcp-remote.sh` is the legacy stdio-over-SSH fallback. It streams MCP
+stdio over SSH into `rhreplay` with `LEAN_PROJECT_PATH=/work/rh120`. A network
+drop kills the server, and OpenCode does not respawn a dead stdio MCP server.
