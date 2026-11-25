@@ -7,10 +7,10 @@ Live handoff for another OpenCode session. Pull `maugomez77/alpoge-rh-replay`, b
 - **#120 is closed** (16:35Z, temporary, to save CI); work continues on `opt/collapse-and-consolidate-4.36`.
 - **Tip:** `ecce788d81` (moving rapidly; was `20193c2836` at 18:03Z).
 - **Live board is stale:** updated 18:03Z with 29 rows, but all 29 modules were built clean at `49b2bdb6a8` and are unchanged since. The work-finder excludes them.
-- **Last full build:** `49b2bdb6a8` → `error: build failed`, **133 errors / 20 modules**. 18 of those 20 files changed since; the two unchanged ones are being built at `7127dd68`:
+- **Last full build:** `49b2bdb6a8` → `error: build failed`, **133 errors / 20 modules** (published: https://github.com/rohanarun/alpoge-rh-replay/issues/35028). 18 of those 20 files changed since; the two unchanged ones are being built at `7127dd68`:
   - `Development.AutomorphicArithmetic…GeometricFlagBases.Bundle0004`
   - `Development.AutomorphicSpectrum.Proofs.GeometryProofs.Bundle0224`
-  - **Status: still building at `7127dd68`** (a large cone rebuild; the tip has since moved to `7b3e06bd1e`).
+  - **Result:** both **FAIL**. `Bundle0004` is unchanged at the tip (`a_snd` unknown → real); `Bundle0224` changed at the tip (likely fixed).
 - Earlier results: baseline `376bacf238` → 96/27; rerun `2d20aa90` → 67/16, **24 of 27** baseline failures fixed.
 - **Work queue:** see [`WORK-QUEUE.md`](WORK-QUEUE.md) — currently **1 M4** candidate and **20 mini** triage items (18 marked `VERIFY` because the file changed since the log SHA), with 28 stale board rows excluded.
 
