@@ -10,3 +10,4 @@
 - 2026-11-24T18:23Z Architecture deployed: content-hash ledger, stability gate, supervisor, claims, journal, receipts, sync.
 - 2026-11-25T01:29Z Published 49b2 full-build terminal (133/20) and 7127 targeted results (Bundle0004 real, Bundle0224 stale).
 - 2026-11-25T01:39Z Bundle0004 and Bundle0224 both compile clean at tip ab2ded12 (direct lean exit 0); @[expose] refactor fixed the private-declaration issue; no PR.
+- 2026-11-25T02:51Z Calibrated full Main Challenge started at b9b24502 (predicted must_build=20012, jobs=191540, est ~6.5h).
