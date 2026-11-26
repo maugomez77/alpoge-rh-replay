@@ -114,6 +114,8 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `module-graph-forman.py` | Full-graph Forman–Ricci curvature map |
 | `ricci_sample_job.py` + `ricci_merge.py` | Sharded Ollivier–Ricci on GitHub Actions (pairwise paths); full 495k-edge pass |
 | `module-graph-ricci-map.py` | Render the full-graph ORC map from shard artifacts |
+| `partition-pilot.py` | Ricci-flow vs spectral vs namespace partition comparison |
+| `lake-dag.py` | Extract Lake `.trace` DAG + source imports + costs into SQLite |
 | `graph-export.py` + `module-graph-layout-tsv.py` | Export a tree's names/edges and lay it out (current-tip images) |
 | `build-timeline-extract.py` + `module-graph-timeline.py` | Real build Gantt from a log + olean mtimes |
 | `preflight.sh <Module>` | Receipt: scope, open scan, statements, importers, build log digest, axioms |

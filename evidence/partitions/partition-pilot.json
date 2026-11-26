@@ -1,0 +1,473 @@
+{
+ "clusters": 316,
+ "import_edges": 146337,
+ "resolution": 1.5,
+ "spectral_k": 8,
+ "partitions": {
+  "ricci": {
+   "k": 10,
+   "sizes": [
+    60,
+    53,
+    45,
+    42,
+    25,
+    23,
+    22,
+    19,
+    18,
+    9
+   ],
+   "modularity_topology": 0.3083,
+   "modularity_import_volume": -0.1098,
+   "cut_topology": 0.5779,
+   "cut_import_volume": 0.8943
+  },
+  "spectral": {
+   "k": 8,
+   "sizes": [
+    84,
+    78,
+    75,
+    37,
+    16,
+    13,
+    10,
+    3
+   ],
+   "modularity_topology": 0.3823,
+   "modularity_import_volume": 0.0277,
+   "cut_topology": 0.3726,
+   "cut_import_volume": 0.2711
+  },
+  "namespace": {
+   "k": 10,
+   "sizes": [
+    158,
+    103,
+    24,
+    12,
+    7,
+    6,
+    3,
+    1,
+    1,
+    1
+   ],
+   "modularity_topology": 0.0669,
+   "modularity_import_volume": -0.0024,
+   "cut_topology": 0.5941,
+   "cut_import_volume": 0.4938
+  }
+ },
+ "pairwise": {
+  "ricci__spectral": {
+   "ari": 0.4096,
+   "nmi": 0.5056
+  },
+  "ricci__namespace": {
+   "ari": 0.052,
+   "nmi": 0.1679
+  },
+  "spectral__namespace": {
+   "ari": 0.0354,
+   "nmi": 0.206
+  }
+ },
+ "composition": {
+  "ricci": [
+   {
+    "community": 3,
+    "size": 60,
+    "top_root": "Lemmata",
+    "purity": 0.583,
+    "roots": {
+     "Lemmata": 35,
+     "Formalism": 21,
+     "ReciprocityTheory": 4
+    }
+   },
+   {
+    "community": 1,
+    "size": 53,
+    "top_root": "Lemmata",
+    "purity": 0.642,
+    "roots": {
+     "Lemmata": 34,
+     "ReciprocityTheory": 7,
+     "Formalism": 4,
+     "CompanionTheory": 4,
+     "GroundTheory": 3
+    }
+   },
+   {
+    "community": 0,
+    "size": 45,
+    "top_root": "Lemmata",
+    "purity": 0.667,
+    "roots": {
+     "Lemmata": 30,
+     "Formalism": 11,
+     "ReciprocityTheory": 2,
+     "PositivityTheory": 1,
+     "GroundTheory": 1
+    }
+   },
+   {
+    "community": 7,
+    "size": 42,
+    "top_root": "Lemmata",
+    "purity": 0.595,
+    "roots": {
+     "Lemmata": 25,
+     "Formalism": 17
+    }
+   },
+   {
+    "community": 6,
+    "size": 25,
+    "top_root": "Formalism",
+    "purity": 0.44,
+    "roots": {
+     "Formalism": 11,
+     "GroundTheory": 6,
+     "Development": 3,
+     "ReciprocityTheory": 1,
+     "Supplements": 1
+    }
+   },
+   {
+    "community": 5,
+    "size": 23,
+    "top_root": "Lemmata",
+    "purity": 0.522,
+    "roots": {
+     "Lemmata": 12,
+     "Formalism": 4,
+     "ReciprocityTheory": 3,
+     "PositivityTheory": 2,
+     "Development": 2
+    }
+   },
+   {
+    "community": 8,
+    "size": 22,
+    "top_root": "Formalism",
+    "purity": 0.545,
+    "roots": {
+     "Formalism": 12,
+     "Lemmata": 3,
+     "CompanionTheory": 2,
+     "ReciprocityTheory": 2,
+     "GroundTheory": 2
+    }
+   },
+   {
+    "community": 9,
+    "size": 19,
+    "top_root": "Formalism",
+    "purity": 0.684,
+    "roots": {
+     "Formalism": 13,
+     "Lemmata": 6
+    }
+   },
+   {
+    "community": 4,
+    "size": 18,
+    "top_root": "Formalism",
+    "purity": 0.556,
+    "roots": {
+     "Formalism": 10,
+     "Lemmata": 8
+    }
+   },
+   {
+    "community": 2,
+    "size": 9,
+    "top_root": "ReciprocityTheory",
+    "purity": 0.556,
+    "roots": {
+     "ReciprocityTheory": 5,
+     "Lemmata": 4
+    }
+   }
+  ],
+  "spectral": [
+   {
+    "community": 4,
+    "size": 84,
+    "top_root": "Lemmata",
+    "purity": 0.393,
+    "roots": {
+     "Lemmata": 33,
+     "ReciprocityTheory": 16,
+     "GroundTheory": 12,
+     "Development": 7,
+     "Formalism": 7
+    }
+   },
+   {
+    "community": 7,
+    "size": 78,
+    "top_root": "Lemmata",
+    "purity": 0.641,
+    "roots": {
+     "Lemmata": 50,
+     "Formalism": 28
+    }
+   },
+   {
+    "community": 1,
+    "size": 75,
+    "top_root": "Lemmata",
+    "purity": 0.48,
+    "roots": {
+     "Lemmata": 36,
+     "Formalism": 34,
+     "ReciprocityTheory": 5
+    }
+   },
+   {
+    "community": 0,
+    "size": 37,
+    "top_root": "Lemmata",
+    "purity": 0.514,
+    "roots": {
+     "Lemmata": 19,
+     "Formalism": 17,
+     "ReciprocityTheory": 1
+    }
+   },
+   {
+    "community": 3,
+    "size": 16,
+    "top_root": "Formalism",
+    "purity": 0.875,
+    "roots": {
+     "Formalism": 14,
+     "Lemmata": 2
+    }
+   },
+   {
+    "community": 5,
+    "size": 13,
+    "top_root": "Lemmata",
+    "purity": 0.846,
+    "roots": {
+     "Lemmata": 11,
+     "ReciprocityTheory": 2
+    }
+   },
+   {
+    "community": 6,
+    "size": 10,
+    "top_root": "Lemmata",
+    "purity": 0.7,
+    "roots": {
+     "Lemmata": 7,
+     "Formalism": 3
+    }
+   },
+   {
+    "community": 2,
+    "size": 3,
+    "top_root": "Main",
+    "purity": 0.333,
+    "roots": {
+     "Main": 1,
+     "Statements": 1,
+     "Supplements": 1
+    }
+   }
+  ]
+ },
+ "cross_edges": {
+  "ricci": [
+   {
+    "pair": "Development.AbelianVarietyTheory -- Development.AutomorphicArithmetic",
+    "imports": 41787
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Development.AbelianVarietyTheory",
+    "imports": 17122
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.LocalToGlobal",
+    "imports": 14516
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.SharpRestriction",
+    "imports": 5882
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Development.WeilBound",
+    "imports": 5578
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Development.AutomorphicSpectrum",
+    "imports": 5573
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Development.AutomorphicSpectrum",
+    "imports": 2898
+   },
+   {
+    "pair": "Formalism.LocalToGlobal -- Development.AutomorphicArithmetic",
+    "imports": 2398
+   },
+   {
+    "pair": "GroundTheory.HeightsAndTheta -- Development.AutomorphicSpectrum",
+    "imports": 2196
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.LocalRingCardinality",
+    "imports": 2180
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- ReciprocityTheory.AnalyticForms",
+    "imports": 1920
+   },
+   {
+    "pair": "Formalism.SharpRestriction -- Development.AutomorphicArithmetic",
+    "imports": 1553
+   },
+   {
+    "pair": "GroundTheory.HeightsAndTheta -- Development.WeilBound",
+    "imports": 1553
+   },
+   {
+    "pair": "Development.AutomorphicArithmetic -- Development.WeilBound",
+    "imports": 1430
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Development.WeilBound",
+    "imports": 1127
+   }
+  ],
+  "spectral": [
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.LocalToGlobal",
+    "imports": 14516
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.SharpRestriction",
+    "imports": 5882
+   },
+   {
+    "pair": "Formalism.LocalToGlobal -- Development.AutomorphicArithmetic",
+    "imports": 2398
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.LocalRingCardinality",
+    "imports": 2180
+   },
+   {
+    "pair": "Formalism.SharpRestriction -- Development.AutomorphicArithmetic",
+    "imports": 1553
+   },
+   {
+    "pair": "Formalism.LocalToGlobal -- Formalism.SharpRestriction",
+    "imports": 1016
+   },
+   {
+    "pair": "Formalism.PeriodIntegrals -- Formalism.LocalToGlobal",
+    "imports": 838
+   },
+   {
+    "pair": "Formalism.HermitianCurvature -- Development.AbelianVarietyTheory",
+    "imports": 648
+   },
+   {
+    "pair": "Formalism.PeriodIntegrals -- Development.AbelianVarietyTheory",
+    "imports": 574
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.SatakeDualWeyl",
+    "imports": 550
+   },
+   {
+    "pair": "Formalism.LocalToGlobal -- Development.AutomorphicSpectrum",
+    "imports": 542
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.RealPlaceAnalysis",
+    "imports": 441
+   },
+   {
+    "pair": "Formalism.SharpRestriction -- Formalism.LocalRingCardinality",
+    "imports": 374
+   },
+   {
+    "pair": "Formalism.LocalToGlobal -- Development.WeilBound",
+    "imports": 323
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Formalism.LocalToGlobal",
+    "imports": 280
+   }
+  ],
+  "namespace": [
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Development.AbelianVarietyTheory",
+    "imports": 17122
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.LocalToGlobal",
+    "imports": 14516
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.SharpRestriction",
+    "imports": 5882
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Development.AutomorphicSpectrum",
+    "imports": 2898
+   },
+   {
+    "pair": "Formalism.LocalToGlobal -- Development.AutomorphicArithmetic",
+    "imports": 2398
+   },
+   {
+    "pair": "GroundTheory.HeightsAndTheta -- Development.AutomorphicSpectrum",
+    "imports": 2196
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- Formalism.LocalRingCardinality",
+    "imports": 2180
+   },
+   {
+    "pair": "Development.AbelianVarietyTheory -- ReciprocityTheory.AnalyticForms",
+    "imports": 1920
+   },
+   {
+    "pair": "Formalism.SharpRestriction -- Development.AutomorphicArithmetic",
+    "imports": 1553
+   },
+   {
+    "pair": "GroundTheory.HeightsAndTheta -- Development.WeilBound",
+    "imports": 1553
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- Development.WeilBound",
+    "imports": 1127
+   },
+   {
+    "pair": "CompanionTheory.SpectralGeometry -- Development.AutomorphicSpectrum",
+    "imports": 773
+   },
+   {
+    "pair": "ReciprocityTheory.ReductiveGroups -- GroundTheory.HeightsAndTheta",
+    "imports": 703
+   },
+   {
+    "pair": "Formalism.HermitianCurvature -- Development.AbelianVarietyTheory",
+    "imports": 648
+   },
+   {
+    "pair": "Formalism.PeriodIntegrals -- Development.AbelianVarietyTheory",
+    "imports": 574
+   }
+  ]
+ }
+}
