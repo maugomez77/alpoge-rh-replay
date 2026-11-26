@@ -164,6 +164,11 @@ frontier, not the whole tree. Fixing it reveals the next layer.
    fresh-container advances with `LAKE_ARTIFACT_CACHE=true`; prime with
    `lake build -o maps.json` + `lake cache add`.
 6. FC: #8214/#8187 approved (need 2nd approval); #8215/#8219 re-review.
+7. **Deferred — graph-analysis recommendations.** Ollivier–Ricci findings and
+   the interface/dedupe/instance-debt proposals live in
+   `evidence/curvature/RECOMMENDATIONS.md`. Analysis only: validate each with a
+   delta-build before touching the tree; do not start refactors until green +
+   certification are stable.
 
 ## Certification gate (next after green)
 
