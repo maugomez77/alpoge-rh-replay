@@ -40,7 +40,7 @@ fi
 cd "$WT" || exit 2
 DF_BEFORE=$(df -h . | awk 'NR==2 {print $4}')
 
-# 2. clean source build, oleans only (no IR/C)
+# 2. clean source build (IR is intrinsic; ~537 GB)
 BUILD=PASS
 lake build Main:elabArts Challenge:elabArts > "$OUT/build.log" 2>&1 || BUILD=FAIL
 LAST=$(grep -oE '\[[0-9]+/[0-9]+\]' "$OUT/build.log" | tail -1 | tr -d '[]')

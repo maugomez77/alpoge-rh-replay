@@ -131,6 +131,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `delta-build.sh` | Build only the closure; falls back to full build above `DELTA_MAX` (IR intrinsic) |
 | `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, rebuild |
 | `certify.sh` | Clean-source build (IR intrinsic) + exports + comparator + kernels |
+| `certify-mini-build.sh` | Hybrid certification: clean build + exports on Mini `/Volumes/Storage`, then comparator/kernels on M4 |
 | `InstanceAudit.lean` | Semantic instance audit: reads `Meta.instanceExtension` (keys, priority, module), not source text |
 | `warm-cache.sh` | Try the repo's validated CI cache (exit 3 = none) |
 | `stop-all.sh [--container]` | Stop watchers + M4 build/container |
@@ -155,6 +156,9 @@ frontier, not the whole tree. Fixing it reveals the next layer.
    worktree, build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
    `Statements.lean` unchanged → ask Rohan to reopen #120.
+   **In progress:** `certify-mini-build.sh e497a6603e` is running on the Mini
+   (`/Volumes/Storage/certify-e497a6603e`); comparator/kernels will run on the M4
+   against the transferred exports.
 4. **If new errors:** build-first → claim (draft PR) → fix → `preflight.sh` →
    `critic.py` → post exact SHA/exit/first diagnostic to #35028.
 5. **Instance hygiene (parallel).** Add the semantic audit (`InstanceAudit.lean`:
