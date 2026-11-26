@@ -27,7 +27,7 @@ Two parallel efforts:
 | **mainbuild16b — GREEN** | **`e497a6603e`**, started 21:01:08Z Nov 25, terminal **06:08:47Z Nov 26** (9h07m39s): **114,019 jobs, exit 0, 0 errors**. Log `/work/mainbuild16b.log`, sha256 `11148e2d…`. At exit the remote tip was also `e497a6603e` (`AHEAD=0`). Checkout `probe/next5`. |
 | Branch tip | `e497a6603e`; remote tip identical at 06:09Z. |
 | Targeted check | `b35a3239c4`: build of the two mainbuild14 failures → **80,107 jobs, exit 0** (13:57Z). Fixes: #1414 (`ReBaseZeta`), #1411/#1412 (`instMeasGL` disables restored in 12 files). |
-| **Disk** | `.lake/build/ir` is **464 GB** again — `Main:elabArts` still emits IR/C for dependencies (Lake behaviour, not a typo). `/work` 95% used (43 GB free), host 45 GB free. Delete IR before certification; fix via `compiler.postponeCompile` (test in flight). |
+| **Disk** | `.lake/build/ir` regrew to **464 GB** and was deleted at 06:15Z. IR is **intrinsic** to Lake’s module system (`metaExportInfo → irArts`); `postponeCompile` cannot remove it. `/work` now 40% used (497 GB free), host 142 GB free. Certification needs ~537 GB → run it on the Mini’s 1.4 TB drive or an external M4 SSD. |
 | Watcher | Fired at 06:09:25Z; summary `/work/mainbuild16b-summary.txt`. |
 | Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; fixed at the next tip |
 | Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → **2/7** at `94ff1f0f` → **0** for those two at `b35a3239c4` → **GREEN 0/0 at `e497a6603e`** |
@@ -116,20 +116,21 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `module-graph-ricci-map.py` | Render the full-graph ORC map from shard artifacts |
 | `partition-pilot.py` | Ricci-flow vs spectral vs namespace partition comparison |
 | `lake-dag.py` | Extract Lake `.trace` DAG + source imports + costs into SQLite |
+| `dag-diff.py` | Diff two DAG snapshots by `dep_hash`; exact rebuild cone + cost |
 | `graph-export.py` + `module-graph-layout-tsv.py` | Export a tree's names/edges and lay it out (current-tip images) |
 | `build-timeline-extract.py` + `module-graph-timeline.py` | Real build Gantt from a log + olean mtimes |
 | `preflight.sh <Module>` | Receipt: scope, open scan, statements, importers, build log digest, axioms |
 | `critic.py --module … --error …` | Deterministic checks + Grok CLI review before `gh pr ready` |
 | `post-receipt.sh <Module> <PR>` | Post the preflight receipt once (marker-deduped) |
-| `build-fast.sh [--check\|--ir]` | Cache preflight + disk guard; `:elabArts` by default, `--ir` for default facets |
+| `build-fast.sh [--check\|--ir]` | Cache preflight + disk guard; `:elabArts` default (IR still emitted by Lake) |
 | `disk-guard.sh` | Shared guard: abort builds below 100G (VM) / 80G (host); sourced by build scripts |
-| `pin-build.sh [stable_s] [branch]` | Quiescence gate + pinned-SHA `elabArts` build + JSON/Markdown receipt |
+| `pin-build.sh [stable_s] [branch]` | Quiescence gate + pinned-SHA build + JSON/Markdown receipt |
 | `instance-scan.py` | Instance-shadow census: class+head groups, disable lines, removal candidates, `--gate` |
 | `hygiene-check.sh` | Gate: no new global instances vs a baseline (2m47s full tree; `--changed` for a diff) |
 | `import-closure.py` | Reverse-dependency closure of changed modules (delta-green unit) |
-| `delta-build.sh` | Build only the closure as `:elabArts`; falls back to `Main Challenge` above `DELTA_MAX` (`DELTA_IR=1` for IR) |
-| `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, `elabArts` build |
-| `certify.sh` | Clean-source `:elabArts` build + exports + comparator + independent kernels |
+| `delta-build.sh` | Build only the closure; falls back to full build above `DELTA_MAX` (IR intrinsic) |
+| `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, rebuild |
+| `certify.sh` | Clean-source build (IR intrinsic) + exports + comparator + kernels |
 | `InstanceAudit.lean` | Semantic instance audit: reads `Meta.instanceExtension` (keys, priority, module), not source text |
 | `warm-cache.sh` | Try the repo's validated CI cache (exit 3 = none) |
 | `stop-all.sh [--container]` | Stop watchers + M4 build/container |
@@ -146,12 +147,12 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 1. **GREEN achieved.** `mainbuild16b` at `e497a6603e` finished **06:08:47Z Nov 26**:
    **114,019 jobs, exit 0, 0 errors** (log sha256 `11148e2d…`). Remote tip was
    identical at exit.
-2. **Before certification:** delete the 464 GB `.lake/build/ir` to free disk, and
-   fix the IR facet behaviour (`compiler.postponeCompile=true` test in flight).
-   `Main:elabArts` still emits IR for dependencies — do not run `certify.sh` until
-   this is fixed or it will refill the disk.
-3. **Certify at `e497a6603e`:** `certify.sh e497a6603e` (fresh worktree,
-   `elabArts`-only build, exports, `lake comparator`, `con-leche --verified`,
+2. **Certification storage.** IR is intrinsic (~464 GB) and was deleted. A clean
+   certification build needs ~537 GB; the M4 has 142 GB host free. Run
+   `certify.sh` on the Mini’s `/Volumes/Storage` (1.4 TB free) or attach an
+   external SSD to the M4 first.
+3. **Certify at `e497a6603e`** on that machine: `certify.sh e497a6603e` (fresh
+   worktree, build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
    `Statements.lean` unchanged → ask Rohan to reopen #120.
 4. **If new errors:** build-first → claim (draft PR) → fix → `preflight.sh` →
@@ -174,24 +175,30 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Certification gate (next after green)
 
-Disk reality on the M4 (2026-11-25, after cleanup):
+Disk reality on the M4 (2026-11-26, after deleting IR):
 
 | Path | Size |
 |---|---:|
-| `.lake/build/ir` (default `irArts`: `.ir`/`.c` per module) | **450 GB → deleted** |
+| `.lake/build/ir` (IR + C per module) | **464 GB → deleted** |
 | `.lake/build/lib/lean` (oleans) | 73 GB |
 | `.lake/packages` (Mathlib artifacts) | 0.5 GB |
-| `/work` in use / free | 342 GB / 469 GB |
-| OrbStack image / host free | 366 GB / 445 GB |
+| `/work` free | 497 GB |
+| Host free | 142 GB |
 
-A default clean build's IR (450 GB) does **not fit safely**. Use **`elabArts`**
-(olean/ilean only). Lake 5.0 library facets are `elabArts` / `irArts`; the
-`:olean` facet exists only on modules — `Main:olean` fails with
-"unknown lean_lib facet `olean`". `certify.sh` was fixed accordingly.
+**IR is intrinsic to Lake’s module system.** `Main:elabArts` still builds IR for
+dependencies because `Module.fetchExportInfo` uses `metaExportInfo`, which fetches
+`irArts`; importers need `.ir.sig`. Setting `compiler.postponeCompile=true` only
+defers codegen — the test failed on a missing `.ir.sig` for an importer. So a
+clean certification build needs roughly **537 GB** (464 IR + 73 oleans), which
+does not fit safely on the M4 today.
+
+Certification must therefore run on a machine/volume with ≥600 GB free:
+the Mini’s `/Volumes/Storage` (1.4 TB free) or an external SSD on the M4.
+Update `certify.sh` to require `CERT_DISK_MIN_GB=600`.
 
 `certify.sh <sha>`:
 1. fresh worktree at the SHA, share only `.lake/packages` (not the project build);
-2. `lake build Main:elabArts Challenge:elabArts` — no IR/C;
+2. `lake build Main:elabArts Challenge:elabArts` — **still produces IR**;
 3. `leanexport Challenge` / `leanexport Main` with `export-targets.txt`;
 4. `lake comparator --config comparator.json --challenge-from-export … --solution-from-export …`;
 5. `con-leche --verified` and `leanchecker-paranoid` on the solution export;

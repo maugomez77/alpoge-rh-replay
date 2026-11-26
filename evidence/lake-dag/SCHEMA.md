@@ -84,6 +84,20 @@ WHERE dst NOT LIKE 'Mathlib%'
 GROUP BY dst ORDER BY n DESC LIMIT 20;
 ```
 
+## Diffing snapshots
+
+`dag-diff.py --old old.sqlite --new new.sqlite` compares `dep_hash` values,
+lists added/removed/changed modules, computes the reverse-dependency closure in
+the new snapshot, and sums the measured median cost of that cone.
+
+```sh
+python3 tools/rh-fix/dag-diff.py --old /work/lake-dag-old.sqlite \
+  --new /work/lake-dag.sqlite --out evidence/dag-diff
+```
+
+A single hub change (`AutomorphicForms₂.Bundle0007`) produces a 15,965-module
+cone in the current tree — exact, hash-based, no mtime guessing.
+
 ## Limits
 
 - Trace `deps.imports` stores **aggregate transitive hashes**, not the full

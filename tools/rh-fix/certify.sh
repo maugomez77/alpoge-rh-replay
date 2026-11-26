@@ -1,10 +1,10 @@
 #!/bin/bash
 # Clean-source certification at a pinned SHA.
 #
-# The default Lake facet `irArts` writes .ir/.c for every module: 450 GB here.
-# For checking we only need `elabArts` (olean/ilean, ~73 GB for the whole tree),
-# so this builds that in a fresh worktree, exports the challenge/solution
-# modules, and hands the exports to Comparator and the independent kernels.
+# IR is intrinsic to Lake's module system: `elabArts` still builds .ir/.c for
+# dependencies because importers fetch `metaExportInfo` → `irArts`. A clean
+# build therefore needs ~537 GB (464 GB IR + 73 GB oleans). Run certification
+# on a volume with >=600 GB free. The exports/comparator stages still apply.
 #
 # Usage: certify.sh <sha> [worktree] [outdir]
 # Requires: bubblewrap, a warm $RH_REPO with .lake/packages (Mathlib artifacts).
@@ -23,7 +23,7 @@ mkdir -p "$OUT"
 # shellcheck disable=SC1091
 source "$(dirname "$0")/disk-guard.sh" 2>/dev/null || true
 if command -v disk_guard >/dev/null 2>&1; then
-  disk_guard "${DISK_MIN_GB:-100}" "$REPO" || exit 3
+  disk_guard "${CERT_DISK_MIN_GB:-600}" "$REPO" || exit 3
 fi
 
 echo "certify: $SHA -> $WT (receipt $OUT)"
