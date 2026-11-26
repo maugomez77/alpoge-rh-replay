@@ -89,8 +89,13 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 ## Machines
 
 - **M4** `maugomez77@mauricios-macbook-pro-1`, container `rhreplay`, repo `/work/rh120`
-  (16 cores, 64 GB, Lean 4.36, warm `.lake`). Builder.
+  (16 cores, 64 GB, Lean 4.36, warm `.lake`). Primary builder.
 - **Mini** (this machine) — control plane: OpenCode, watchers, MCP bridge, logs.
+  Also running the hybrid certification build on `/Volumes/Storage`.
+- **M3 Max** `mauriciog@10.0.0.43` (Tailscale `100.85.163.88`) — second builder:
+  16 cores (12P+4E), 48 GB, 724 GB free internal, macOS 26.6.2. Repo `~/rh120`
+  (Lean 4.36 + 7.3 GB packages copied over LAN), helper `~/m3-tools/m3-build.sh`,
+  logs `~/rh-build-<sha>.log`. `caffeinate` running; keep it awake.
 
 ## Tooling (all in `~/.rh-fix`, mirrored in this folder)
 
@@ -132,6 +137,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `wait-and-build.sh` | Wait for a build to exit, snapshot it, advance to the tip, rebuild |
 | `certify.sh` | Clean-source build (IR intrinsic) + exports + comparator + kernels |
 | `certify-mini-build.sh` | Hybrid certification: clean build + exports on Mini `/Volumes/Storage`, then comparator/kernels on M4 |
+| `m3-build.sh` | Second-builder wrapper on the M3 Max (fetch tip, checkout `probe/m3`, disk guard, log) |
 | `InstanceAudit.lean` | Semantic instance audit: reads `Meta.instanceExtension` (keys, priority, module), not source text |
 | `warm-cache.sh` | Try the repo's validated CI cache (exit 3 = none) |
 | `stop-all.sh [--container]` | Stop watchers + M4 build/container |
