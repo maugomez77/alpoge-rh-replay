@@ -1,6 +1,6 @@
 # CURRENT — single source of truth
 
-**Last updated:** 2026-11-25T21:22Z (13:22 PST)
+**Last updated:** 2026-11-26T06:10Z (22:10 PST Nov 25)
 **Time:** all timestamps are **UTC** (`Z`). Local Pacific time = **UTC−8h** (PST, standard time); in summer = UTC−7h (PDT).
 **Repo:** `maugomez77/alpoge-rh-replay`, branch `tools/rh-fix`
 **This file is the only one you need to read to resume.**
@@ -17,20 +17,20 @@ Two parallel efforts:
    full builds, fault-finding, small fixes, receipts.
 2. **Formal Conjectures** — four PRs adding Erdős problem statuses/answers.
 
-## Live state (2026-11-25T21:05Z)
+## Live state (2026-11-26T06:10Z)
 
 | Item | Value |
 |---|---|
 | **PR #120** | **CLOSED** (rohanarun, 16:35Z Nov 24) to stop the un-skippable `challenge-files.yml` check re-running on every push. Reopen only after green + verification + rebase. Work continues on the **fork** branch. **Provenance:** first closed by *Deicyde* at 10:44Z Nov 24 as "superseded by #324", reopened 13:18Z by Deicyde (Rohan confirmed the plan at 13:25Z), re-closed by the author at 16:35Z. The PR head is frozen at `67edc6403` (Nov 23 11:27Z) — **900+ commits behind** the current fork tip `e497a6603e`. |
 | **mainbuild14** | `884075ed`…`94ff1f0f`, terminal 11:56Z Nov 25: **113,995 / 114,021**, `error: build failed`, **7 errors / 2 modules**: `ReBaseZeta` (4) and `ArchimedeanSchwartz.HodgeTateFromSandwich` (3). Log `/work/mainbuild14.log`, sha256 `7cfbd1c0…`. |
 | **mainbuild15** | `7fb6893d70`, started 13:58Z. **Killed at 20:02Z by host-disk exhaustion** (see Disk). Was 105,280/105,967, **0 errors**. A resume (`mainbuild15b`) also died; superseded by mainbuild16b. |
-| **mainbuild16b in flight** | **`e497a6603e`**, started 21:01Z (13:01 PST); **`lake build Main:elabArts Challenge:elabArts`** (olean/ilean only — no IR/C). Log `/work/mainbuild16b.log`. |
-| Branch tip | `e497a6603e` (+29 commits since `7fb6893d70`). M4 worktree checked out as `probe/next5`. |
+| **mainbuild16b — GREEN** | **`e497a6603e`**, started 21:01:08Z Nov 25, terminal **06:08:47Z Nov 26** (9h07m39s): **114,019 jobs, exit 0, 0 errors**. Log `/work/mainbuild16b.log`, sha256 `11148e2d…`. At exit the remote tip was also `e497a6603e` (`AHEAD=0`). Checkout `probe/next5`. |
+| Branch tip | `e497a6603e`; remote tip identical at 06:09Z. |
 | Targeted check | `b35a3239c4`: build of the two mainbuild14 failures → **80,107 jobs, exit 0** (13:57Z). Fixes: #1414 (`ReBaseZeta`), #1411/#1412 (`instMeasGL` disables restored in 12 files). |
-| **Disk (recovered)** | Root cause of the 20:02Z VM force-stop: **host disk 100% full** (118 MB free); OrbStack `data.img.raw` had grown to **792 GB**, and `.lake/build/ir` was **450 GB**. Cleanup: caches + stale Docker Desktop (~20 GB host), deleted `ir` (450 GB). OrbStack auto-reclaimed: image **366 GB**, host **445 GB free**, `/work` 43% used. |
-| Watcher | monitor-only `/work/watch-build.sh` armed for mainbuild16b → `/work/mainbuild16b-summary.txt`; matches any `lake build`. |
+| **Disk** | `.lake/build/ir` is **464 GB** again — `Main:elabArts` still emits IR/C for dependencies (Lake behaviour, not a typo). `/work` 95% used (43 GB free), host 45 GB free. Delete IR before certification; fix via `compiler.postponeCompile` (test in flight). |
+| Watcher | Fired at 06:09:25Z; summary `/work/mainbuild16b-summary.txt`. |
 | Earlier milestone | `b9b24502` full build: **1 error / 1 module**, 3h00m; fixed at the next tip |
-| Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → **2/7** at `94ff1f0f` → **0** for those two at `b35a3239c4` |
+| Trajectory | 96/27 → 67/16 → 133/20 → **1/1** → **2/7** at `94ff1f0f` → **0** for those two at `b35a3239c4` → **GREEN 0/0 at `e497a6603e`** |
 | lean-lsp MCP | **removed** from the OpenCode catalog (2026-11-25 system update); no MCP tools available. `lake env lean` over SSH works. |
 
 ### New finding: instance-shadow census (2026-11-25)
@@ -143,30 +143,30 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 
 ## Immediate next steps
 
-1. **Tip build.** `mainbuild16b` at `e497a6603e` (started 21:01Z), `elabArts` only.
-   The two mainbuild14 failures are already confirmed clean at `b35a3239c4`
-   (80,107 jobs, exit 0). On exit: if green → `certify.sh e497a6603e`; if errors →
-   triage and delta-build. Do **not** run plain `lake build Main Challenge` on
-   this machine without space headroom: IR is 450 GB and previously filled the host.
-   **Next cycle:** use `pin-build.sh 600` (quiescence gate + pinned SHA + JSON
-   receipt) instead of starting ad-hoc builds at a moving tip.
-2. **If the tip build is green:** run `certify.sh <sha>` (fresh worktree,
+1. **GREEN achieved.** `mainbuild16b` at `e497a6603e` finished **06:08:47Z Nov 26**:
+   **114,019 jobs, exit 0, 0 errors** (log sha256 `11148e2d…`). Remote tip was
+   identical at exit.
+2. **Before certification:** delete the 464 GB `.lake/build/ir` to free disk, and
+   fix the IR facet behaviour (`compiler.postponeCompile=true` test in flight).
+   `Main:elabArts` still emits IR for dependencies — do not run `certify.sh` until
+   this is fixed or it will refill the disk.
+3. **Certify at `e497a6603e`:** `certify.sh e497a6603e` (fresh worktree,
    `elabArts`-only build, exports, `lake comparator`, `con-leche --verified`,
    `leanchecker-paranoid`), then rebase onto `main` with `Challenge.lean` /
    `Statements.lean` unchanged → ask Rohan to reopen #120.
-3. **If new errors:** build-first → claim (draft PR) → fix → `preflight.sh` →
+4. **If new errors:** build-first → claim (draft PR) → fix → `preflight.sh` →
    `critic.py` → post exact SHA/exit/first diagnostic to #35028.
-4. **Instance hygiene (parallel).** Add the semantic audit (`InstanceAudit.lean`:
+5. **Instance hygiene (parallel).** Add the semantic audit (`InstanceAudit.lean`:
    import the module, group instances by class+head, flag duplicates/defeq), then
    remove the single-provider instances first (`BaseC.modO` 688, `BaseC.towO` 688,
    `subfield_valuativeRel` 191, `rulesCommRing`/`rulesSMul` 116) and convert the top
    offenders (`modFun`, `modTens`, `modProd`, `modQuot`, `subRulesModuleInt`,
    `instMeasGL`, `instBorelGL`, GL topology) to `scoped instance`.
-5. **Cache benchmark.** After the tip build: same-worktree / fresh-worktree /
+6. **Cache benchmark.** After the tip build: same-worktree / fresh-worktree /
    fresh-container advances with `LAKE_ARTIFACT_CACHE=true`; prime with
    `lake build -o maps.json` + `lake cache add`.
-6. FC: #8214/#8187 approved (need 2nd approval); #8215/#8219 re-review.
-7. **Deferred — graph-analysis recommendations.** Ollivier–Ricci findings and
+7. FC: #8214/#8187 approved (need 2nd approval); #8215/#8219 re-review.
+8. **Deferred — graph-analysis recommendations.** Ollivier–Ricci findings and
    the interface/dedupe/instance-debt proposals live in
    `evidence/curvature/RECOMMENDATIONS.md`. Analysis only: validate each with a
    delta-build before touching the tree; do not start refactors until green +
