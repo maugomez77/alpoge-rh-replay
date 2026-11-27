@@ -11,16 +11,17 @@ export PATH="$HOME/.elan/bin:$PATH"
 export LEAN_ABORT_ON_PANIC=1
 
 REPO=${RH_REPO:-/Volumes/Storage/Riemmann/rh120}
+WORK_ROOT=${WORK_ROOT:-/Volumes/Storage}
 SHA=${1:?usage: certify-mini-build.sh <sha> [worktree] [outdir]}
 SHORT=$(git -C "$REPO" rev-parse --short "$SHA") || exit 2
-WT=${2:-/Volumes/Storage/certify-$SHORT}
+WT=${2:-$WORK_ROOT/certify-$SHORT}
 OUT=${3:-$HOME/.rh-fix/certify-$SHORT}
 mkdir -p "$OUT"
 
 # shellcheck disable=SC1091
 source "$(dirname "$0")/disk-guard.sh" 2>/dev/null || true
 if command -v disk_guard >/dev/null 2>&1; then
-  disk_guard "${CERT_DISK_MIN_GB:-650}" /Volumes/Storage || exit 3
+  disk_guard "${CERT_DISK_MIN_GB:-650}" "$WORK_ROOT" || exit 3
 fi
 
 echo "certify-mini: $SHA -> $WT (receipt $OUT)"
