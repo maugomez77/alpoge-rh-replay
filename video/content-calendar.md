@@ -38,3 +38,10 @@ Reuse the existing Blender scene, graph renders, receipts, and SRT captions.
 - Weeks 5–8: open GitHub Sponsors/Patreon; publish a “build audit” report.
 - Weeks 9–12: pitch 5 sponsors with analytics; test a members-only build log.
 - Track: CTR 5–8%, AVD 40%+, returning viewers, subscribers per video.
+
+## Published
+
+- Week 1 long: https://youtu.be/FRDXH7KfEWA
+- Week 1 Short: https://youtu.be/niYR8T2Tyic
+- Week 2 long: https://youtu.be/SNLjLkn1ZwE
+- Week 2 Spanish Short: https://youtu.be/7iVpXNTyESw
