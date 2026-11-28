@@ -1,5 +1,8 @@
 # 12-week content calendar
 
+> Production now lives in the private channel repo: `maugomez77/rh-channel`
+> (local clone `/Volumes/Storage/Riemmann/rh-channel`). This file is the source copy.
+
 Cadence: **1 long video/week (8–15 min) + 3 Shorts/week (30–50 s)**.  
 Publish long on **Tuesday**, Shorts on **Wednesday / Friday / Sunday**.  
 Reuse the existing Blender scene, graph renders, receipts, and SRT captions.
