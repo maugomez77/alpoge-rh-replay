@@ -102,6 +102,7 @@ frontier, not the whole tree. Fixing it reveals the next layer.
 | `plan.py [--elab-only]` | Beforehand estimate: closure, jobs, must-build, critical path, wall |
 | `times-extract.py` | Per-module compile-time history → `build-costs.json` + `times-rich.txt` |
 | `dep-graph.py [--level 1\|2]` | Render the real import graph from `src/` (SVG/PNG/JSON) |
+| `blender-graph.py` | Generate a 3D Blender scene from the import graph (emissive ribbons, camera move) |
 | `module-graph-layout.py` | Force layout (DrL) of all modules → `npz/json` cache |
 | `module-graph-{render,density,layers}.py` | Galaxy, density-reveal, and layered-BFS renders |
 | `module-graph-interactive.py` | Self-contained Plotly WebGL HTML (pan/zoom/hover) |
