@@ -41,3 +41,4 @@
 - 2026-11-27T06:30Z Parallel certification: Mini build at 83k/114k (24h, USB bottleneck); started the same clean build + exports on the M3 Max internal NVMe (`certify-e497a6603e`, 720 GB free, 650 GB guard). First receipt wins.
 - 2026-11-28T03:00Z M3 retired: Tier 2 wipeout removed `~/certify-e497a6603e` (600G), `~/rh120`, `~/.elan`, `~/m3-tools`, `~/.rh-fix` and temp files. Disk free 121G -> 734G. Clean-build receipt saved as `evidence/certify/BUILD_RECEIPT_M3.md`.
 - 2026-11-28T04:05Z Blender hero prototype: 3D scene from 47,885 modules / 494,947 imports (120k sampled edges, cluster-depth, emissive ribbons, 5s camera move, 1080p, post bloom). Asset: `video/blender/graph_hero_glow.mp4`; script `tools/rh-fix/blender-graph.py`.
+- 2026-11-28T04:15Z 60s narrated video draft: Blender hero + density/timeline/cost/Ricci/debt cards, edge-tts draft narration, ambient bed. File `video/cut60/cut60_narrated.mp4`; script/text tracked.

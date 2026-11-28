@@ -1,0 +1,7 @@
+Seventeen million lines of Lean. One hundred seventy-five thousand files. The Riemann Hypothesis, formalized and machine-checked. We rebuilt the archive on a Mac. Forty-seven thousand modules. Nearly half a million imports. The full build: one hundred fourteen thousand jobs. Nine hours. Zero errors.
+
+But the graph tells a stranger story. Ninety percent of its import edges are bridges. The cost is spread across the tree: the top one percent is only ten percent of compile time.
+
+The curvature map shows the same pattern. The weakest links sit between namespaces, not inside them. Instance debt is a separate problem: eighteen thousand disables across ten thousand modules.
+
+This is not a finished story. The build is green. Certification is still running. But the shape of the proof is now visible. No human has read all of it. That is the point.
