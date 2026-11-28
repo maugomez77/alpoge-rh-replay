@@ -1,0 +1,15 @@
+Every non-trivial zero of the Riemann zeta function has real part one half. That is the Riemann Hypothesis. In November 2026, a Lean 4 formalization of the statement, and of its generalization to Dirichlet L-functions, was released: one hundred seventy-five thousand modules, seventeen million lines. This is a replay and consolidation of that archive. It is not a new proof.
+
+The working tree we build has forty-seven thousand eight hundred eighty-five modules and fourteen point five eight million lines. We parse every import: four hundred ninety-four thousand nine hundred forty-seven edges. The graph is not an illustration. It is the source tree.
+
+We build two targets, Main and Challenge, in a Linux container on an Apple M4 Max. The successful run: one hundred fourteen thousand and nineteen jobs, nine hours seven minutes, zero errors, exit zero, at commit e four nine seven a six six zero three e. Lake still generates intermediate representation: four hundred sixty-four gigabytes of dot I R and dot C files, against seventy-three gigabytes of oleans. The elabArts target does not suppress I R, because importers request meta export info, which pulls I R arts. Disk headroom is part of the build.
+
+The graph is wide and shallow. Mean degree twenty point seven; median ten; maximum four thousand two hundred nine. The deepest k-core is forty-six, with only twenty-one modules. The longest import chain is one hundred fifty-six modules. But the critical path is not the bottleneck: its measured cost is about twenty-four minutes, against six point two five hours of total work on sixteen cores.
+
+Compile cost is broad. Total measured median time: four hundred seventeen thousand three hundred forty-one seconds. The top one percent of modules account for nine point seven percent. Modules of degree three to fifty account for eighty-five percent. The build is throughput-bound, not dominated by a few hubs.
+
+Ollivier Ricci curvature on all four hundred ninety-four thousand edges: mean minus zero point two six six; ninety point nine percent negative. Cross namespace edges are more negative: minus zero point three five, against minus zero point two five. The sharpest bridges sit between Development dot Abelian Variety Theory and its neighbours, and between Formalism and Reciprocity Theory. These are interface boundaries, not compile time hotspots.
+
+Instance debt: eighteen thousand eight hundred fifteen attribute minus instance lines across ten thousand three hundred forty-four modules, twenty-one point six percent of the tree. Strict near duplicate census: four hundred forty-four modules at cosine at least zero point nine five and Jaccard at least zero point eight. Both are generator level problems.
+
+The build is green. That is not the same as certification. Certification requires a clean worktree, a clean build, exports, the comparator, con leche, and the paranoid checker. At the time of this recording, the export is still running. Build green. Certification in progress. The graph is real. The proof is the next step.

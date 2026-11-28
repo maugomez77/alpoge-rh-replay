@@ -1,0 +1,152 @@
+1
+00:00:00,100 --> 00:00:04,550
+Every non-trivial zero of the Riemann zeta function has real part one half.
+
+2
+00:00:04,500 --> 00:00:06,525
+That is the Riemann Hypothesis.
+
+3
+00:00:06,525 --> 00:00:18,675
+In November 2026, a Lean 4 formalization of the statement, and of its generalization to Dirichlet L-functions, was released: one hundred seventy-five thousand modules, seventeen million lines.
+
+4
+00:00:18,675 --> 00:00:21,987
+This is a replay and consolidation of that archive.
+
+5
+00:00:21,987 --> 00:00:23,525
+It is not a new proof.
+
+6
+00:00:23,525 --> 00:00:30,900
+The working tree we build has forty-seven thousand eight hundred eighty-five modules and fourteen point five eight million lines.
+
+7
+00:00:30,900 --> 00:00:36,025
+We parse every import: four hundred ninety-four thousand nine hundred forty-seven edges.
+
+8
+00:00:36,025 --> 00:00:38,125
+The graph is not an illustration.
+
+9
+00:00:38,125 --> 00:00:39,512
+It is the source tree.
+
+10
+00:00:39,512 --> 00:00:45,037
+We build two targets, Main and Challenge, in a Linux container on an Apple M4 Max.
+
+11
+00:00:45,037 --> 00:01:05,537
+The successful run: one hundred fourteen thousand and nineteen jobs, nine hours seven minutes, zero errors, exit zero, at commit e four nine seven a six six zero three e. Lake still generates intermediate representation: four hundred sixty-four gigabytes of dot I R and dot C files, against seventy-three gigabytes of oleans.
+
+12
+00:01:05,537 --> 00:01:12,475
+The elabArts target does not suppress I R, because importers request meta export info, which pulls I R arts.
+
+13
+00:01:12,475 --> 00:01:14,537
+Disk headroom is part of the build.
+
+14
+00:01:14,537 --> 00:01:16,487
+The graph is wide and shallow.
+
+15
+00:01:16,487 --> 00:01:21,712
+Mean degree twenty point seven; median ten; maximum four thousand two hundred nine.
+
+16
+00:01:21,712 --> 00:01:25,662
+The deepest k-core is forty-six, with only twenty-one modules.
+
+17
+00:01:25,662 --> 00:01:29,287
+The longest import chain is one hundred fifty-six modules.
+
+18
+00:01:29,287 --> 00:01:38,650
+But the critical path is not the bottleneck: its measured cost is about twenty-four minutes, against six point two five hours of total work on sixteen cores.
+
+19
+00:01:38,650 --> 00:01:40,362
+Compile cost is broad.
+
+20
+00:01:40,362 --> 00:01:45,662
+Total measured median time: four hundred seventeen thousand three hundred forty-one seconds.
+
+21
+00:01:45,662 --> 00:01:49,362
+The top one percent of modules account for nine point seven percent.
+
+22
+00:01:49,362 --> 00:01:53,050
+Modules of degree three to fifty account for eighty-five percent.
+
+23
+00:01:53,050 --> 00:01:56,637
+The build is throughput-bound, not dominated by a few hubs.
+
+24
+00:01:56,637 --> 00:02:05,375
+Ollivier Ricci curvature on all four hundred ninety-four thousand edges: mean minus zero point two six six; ninety point nine percent negative.
+
+25
+00:02:05,375 --> 00:02:12,300
+Cross namespace edges are more negative: minus zero point three five, against minus zero point two five.
+
+26
+00:02:12,300 --> 00:02:20,350
+The sharpest bridges sit between Development dot Abelian Variety Theory and its neighbours, and between Formalism and Reciprocity Theory.
+
+27
+00:02:20,350 --> 00:02:23,787
+These are interface boundaries, not compile time hotspots.
+
+28
+00:02:23,787 --> 00:02:33,862
+Instance debt: eighteen thousand eight hundred fifteen attribute minus instance lines across ten thousand three hundred forty-four modules, twenty-one point six percent of the tree.
+
+29
+00:02:33,862 --> 00:02:42,425
+Strict near duplicate census: four hundred forty-four modules at cosine at least zero point nine five and Jaccard at least zero point eight.
+
+30
+00:02:42,425 --> 00:02:44,512
+Both are generator level problems.
+
+31
+00:02:44,512 --> 00:02:45,900
+The build is green.
+
+32
+00:02:45,900 --> 00:02:48,162
+That is not the same as certification.
+
+33
+00:02:48,162 --> 00:02:56,462
+Certification requires a clean worktree, a clean build, exports, the comparator, con leche, and the paranoid checker.
+
+34
+00:02:56,462 --> 00:02:59,512
+At the time of this recording, the export is still running.
+
+35
+00:02:59,512 --> 00:03:00,550
+Build green.
+
+36
+00:03:00,550 --> 00:03:02,550
+Certification in progress.
+
+37
+00:03:02,550 --> 00:03:03,937
+The graph is real.
+
+38
+00:03:03,937 --> 00:03:05,750
+The proof is the next step.
+
