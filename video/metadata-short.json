@@ -1,0 +1,18 @@
+{
+  "title": "17M Lines of Lean, Rebuilt #Shorts",
+  "description": "The Riemann Hypothesis formalization, replayed: 47,885 modules, 114,019 build jobs, 9 h 07 m, 0 errors. Not a new proof — a replay. Certification is in progress.\n\nFull technical cut: see the long-form video on this channel.\n\n#Shorts #RiemannHypothesis #Lean4 #FormalVerification #Math",
+  "tags": [
+    "Riemann Hypothesis",
+    "Lean 4",
+    "formal verification",
+    "Mathlib",
+    "Shorts",
+    "mathematics",
+    "machine-checked proof"
+  ],
+  "privacyStatus": "public",
+  "madeForKids": false,
+  "categoryId": "28",
+  "defaultLanguage": "en",
+  "defaultAudioLanguage": "en"
+}
